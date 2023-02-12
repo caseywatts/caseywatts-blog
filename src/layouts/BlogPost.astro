@@ -13,7 +13,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <meta slot="head" name="description" content={description} />
 
 <OuterLayout>
-	<article class="bg-white p-2 md:p-6 mt-2 md:mt-6 mx-auto prose lg:prose-lg">
+	<article class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto prose lg:prose-lg drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
 		{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 		<div class="flex justify-between">
 			<h1 class="m-1">{title}</h1>
