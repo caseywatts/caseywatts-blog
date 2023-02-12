@@ -1,0 +1,19 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+	<head>
+		<BaseHead  />
+	</head>
+
+	<body>
+		<Header />
+		<main class="bg-gradient-to-r from-indigo-300 to-purple-300 via-blue-300">
+      <slot />
+		</main>
+		<Footer />
+	</body>
+</html>
