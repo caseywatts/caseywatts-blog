@@ -1,17 +1,46 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import SocialMedia from './SocialMedia.astro';
+const { origin } = Astro.url;
 ---
-
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
+	<nav class="bg-white shadow bg-gray-100">
+		<div class="px-3 py-3 md:px-6 md:py-3 mx-auto md:flex md:justify-between md:items-center">
+			<div class="flex items-center justify-between">
+				<div>
+					<a class="text-xl font-bold text-gray-800 md:text-2xl hover:text-gray-700 " href={origin}> Casey Watts!</a>
+				</div>
+
+				<!-- Mobile menu button -->
+				<div class="flex md:hidden">
+					<button type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600 " aria-label="toggle menu" onclick="showHideMobileNavMenu()">
+						<svg viewBox="0 0 24 24" class="w-4 h-4 fill-current">
+							<path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+			<div id="mainNav" class="flex-grow justify-between items-center block hidden md:flex">
+				<div class="flex flex-col md:flex-row md:mx-6">
+					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="/my-story">Hi, I'm Casey!</a>
+					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="/blog">Blog</a>
+					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="https://www.happyandeffective.com">Work with me</a>
+					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="/contact">Contact</a>
+				</div>
+				<SocialMedia SVGSize="24" />
+			</div>
+		</div>
 	</nav>
 </header>
+
+<script is:inline>
+  function showHideMobileNavMenu() {
+    console.log("lol");
+    var mainNav = document.getElementById("mainNav");
+    if (mainNav.classList.contains("hidden")) {
+      mainNav.classList.remove("hidden");
+    } else {
+      mainNav.classList.add("hidden");
+    }
+  }
+</script>
