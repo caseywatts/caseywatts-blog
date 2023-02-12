@@ -17,5 +17,7 @@ const { Content } = await post.render();
 
 <BlogPost {...post.data}>
 	<h1>{post.data.title}</h1>
-	<Content />
+	<div class="prose lg:prose-xl">
+		<Content />
+	</div>
 </BlogPost>
