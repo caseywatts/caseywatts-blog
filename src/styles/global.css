@@ -9,7 +9,7 @@
 } */
 
 
-code {
+code, pre {
 	background-color: silver;
 	padding: 4px;
 	font-weight: normal;
