@@ -42,5 +42,6 @@ export const REDIRECTS = {
   "twitter": "http://twitter.com/heycaseywattsup",
   "mastodon": "https://social.coop/@heycaseywattsup",
   "whoopsies": "/soundboard#catbug-whoopsies",
+  "gists-and-tricks": "/projects"
 }
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);

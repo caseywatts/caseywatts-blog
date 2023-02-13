@@ -1,0 +1,53 @@
+---
+import Page from "../layouts/Page.astro";
+---
+
+<Page>
+
+<style>
+  .bubble-link {
+    @apply m-4 bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200 text-center rounded-full p-4 items-center flex justify-center shadow-md hover:shadow-sm
+  }
+</style>
+
+  <audio id="catbug-whoopsies" preload="auto" src="/soundboard/catbug-whoopsies.mp3"></audio>
+  <audio id="sardonyx-elegant" preload="auto" src="/soundboard/sardonyx-elegant.m4a"></audio>
+  <audio id="teengirlsquad-sogood" preload="auto" src="/soundboard/teengirlsquad-sogood.m4a"></audio>
+  <audio id="eggs" preload="auto" src="/soundboard/eggs.m4a"></audio>
+
+  <h1 style="text-align: center">Soundboard</h1>
+  <div class="some-section">
+    <a href="#catbug-whoopsies" class="bubble-link" onclick="document.getElementById('catbug-whoopsies').play();">
+      WHOOPSIES
+    </a>
+    <a href="#sardonyx-elegant" class="bubble-link" onclick="document.getElementById('sardonyx-elegant').play();">
+      ELEGANT
+    </a>
+    <a href="#teengirlsquad-sogood" class="bubble-link" onclick="document.getElementById('teengirlsquad-sogood').play();">
+      SO GOOD
+    </a>
+    <a href="#eggs" class="bubble-link" onclick="document.getElementById('eggs').play();">
+      EGGS
+    </a>
+  </div>
+
+  <h2 style="text-align: center">Sources</h2>
+  <div class="some-section">
+    <a href="https://www.youtube.com/watch?v=rFWb7DG7zTc" class="bubble-link">WHOOPSIES source</a>
+    <a href="https://www.youtube.com/watch?v=4rdgXaQc0bo" class="bubble-link">ELEGANT source</a>
+    <a href="https://www.youtube.com/watch?v=3CSNGEqhgI0" class="bubble-link">SO GOOD source</a>
+    <a href="https://www.youtube.com/watch?v=SsjJ1WWrV20" class="bubble-link">EGGS source</a>
+  </div>
+
+  <h2 style="text-align: center">Good Vibes</h2>
+  <div class="some-section">
+    <a href="#" class="bubble-link" onclick="window.navigator.vibrate([200, 100, 200]);">
+      vibe
+    </a>
+  </div>
+
+  <script is:inline>
+    var autoplayTrackId = window.location.hash.substring(1);
+    if (autoplayTrackId) { document.getElementById(autoplayTrackId).play(); }
+  </script>
+</Page>
