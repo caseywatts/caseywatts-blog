@@ -1,13 +1,8 @@
 {
   "redirects": [
     {
-      "source": "/bashautocomplete",
-      "destination": "https://gist.github.com/caseywatts/6c989ed8e942a75f97f5e05dcda003f1"
-    },
-
-    {
-      "source": "/sogood",
-      "destination": "/soundboard#teengirlsquad-sogood"
+      "source": "x",
+      "destination": "https://gist.github.com/caseywatts/8266527a24667aad80b7d6127130de06"
     }
   ]
 }
