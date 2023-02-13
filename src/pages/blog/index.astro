@@ -9,7 +9,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <OuterLayout>
-	<section>
+	<section class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto prose lg:prose-lg drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
 		<ul>
 			{
 				posts.map((post) => (
