@@ -9,13 +9,21 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <OuterLayout>
-	<section class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto prose lg:prose-lg drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
+	<section>
+		<div class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto prose lg:prose-lg drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
+			<h2 class="text-center">Blog Posts</h2>
+		</div>
 		<ul>
 			{
 				posts.map((post) => (
-					<li>
-						<FormattedDate date={post.data.pubDate} />
-						<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+					<li class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto prose lg:prose-lg drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
+						<div class="flex justify-between">
+							<div>
+								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+								<span>{post.data.tagline}</span>
+							</div>
+							<FormattedDate date={post.data.pubDate} />
+						</div>
 					</li>
 				))
 			}
