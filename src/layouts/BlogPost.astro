@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import OuterLayout from '../layouts/OuterLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import Bio from '../components/Bio.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -35,5 +36,8 @@ const { title, tagline, description, pubDate, updatedDate, heroImage } = Astro.p
 			</div>
 			<slot />
 		</article>
+	</div>
+	<div class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto max-w-3xl drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
+		<Bio />
 	</div>
 </OuterLayout>
