@@ -2,40 +2,44 @@
 import ButtonLink from "./ButtonLink.astro"
 ---
 
-<div class="block grid grid-cols-1 md:grid-cols-2">
+<div class="grid grid-cols-1 md:grid-cols-2 space-y-10 align-stretch">
+  
   <div>
-    <h2 class="text-2xl text-center mt-10">Bring Casey to your Company</h2>
+    <div class="text-6xl margin-auto text-center mb-0">📖</div>
+    <h2 class="text-2xl text-center">Read</h2>
+    <div class="">
+      <div><ButtonLink href="/blog" text="blog" /></div>
+      <div><ButtonLink href="/projects" text="projects" /></div>
+      <div><ButtonLink href="https://www.debuggingyourbrain.com" text="Debugging Your Brain (book)" /></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="text-6xl margin-auto text-center mb-0">👀</div>
+    <h2 class="text-2xl text-center">Listen, Watch</h2>
+    <div class="">
+      <div><ButtonLink href="https://www.youtube.com/watch?v=nj3IoW_rboE&list=PLsGBNq2i4TkLJUc2p5-p1T2LATcuP-Kx1" text="videos" /></div>
+      <div><ButtonLink href="https://www.greaterthancode.com/hosts/casey-watts" text="podcast episodes" /></div>
+    </div>
+  </div>
+  
+  <div>
+    <div class="text-6xl margin-auto text-center mb-0">🤝🏻</div>
+    <h2 class="text-2xl text-center"> Bring Casey to your Company</h2>
     <div class="">
       <div><ButtonLink href="https://happyandeffective.com/workshops" text="workshops" /></div>
       <div><ButtonLink href="https://happyandeffective.com/coaching" text="coaching" /></div>
       <div><ButtonLink href="/contact" text="contact Casey" /></div>
     </div>
   </div>
-
+  
   <div>
-    <h2 class="text-2xl text-center mt-10">Connect with Casey</h2>
+    <div class="text-6xl margin-auto text-center mb-0">👋🏻</div>
+    <h2 class="text-2xl text-center">Connect with Casey</h2>
     <div class="">
       <div><ButtonLink href="https://social.coop/@heycaseywattsup" text="Mastodon" /></div>
       <div><ButtonLink href="https://twitter.com/heycaseywattsup" text="Twitter" /></div>
       <div><ButtonLink href="https://linkedin.com/in/heycaseywattsup" text="LinkedIn" /></div>
-    </div>
-  </div>
-
-  <div>
-    <h2 class="text-2xl text-center mt-10">Read, Listen, Watch</h2>
-    <div class="">
-      <div><ButtonLink href="/blog" text="blog" /></div>
-      <div><ButtonLink href="https://www.youtube.com/watch?v=nj3IoW_rboE&list=PLsGBNq2i4TkLJUc2p5-p1T2LATcuP-Kx1" text="videos" /></div>
-      <div><ButtonLink href="https://www.greaterthancode.com/hosts/casey-watts" text="podcast episodes" /></div>
-      <div><ButtonLink href="https://www.debuggingyourbrain.com" text="Debugging Your Brain (book)" /></div>
-    </div>
-  </div>
-
-  <div>
-    <h2 class="text-2xl text-center mt-10">Tools, Projects</h2>
-    <div class="">
-      <div><ButtonLink href="/gists-and-tricks" text="gists & tricks" /></div>
-      <div><ButtonLink href="/projects" text="projects" /></div>
     </div>
   </div>
 </div>
