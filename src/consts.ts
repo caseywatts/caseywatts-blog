@@ -42,6 +42,11 @@ export const REDIRECTS = {
   "twitter": "http://twitter.com/heycaseywattsup",
   "mastodon": "https://social.coop/@heycaseywattsup",
   "whoopsies": "/soundboard#catbug-whoopsies",
-  "gists-and-tricks": "/projects"
+  "gists-and-tricks": "/projects",
+  "workshops": "https://happyandeffective.com/workshops",
+  "coaching": "https://happyandeffective.com/coaching",
+  "workshops/matrix-based-prioritization-for-strong-team-alignment": "https://happyandeffective.com/workshops",
+  "workshops/feeling-understood": "https://happyandeffective.com/workshops",
+  "workshops/team-health": "https://happyandeffective.com/workshops",
 }
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);
