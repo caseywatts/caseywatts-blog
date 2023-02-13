@@ -1,0 +1,15 @@
+---
+import OuterLayout from '../layouts/OuterLayout.astro';
+
+const { title, description } = Astro.props;
+---
+
+<title slot="head">{title}</title>
+<meta slot="head" name="title" content={title} />
+<meta slot="head" name="description" content={description} />
+
+<OuterLayout>
+	<div class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto max-w-3xl drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
+			<slot />
+	</div>
+</OuterLayout>
