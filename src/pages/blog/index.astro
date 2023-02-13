@@ -17,12 +17,14 @@ const posts = (await getCollection('blog')).sort(
 			{
 				posts.map((post) => (
 					<li class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto prose lg:prose-lg drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
-						<div class="flex justify-between">
+						<div class="flex flex-col md:flex-row justify-between ">
 							<div>
 								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-								<span>{post.data.tagline}</span>
+								<div>{post.data.tagline}</div>
 							</div>
-							<FormattedDate date={post.data.pubDate} />
+							<div class="text-right italic text-violet-500 text-sm">
+								<FormattedDate date={post.data.pubDate} />
+							</div>
 						</div>
 					</li>
 				))
