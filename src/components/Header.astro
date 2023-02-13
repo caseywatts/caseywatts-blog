@@ -22,12 +22,14 @@ const { origin } = Astro.url;
 			<!-- Mobile Menu open: "block", Menu closed: "hidden" -->
 			<div id="mainNav" class="flex-grow justify-between items-center block hidden md:flex">
 				<div class="flex flex-col md:flex-row md:mx-6">
-					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="/my-story">About Me</a>
+					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="/my-story">About Casey</a>
 					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="/blog">Blog</a>
-					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="https://www.happyandeffective.com">Work with me</a>
 					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="/contact">Contact</a>
 				</div>
-				<SocialMedia SVGSize="24" />
+				<div class="flex flex-row">
+					<a class="my-1 text-gray-700 hover:text-indigo-500  md:mx-3 md:my-0 text-center" href="https://www.happyandeffective.com">Work with Casey</a>
+					<SocialMedia SVGSize="24" />
+				</div>
 			</div>
 		</div>
 	</nav>
