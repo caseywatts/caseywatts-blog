@@ -5,7 +5,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, tagline, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <title slot="head">{title}</title>
@@ -18,8 +18,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<article class="prose lg:prose-lg">
 			{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
 			<div class="flex justify-between">
-				<h1 class="m-1">{title}</h1>
-				<span class="m-1 italic">
+					<h1 class="m-1 mb-0">
+						{title}
+						<div class="m-1 text-2xl">{tagline}</div>
+					</h1>
+				<span class="m-1 italic min-w-fit">
 					<FormattedDate date={pubDate} />
 				</span>
 				{
