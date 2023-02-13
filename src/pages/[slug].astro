@@ -1,0 +1,25 @@
+---
+import Redirect from '../components/Redirect.astro';
+import { REDIRECTS, REDIRECT_FROMS } from "../consts";
+
+export function getStaticPaths() {
+  return REDIRECT_FROMS.map((redirectFrom) => {
+    return {"params": {"slug": redirectFrom}}
+  })
+}
+
+const { slug = "" } = Astro.params;
+
+function calculateURL() {
+  if (REDIRECT_FROMS.includes(slug)) {
+    return REDIRECTS[slug];
+  } else {
+    return "/404"
+  }
+}
+
+let url = calculateURL();
+
+---
+
+<Redirect url={url} />
