@@ -22,7 +22,7 @@ const posts = (await getCollection('blog')).sort(
 								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
 								<div>{post.data.tagline}</div>
 							</div>
-							<div class="text-right italic text-violet-500 text-sm">
+							<div class="text-right italic text-violet-500 text-sm flex-1">
 								<FormattedDate date={post.data.pubDate} />
 							</div>
 						</div>
