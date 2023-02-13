@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 import svelte from "@astrojs/svelte";
@@ -9,7 +9,9 @@ import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
+
+// https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: "https://caseywatts.com",
   integrations: [mdx(), sitemap(), svelte(), tailwind()]
 });
