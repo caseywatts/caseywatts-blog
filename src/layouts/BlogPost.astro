@@ -14,7 +14,7 @@ const { title, tagline, description, pubDate, updatedDate, heroImage, emoji } = 
 <meta slot="head" name="description" content={title + " " + tagline} />
 
 <OuterLayout>
-	<div class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto max-w-3xl drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
+	<div class="panel">
 		<div class="flex mb-4">
 			<div class="mb-5"><a href="/blog">⬅️ other posts</a></div>
 			<div class="text-right italic text-violet-500 text-sm flex-1">
@@ -42,7 +42,7 @@ const { title, tagline, description, pubDate, updatedDate, heroImage, emoji } = 
 			<slot />
 		</article>
 	</div>
-	<div class="bg-blue-50 p-2 md:p-6 my-2 md:my-6 mx-auto max-w-3xl drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
+	<div class="panel">
 		<Bio />
 	</div>
 </OuterLayout>

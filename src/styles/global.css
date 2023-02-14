@@ -21,6 +21,13 @@ body {
 	overflow-wrap: break-word;
 }
 
+.panel {
+	@apply bg-blue-50;
+	@apply p-2 md:p-6 my-2 md:my-6 mx-auto max-w-4xl;
+	@apply drop-shadow-2xl hover:drop-shadow-xl;
+	@apply transition ease-in-out duration-500;
+}
+
 /* body {
 	font-family: Verdana, sans-serif;
 	margin: auto;
