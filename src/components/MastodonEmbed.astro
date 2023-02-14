@@ -29,73 +29,13 @@ try {
 }
 ---
 
-<style>
-
-
-.avatar img {
-  width: 60px;
-  border-radius: 100px;
-}
-
-.avatar span {
-  font-size: 0.8rem;
-  color: grey;
-}
-
-.post-body {
-  padding: 0.5rem;
-  flex-shrink: 1;
-  flex-grow: 1;
-}
-
-.post-img {
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
-  flex-shrink: 0;
-  flex-grow: 0;
-}
-
-.post-img img {
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 120%;
-  max-height: 120%;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.toot-stats {
-  display: flex;
-  flex-direction: row;
-  margin-left: 1rem;
-}
-
-.toot-stats span {
-  margin: 0 0.5rem;
-}
-
-.dark {
-  background-color: #282c38;
-  color: white;
-}
-
-.dark .avatar {
-  color: white;
-}
-</style>
 
 <div class:list={["container", variant || null]}>
   {
     !toot ? (
       <p>Post not found.</p>
     ) : (
-      <div class="bg-blue-200 rounded-lg flex flex-row justify-between border-4 border-blue-400">
+      <div class="bg-blue-100 rounded-lg flex flex-row justify-between border-4 border-blue-300">
         <div class=" p-2 flex flex-col justify-center">
           <Markup content={toot.content} />
           {toot.media_attachments.length === 0 ? null : (
@@ -121,24 +61,24 @@ try {
           </a>
 
           <div class="p-2 rounded-lg flex flex-row align-middle justify-center items-center space-x-4">
-            <span>
-              <span><Icon icon="reply-fill" /></span>
-              {toot.replies_count}
-            </span>
-            <span>
+            <div class="flex flex-row items-center justify-center align-middle space-x-2">
+              <Icon icon="reply-fill" />
+              <span>{toot.replies_count}</span>
+            </div>
+            <div class="flex flex-row items-center justify-center align-middle space-x-2">
               <Icon icon="repeat" />
-              {toot.reblogs_count}
-            </span>
-            <span>
+              <span>{toot.reblogs_count}</span>
+            </div>
+            <div class="flex flex-row items-center justify-center align-middle space-x-2">
               <Icon icon="star-fill" />
-              {toot.favourites_count}
-            </span>
+              <span>{toot.favourites_count}</span>
+            </div>
           </div>
         </div>
       </div>
-      <div class="text-right">
+      <div class="text-right py-2">
         <a class="link" href={toot.url} target="_blank">
-          View Post on Mastodon
+          View Post & Replies on Mastodon
         </a>
       </div>
     )
