@@ -1,0 +1,47 @@
+---
+layout: ../layouts/Page.astro
+title: Subscribe
+---
+
+import EmailCheckbox from "../components/EmailCheckbox.astro";
+
+<div class="mx-auto">
+<form
+  action="
+    https://buttondown.email/api/emails/
+  "
+  method="post"
+  target="popupwindow"
+  class="embeddable-buttondown-form"
+>
+  <h2 class="text-center mt-0">Casey's Mailing List 👋🏻</h2>
+  <div class="text-center">I email about <b>once per month.</b></div>
+
+<div class="text-center">Only get emails you want.</div>
+<div>Events</div>
+<div class="grid md:grid-cols-2">
+  <EmailCheckbox tagName="🏛️ Local Events" description="DC, MD, VA area things" />
+  <EmailCheckbox tagName="🎥 Online Events" description="DC, MD, VA area things" />
+</div>
+<div>Topics</div>
+<div class="grid md:grid-cols-2">
+  <EmailCheckbox tagName="💻 Programming" description="javascript, coding, etc" />
+  <EmailCheckbox tagName="💡 Tips" description="gmail tricks, etc" />
+  <EmailCheckbox tagName="🧠 Psychology" description="burnout, validation etc" />
+  <EmailCheckbox tagName="🌎 Community" description="volunteers, co-ownership, inclusion" />
+</div>
+
+<div class="mx-auto p-6">
+  <span class="flex justify-center items-center space-x-4">
+    <label for="email">Email</label>
+    <input class="hover:shadow-inner border-2 border-slate-300 hover:border-slate-400" type="email" name="email" placeholder="you@gmail.com" autofocus />
+    <input class="bg-violet-300 shadow-lg hover:shadow-md border border-violet-400 hover:border-violet-600 p-2 rounded-lg" type="submit" value="Subscribe" />
+  </span>
+</div>
+
+<div class="text-right text-slate-500">
+  Powered by <a href="https://buttondown.email" target="_blank">Buttondown</a>
+</div>
+<input type="hidden" value="1" name="embed" />
+</form>
+</div>

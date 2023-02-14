@@ -1,0 +1,11 @@
+---
+const { tagName, description } = Astro.props;
+---
+
+<label class=" bg-blue-200 shadow-md hover:shadow-sm border border-blue-400 hover:border-blue-600 hover:cursor-pointer p-4 m-2" for={tagName}>
+  <div class="flex flex-row align-middle justify-between items-center">
+      <span class="text-xl">{tagName}</span>
+      <input type="checkbox" id={tagName} name="tag" value={tagName} checked />
+  </div>
+  <span class="text-slate-600">{description}</span>
+</label>
