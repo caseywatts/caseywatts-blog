@@ -35,8 +35,8 @@ try {
     !toot ? (
       <p>Post not found.</p>
     ) : (
-      <div class="bg-blue-100 rounded-lg flex flex-row justify-between border-4 border-blue-300">
-        <div class=" p-2 flex flex-col justify-center">
+      <div class="bg-blue-100 rounded-lg flex flex-col md:flex-row justify-between border-4 border-blue-300 p-4">
+        <div class="flex flex-col justify-center">
           <Markup content={toot.content} />
           {toot.media_attachments.length === 0 ? null : (
             <div class="bg-violet-100 p-2">
@@ -47,8 +47,8 @@ try {
               </div>
               )}
         </div>
-        <div class="flex flex-col justify-around align-middle items-center">
-          <a href={toot.account.url} target="_blank" class="p-3 flex flex-row rounded-lg space-x-3">
+        <div class="flex flex-col align-middle items-center">
+          <div class="flex flex-row space-x-3">
             <img
               src={toot.account.avatar}
               alt={`${toot.account.username}'s avatar`}
@@ -58,9 +58,9 @@ try {
               <div>{`@${toot.account.username}`}</div>
               <div class="text-sm">{`@${userUrl}`}</div>
             </div>
-          </a>
+          </div>
 
-          <div class="p-2 rounded-lg flex flex-row align-middle justify-center items-center space-x-4">
+          <div class="flex flex-row align-middle justify-center items-center space-x-4">
             <div class="flex flex-row items-center justify-center align-middle space-x-2">
               <Icon icon="reply-fill" />
               <span>{toot.replies_count}</span>
