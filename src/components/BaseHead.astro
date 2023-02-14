@@ -12,6 +12,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <link rel="icon" href="/favicon.png" />
 <meta name="generator" content={Astro.generator} />
 
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"></noscript>
+
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
