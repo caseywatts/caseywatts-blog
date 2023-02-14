@@ -3,10 +3,11 @@ import type { CollectionEntry } from 'astro:content';
 import OuterLayout from '../layouts/OuterLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Bio from '../components/Bio.astro';
+import MastodonEmbed from '../components/MastodonEmbed.astro'
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, tagline, description, pubDate, updatedDate, heroImage, emoji } = Astro.props;
+const { title, tagline, pubDate, updatedDate, heroImage, emoji, mastodonURL } = Astro.props;
 ---
 
 <title slot="head">{emoji + " " + title}</title>
@@ -44,6 +45,16 @@ const { title, tagline, description, pubDate, updatedDate, heroImage, emoji } = 
 			<slot />
 		</article>
 	</div>
+
+	{
+		mastodonURL && (
+		<div class="panel">
+			<h2 class="text-3xl text-center">Online Buzz & Comments</h2>
+			<MastodonEmbed url={mastodonURL} />
+		</div>
+		)
+	}
+
 	<div class="panel">
 		<Bio />
 	</div>

@@ -17,7 +17,8 @@ const blog = defineCollection({
 			.transform((str) => (str ? new Date(str) : undefined)),
 		heroImage: z.string().optional(),
 		tags: z.string().array().optional(),
-		emoji: z.string().optional()
+		emoji: z.string().optional(),
+		mastodonURL: z.string().optional()
 	}),
 });
 

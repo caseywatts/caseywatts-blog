@@ -1,0 +1,172 @@
+---
+import { Markup } from "astro-remote";
+// import "./src/styles.css";
+
+import Icon from "./icons/Icon.astro";
+
+interface Props {
+  url: String;
+  variant?: String;
+}
+
+const { url, variant } = Astro.props;
+
+const instance = new URL(url).hostname;
+const splitPathname = url.split("/");
+const tootId = splitPathname[splitPathname.length - 1];
+
+let toot;
+let userUrl;
+
+try {
+  const res = await fetch(`https://${instance}/api/v1/statuses/${tootId}`);
+  console.log(res);
+  toot = (await res.json()) || [];
+  userUrl = new URL(toot?.account?.url)?.hostname;
+} catch (err) {
+  toot = null;
+  console.log(err);
+}
+---
+
+<style>
+a {
+  color: #8c8dff;
+  text-decoration: none;
+}
+
+.container {
+  /* font-family: "Roboto", sans-serif; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 6px;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 90px;
+  margin: 1rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  color: black;
+}
+
+.avatar img {
+  width: 60px;
+  border-radius: 100px;
+}
+
+.avatar span {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.post-body {
+  padding: 0.5rem;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.post-img {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.post-img img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 120%;
+  max-height: 120%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.toot-stats {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+}
+
+.toot-stats span {
+  margin: 0 0.5rem;
+}
+
+.dark {
+  background-color: #282c38;
+  color: white;
+}
+
+.dark .avatar {
+  color: white;
+}
+</style>
+
+<div class:list={["container", variant || null]}>
+  {
+    !toot ? (
+      <p>Post not found.</p>
+    ) : (
+      <>
+        <div class="content">
+          <a href={toot.account.url} target="_blank" class="avatar">
+            <img
+              src={toot.account.avatar}
+              alt={`${toot.account.username}'s avatar`}
+            />
+            {`@${toot.account.username}`}
+            <br />
+            <span>{`@${userUrl}`}</span>
+          </a>
+          <div class="post-body">
+            <Markup content={toot.content} />
+          </div>
+          {toot.media_attachments.length === 0 ? null : (
+            <div class="post-img">
+              <img
+                src={toot.media_attachments[0].url}
+                alt={toot.media_attachments[0].description}
+              />
+            </div>
+          )}
+        </div>
+        <div class="footer">
+          <div class="toot-stats">
+            <span>
+              <Icon icon="reply-fill" />
+              {toot.replies_count}
+            </span>
+            <span>
+              <Icon icon="repeat" /> {toot.reblogs_count}
+            </span>
+            <span>
+              <Icon icon="star-fill" />
+              {toot.favourites_count}
+            </span>
+          </div>
+          <a href={toot.url} target="_blank">
+            View Post on Mastodon
+          </a>
+        </div>
+      </>
+    )
+  }
+</div>
