@@ -30,6 +30,10 @@ body {
 	@apply transition ease-in-out duration-500;
 }
 
+.link {
+	@apply text-blue-500 visited:text-violet-500 underline;
+}
+
 /* body {
 	font-family: Verdana, sans-serif;
 	margin: auto;
