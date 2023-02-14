@@ -10,7 +10,8 @@
 
 
 code, pre {
-	background-color: silver;
+	@apply bg-blue-100;
+	border: 1px solid #ddd;
 	padding: 4px;
 	font-weight: normal;
 }
