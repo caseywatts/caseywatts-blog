@@ -22,6 +22,17 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   posthog.init('phc_HfacQxmwigxMxMYoWhEdgxFYQ6oqH6mdCF6zge3Gy5T',{api_host:'https://app.posthog.com'})
 </script>
 
+<script>
+  import { inject } from '@vercel/analytics';
+
+  // import some helper that is exposed by your current framework to determine the right mode manually
+  const dev = import.meta.env.MODE;
+
+  inject({
+    mode: dev ? 'development' : 'production',
+  });
+</script>
+
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
