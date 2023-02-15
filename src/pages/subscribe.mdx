@@ -6,12 +6,6 @@ import EmailCheckbox from "../components/EmailCheckbox.astro";
 import OuterLayout from "../layouts/OuterLayout.astro";
 
 <OuterLayout>
-  <div class="panel text-center">
-    <h2 class="text-2xl mb-5">📜 Subscribe via RSS</h2>
-    <div class="mb-2">
-      <code class="text-center p-2">https://caseywatts.com/rss.xml</code>
-    </div>
-  </div>
 	<div class="panel">
     <div class="mx-auto">
     <form
@@ -51,7 +45,7 @@ import OuterLayout from "../layouts/OuterLayout.astro";
     <div class="text-right text-slate-500">
       Powered by <a href="https://buttondown.email" target="_blank">Buttondown</a>
     </div>
-    <hr />
+    <hr class="my-4" />
     <div class="text-slate-500">
       Maybe later you want to <b>update</b> your subscription categories? Come back to this page and re-subscribe to update them. <a href="https://github.com/buttondown-email/roadmap/issues/1168">Details.</a>
     </div>
@@ -60,4 +54,13 @@ import OuterLayout from "../layouts/OuterLayout.astro";
     </div>
 
   </div>
+
+<div class="panel text-center space-y-6">
+  <h2 class="text-2xl">📜 Subscribe via RSS</h2>
+  <div class="text-center">blog posts only</div>
+  <div class="mb-4">
+    <code class="text-center p-2">https://caseywatts.com/rss.xml</code>
+  </div>
+</div>
+
 </OuterLayout>

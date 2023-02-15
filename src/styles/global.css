@@ -10,6 +10,10 @@ body {
 	@apply text-blue-500 visited:text-violet-500 underline;
 }
 
+.button-link {
+	@apply m-4 bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200 text-center rounded-full p-4 items-center flex justify-center shadow-md hover:shadow-sm
+}
+
 
 /* components */
 

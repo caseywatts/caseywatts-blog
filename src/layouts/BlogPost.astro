@@ -4,6 +4,7 @@ import OuterLayout from '../layouts/OuterLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Bio from '../components/Bio.astro';
 import MastodonEmbed from '../components/MastodonEmbed.astro'
+import SuggestToSubscribe from '../components/SuggestToSubscribe.astro'
 import defaultImage from "../assets/headshot-2.jpg";
 
 
@@ -57,6 +58,11 @@ const { title, tagline, pubDate, updatedDate, heroImage, emoji, mastodonURL } = 
 		</div>
 		)
 	}
+
+<div class="panel">
+	<SuggestToSubscribe />
+</div>
+
 
 	<div class="panel">
 		<Bio />
