@@ -28,7 +28,6 @@ body {
 	@apply transition ease-in-out duration-500;
 }
 
-
 /* checkbox lists */
 
 .prose input[type="checkbox"] {
