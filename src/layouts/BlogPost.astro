@@ -59,3 +59,9 @@ const { title, tagline, pubDate, updatedDate, heroImage, emoji, mastodonURL } = 
 		<Bio />
 	</div>
 </OuterLayout>
+
+<script is:inline>
+	// allow checkboxes on blog posts
+	// I'd rather do this in a [rehype plugin](https://github.com/remarkjs/remark-gfm/issues/41), but this works for now
+	document.querySelectorAll("input[type=checkbox]").forEach((node) => node.disabled = false)
+</script>
