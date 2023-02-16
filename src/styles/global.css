@@ -1,17 +1,26 @@
 /* general setup */
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
 body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	/* font-family: 'Quicksand', sans-serif; */
 }
 
+.link-color {
+	@apply text-blue-500 visited:text-violet-500;
+}
+
 .link {
-	@apply text-blue-500 visited:text-violet-500 underline;
+	@apply link-color underline;
 }
 
 .prose a {
-	@apply text-blue-500 visited:text-violet-500 underline;
+	@apply link-color underline;
 }
 
 .button-link {
