@@ -3,25 +3,37 @@ import headshot from "../assets/headshot-2.jpg";
 ---
 
 <div class="">
-  <div class="bg-gray-100 my-0 md:my-4 p-4 md:p-5 rounded-lg flex flex-wrap justify-around">
+  <div class="bg-gray-100 rounded-lg flex flex-wrap justify-around">
     <div class="flex justify-around">
-      <div class="flex-shrink flex flex-wrap items-center justify-center">
+      <div class="flex-shrink flex flex-wrap items-center justify-center align-middle">
         <img src={headshot} height="150px" width="150px" class="rounded-full ring-8 ring-violet-500 m-4" alt="Casey's headshot" />
-        <div class="m-1 md:m-2">
+        <div class="m-1 md:m-2 space-y-6">
           <h2 class="text-violet-500 text-5xl text-center">Hi, I'm Casey!</h2>
-          <p class="mt-2 prose prose-indigo text-center">
+          <p class="prose prose-indigo text-center">
             I'm all about helping people be<br />
             <a href="https://www.happyandeffective.com">happy and effective.</a>
           </p>
         </div>
       </div>
     </div>
-    <div class="flex-grow flex flex-col justify-center">
-      <p class="prose prose-indigo mx-auto m-4">Casey has dual backgrounds in <b>psychology</b> and <b>software development</b>. He is the author of <a href="https://www.debuggingyourbrain.com">Debugging Your Brain</a>, an applied psychology and self-help book. He has worked in tech for 10+ years in many roles: Product Manager, Engineering Manager, and UX Developer.</p>
-      <p class="prose prose-indigo mx-auto m-4">
-        Want your team to be the happiest, most effective team around? Casey is uniquely capable of helping transform the culture of your tech team. Your company deserves Casey's support:
-        <a href="/keynotes">keynote presentations</a>, <a href="/workshops">workshops</a>, and coaching.
-      </p>
-    </div>
+  </div>
+  <div class="flex flex-col">
+    <p class="prose mx-auto p-2 md:p-6">
+      You might know me from my:
+      <a
+        class=""
+        href="https://www.youtube.com/watch?v=nj3IoW_rboE&amp;list=PLsGBNq2i4TkLJUc2p5-p1T2LATcuP-Kx1"
+        >talks at tech conferences</a
+      >, or
+      <a class="" href="https://www.debuggingyourbrain.com"
+        >book Debugging Your Brain</a
+      >, or <a class="bubble-link" href="/blog">blog posts</a>,
+      or
+      <a
+        class="bubble-link"
+        href="https://www.greaterthancode.com/hosts/casey-watts"
+        >co-hosting the Greater Than Code podcast</a
+      >, or <a class="bubble-link" href="/bubbles">blowing bubbles</a>.
+    </p>
   </div>
 </div>

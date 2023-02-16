@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import OuterLayout from '../layouts/OuterLayout.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Bio from '../components/Bio.astro';
+import CaseyFacts from '../components/CaseyFacts.svelte';
 import MastodonEmbed from '../components/MastodonEmbed.astro'
 import SuggestToSubscribe from '../components/SuggestToSubscribe.astro'
 import defaultImage from "../assets/headshot-2.jpg";
@@ -87,6 +88,9 @@ const titleWithTagline = titleWithEmoji + " - " + tagline;
 
 	<div class="panel">
 		<Bio />
+	</div>
+	<div class="panel">
+		<CaseyFacts />
 	</div>
 </OuterLayout>
 
