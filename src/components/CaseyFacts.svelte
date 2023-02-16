@@ -13,8 +13,6 @@
   $: currentFact = randomCaseyFact();
 
   function newCaseyFact() {
-    console.log("lol");
-    console.log(randomCaseyFact());
     currentFact = randomCaseyFact();
   }
 </script>
@@ -26,6 +24,6 @@
   </div>
   <div class="text-center italic">refresh the page for another</div>
 </div>
-<!-- <div>
-  <a class="button-link" href="#" on:click={newCaseyFact} on:keyup={newCaseyFact}>get a new fact</a>
-</div> -->
+<div>
+  <div class="button-link" on:click={newCaseyFact} on:keyup={newCaseyFact}>get a new fact</div>
+</div>
