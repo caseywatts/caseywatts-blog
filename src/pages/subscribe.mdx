@@ -34,8 +34,8 @@ import OuterLayout from "../layouts/OuterLayout.astro";
       <EmailCheckbox tagName="🌎 Community" description="volunteers, co-ownership, inclusion" />
     </div>
 
-    <div class="mx-auto py-8">
-      <span class="flex justify-center items-center space-x-4">
+    <div class="mx-auto pb-8 pt-3 md:pt-8">
+      <span class="flex flex-col md:flex-row justify-center items-center md:space-x-4 space-y-3 md:space-y-0">
         <label for="email">Email</label>
         <input class="bg-white hover:shadow-inner border-2 border-slate-300 hover:border-slate-400 w-64" type="email" name="email" placeholder="my.name@example.com" autofocus />
         <input class="bg-gradient-to-tr from-blue-100 via-blue-200 to-blue-100 shadow-lg hover:shadow-md border border-violet-400 hover:border-violet-600 p-2 rounded-lg" type="submit" value="Subscribe" />
@@ -47,7 +47,7 @@ import OuterLayout from "../layouts/OuterLayout.astro";
     </div>
     <hr class="my-4" />
     <div class="text-slate-500">
-      Maybe later you want to <b>update</b> your subscription categories? Come back to this page and re-subscribe to update them. <a href="https://github.com/buttondown-email/roadmap/issues/1168">Details.</a>
+      Maybe later you'll want to <b>update</b> your subscription categories -- come back to this page and re-subscribe to update them. <a href="https://github.com/buttondown-email/roadmap/issues/1168">Details.</a>
     </div>
     <input type="hidden" value="1" name="embed" />
     </form>
