@@ -10,12 +10,12 @@ import defaultImage from "../assets/headshot-2.jpg";
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, tagline, pubDate, updatedDate, heroImage, emoji, mastodonURL } = Astro.props;
+const { title, tagline, description, pubDate, updatedDate, heroImage, emoji, mastodonURL } = Astro.props;
 ---
 
 <title slot="head">{emoji + " " + title}</title>
 <meta slot="head" name="title" content={emoji + " " + title} />
-<meta slot="head" name="description" content={title + " - " + tagline} />
+<meta slot="head" name="description" content={description || title + " - " + tagline} />
 <meta slot="head" name="og:image" content={heroImage || defaultImage} />
 
 <OuterLayout>
