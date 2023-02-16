@@ -23,6 +23,11 @@ ${url}`
 
 const tootLink = `https://social.coop/share?text=${tootContent}`
 const tweetLink = `https://twitter.com/intent/tweet?text=${tootContent}`
+
+const linkedinContent = 
+`✨ Blog Post ✨ (link in comments)
+${emoji} ${title}
+${tagline}`
 ---
 
 
@@ -32,5 +37,11 @@ const tweetLink = `https://twitter.com/intent/tweet?text=${tootContent}`
     <pre class="bg-slate-50 p-4">{decodeURI(tootContent)}</pre>
     <a class="button-link" href={tootLink}>Toot</a>
     <a class="button-link" href={tweetLink}>Tweet</a>
+  </div>
+  <div class="block panel hover:bg-blue-100">
+    <div class="mb-4 text-2xl">Post to Linkednn</div>
+    <pre class="bg-slate-50 p-4">{decodeURI(linkedinContent)}</pre>
+    <pre class="bg-slate-50 p-4">{url}</pre>
+    <a class="button-link" href="https://www.linkedin.com/feed/">Linkednn Post</a>
   </div>
 </OuterLayout>
