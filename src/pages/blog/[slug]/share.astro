@@ -1,0 +1,34 @@
+---
+import OuterLayout from '../../../layouts/OuterLayout.astro';
+import { CollectionEntry, getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'blog'>;
+
+const post = Astro.props;
+const { title, tagline, emoji } = post.data;
+const url = Astro.site.origin + `/blog/${post.slug}/`;
+
+const tootContent = 
+`✨ Blog Post ✨%0A%0A
+${emoji} ${title}%0A
+${tagline}%0A%0A
+${url}`
+
+const tootLink = `https://social.coop/share?text=${tootContent}`
+---
+
+
+<OuterLayout>
+  <div class="block panel hover:bg-blue-100">
+    <div class="mb-4 text-2xl">Post to Mastodon</div>
+    <pre class="bg-slate-50 p-4">{decodeURI(tootContent)}</pre>
+    <a class="button-link" href={tootLink}>Toot</a>
+  </div>
+</OuterLayout>
