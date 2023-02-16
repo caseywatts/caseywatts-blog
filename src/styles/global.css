@@ -11,6 +11,10 @@ body {
 	/* font-family: 'Quicksand', sans-serif; */
 }
 
+.all-small-caps {
+	font-variant-caps: all-small-caps;
+}
+
 .link-color {
 	@apply text-blue-500 visited:text-violet-500;
 }

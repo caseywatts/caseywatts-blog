@@ -72,7 +72,8 @@ export const REDIRECTS = {
   "2018/12/16/debugging-your-brain-2": "debugging-your-brain-2",
   "2019/12/28/debugging-your-brain-3": "debugging-your-brain-3",
   "2019/12/28/debugging-your-brain-4": "debugging-your-brain-4",
-  "2020/03/19/debugging-your-brain-5": "debugging-your-brain-d",
+  "2020/03/19/debugging-your-brain-5": "debugging-your-brain-5",
+  "subscribe": "newsletter"
 }
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);
 

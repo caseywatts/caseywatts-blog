@@ -11,10 +11,17 @@ const posts = (await getCollection('blog')).sort(
 <OuterLayout>
 	<section>
 		<div class="panel">
-			<h2 class="text-3xl text-center mb-3">Blog Posts</h2>
-			<p class="text-center mt-0">
-				<a class="link" href="/rss.xml">Subscribe via RSS</a>
-			</p>
+			<h2 class="text-3xl text-center mb-6">Blog Posts</h2>
+			<div class="flex justify-around text-lg">
+				<div class="text-center space-y-0">
+					<div class="text-lg">Subscribe by RSS</div>
+					<code class="inline-block text-sm md:text-md text-center p-2">https://caseywatts.com/rss.xml</code>
+				</div>
+				<div class="text-center space-y-0">
+					<div>Subscribe by Email</div>
+					<div><a class="link text-lg" href="/subscribe">Newsletter</a></div>
+				</div>		
+			</div>
 		</div>
 		<ul>
 			{
