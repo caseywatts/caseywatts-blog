@@ -28,7 +28,10 @@ const titleWithTagline = titleWithEmoji + " - " + tagline;
 		}
 	}}
 	twitter={{
-		creator: "@heycaseywattsup"
+		creator: "@heycaseywattsup",
+		image: (heroImage || defaultImage),
+		title: titleWithEmoji,
+		description: (description || titleWithTagline)
 	}}
 />
 

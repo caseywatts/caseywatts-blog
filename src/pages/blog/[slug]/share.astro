@@ -22,13 +22,15 @@ ${tagline}%0A%0A
 ${url}`
 
 const tootLink = `https://social.coop/share?text=${tootContent}`
+const tweetLink = `https://twitter.com/intent/tweet?text=${tootContent}`
 ---
 
 
 <OuterLayout>
   <div class="block panel hover:bg-blue-100">
-    <div class="mb-4 text-2xl">Post to Mastodon</div>
+    <div class="mb-4 text-2xl">Post to Mastodon/Twitter</div>
     <pre class="bg-slate-50 p-4">{decodeURI(tootContent)}</pre>
     <a class="button-link" href={tootLink}>Toot</a>
+    <a class="button-link" href={tweetLink}>Tweet</a>
   </div>
 </OuterLayout>
