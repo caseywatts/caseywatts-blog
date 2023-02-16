@@ -35,13 +35,17 @@ ${tagline}`
   <div class="block panel hover:bg-blue-100">
     <div class="mb-4 text-2xl">Post to Mastodon/Twitter</div>
     <pre class="bg-slate-50 p-4">{decodeURI(tootContent)}</pre>
-    <a class="button-link" href={tootLink}>Toot</a>
-    <a class="button-link" href={tweetLink}>Tweet</a>
+    <div class="flex justify-end">
+      <a class="button-link" href={tootLink}>Toot</a>
+      <a class="button-link" href={tweetLink}>Tweet</a>
+    </div>
   </div>
   <div class="block panel hover:bg-blue-100">
     <div class="mb-4 text-2xl">Post to Linkedin</div>
     <pre class="bg-slate-50 p-4">{decodeURI(linkedinContent)}</pre>
     <pre class="bg-slate-50 p-4">{url}</pre>
-    <a class="button-link" href="https://www.linkedin.com/feed/">Linkedin Post</a>
+    <div class="flex justify-end">
+      <a class="button-link" href="https://www.linkedin.com/feed/">Linkedin Post</a>
+    </div>
   </div>
 </OuterLayout>

@@ -22,8 +22,7 @@
   <div id="casey-fact" class="text-center text-lg bg-violet-200 p-8">
     {currentFact}
   </div>
-  <div class="text-center italic">refresh the page for another</div>
 </div>
-<div>
-  <div class="button-link" on:click={newCaseyFact} on:keyup={newCaseyFact}>get a new fact</div>
+<div class="text-center">
+  <div class="button-link inline-block" on:click={newCaseyFact} on:keyup={newCaseyFact}>🔄 new fact</div>
 </div>
