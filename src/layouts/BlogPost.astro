@@ -6,16 +6,34 @@ import Bio from '../components/Bio.astro';
 import MastodonEmbed from '../components/MastodonEmbed.astro'
 import SuggestToSubscribe from '../components/SuggestToSubscribe.astro'
 import defaultImage from "../assets/headshot-2.jpg";
-
+import { SEO } from "astro-seo";
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, tagline, description, pubDate, updatedDate, heroImage, emoji, mastodonURL } = Astro.props;
+const titleWithEmoji = emoji + " " + title;
+const titleWithTagline = titleWithEmoji + " - " + tagline;
 ---
 
-<title slot="head">{emoji + " " + title}</title>
-<meta slot="head" name="title" content={emoji + " " + title} />
-<meta slot="head" name="description" content={description || title + " - " + tagline} />
+<title slot="head">{titleWithEmoji}</title>
+<SEO
+  slot="head"
+  title={titleWithEmoji}
+	description={description || titleWithTagline}
+	openGraph={{
+		basic: {
+			title: titleWithEmoji,
+			image: (heroImage || defaultImage),
+			type: "website"
+		}
+	}}
+	twitter={{
+		creator: "@heycaseywattsup"
+	}}
+/>
+
+<!-- <meta slot="head" name="title" content={emoji + " " + title} /> -->
+<!-- <meta slot="head" name="description" content={description || title + " - " + tagline} /> -->
 <meta slot="head" name="og:image" content={heroImage || defaultImage} />
 
 <OuterLayout>
