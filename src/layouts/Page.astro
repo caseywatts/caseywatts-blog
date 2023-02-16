@@ -1,7 +1,7 @@
 ---
 import OuterLayout from '../layouts/OuterLayout.astro';
 
-const { title, description } = Astro.props;
+const { title, description } = Astro.props.frontmatter || Astro.props;
 ---
 
 <title slot="head">{title}</title>
