@@ -11,7 +11,7 @@ export async function get(context) {
     description: SITE_DESCRIPTION,
     site: context.site,
     items: sortedPosts.map((post) => {
-      const description = post.description || `${post.data.emoji} ${post.data.title} ${post.data.tagline}`;
+      const description = post.data.description || `${post.data.emoji} ${post.data.title} ${post.data.tagline}`;
       return {
         ...post.data,
         description,
