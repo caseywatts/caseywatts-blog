@@ -75,3 +75,17 @@ export const REDIRECTS = {
   "2020/03/19/debugging-your-brain-5": "debugging-your-brain-d",
 }
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);
+
+export const CASEY_FACTS = [
+  "💔 I can play Bad Romance on 15+ instruments",
+  "🌈 I own an instrument in every color.",
+  "💜 I used to work for Heroku, as an engineering manager and frontend developer.",
+  "🔨 I used to work at Yale, leading a team of 300 students who repaired laptops, PCs, media equipment, and did software development.",
+  "🛫 When I was 16 I learned how to fly a plane. I even soloed!",
+  "🚗 I didn't learn to drive until I was 23. I didn't need it in cities!",
+  "🏛️ I used to work for the US Government, working on Asylum/Immigration as a Product Manager.",
+  "🧑🏻‍🏫 I used to teach software development full-time, through the Yale Entrepreneurial Institute.",
+  "🎨 I designed this whole website myself! Using Astro and Tailwind.",
+  "🫡 I was in a pre-military program as a teen. They called me Major Watts (literally!)",
+  "📘 I wrote a book! Debugging Your Brain bring together my backgrounds in psychology and software development."
+]

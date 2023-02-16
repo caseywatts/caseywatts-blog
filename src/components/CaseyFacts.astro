@@ -1,0 +1,35 @@
+---
+import { CASEY_FACTS } from "../consts";
+
+Array.prototype.random = function () { // I can't believe this isn't built in! lol
+  return this[Math.floor((Math.random()*this.length))];
+}
+
+const randomCaseyFact = function() {
+  return CASEY_FACTS.random()
+}
+---
+
+<script is:inline define:vars={{ CASEY_FACTS }}>
+  Array.prototype.random = function () { // I can't believe this isn't built in! lol
+    return this[Math.floor((Math.random()*this.length))];
+  }
+  const randomCaseyFact = function() {
+    return CASEY_FACTS.random()
+  }
+  const newCaseyFact = function() {
+    document.getElementById('casey-fact').innerHTML = randomCaseyFact();
+  }
+</script>
+
+<div class="text-center text-2xl mb-4">Random Casey Facts</div>
+<div id="casey-fact" class="text-center text-lg">
+  { randomCaseyFact() }
+</div>
+<div>
+  <a id="generate-casey-fact" class="button-link" onclick="newCaseyFact()">get a new fact</a>
+</div>
+
+<script></script>
+  document.getElementById('generate-casey-fact').addEventListener("click", newCaseyFact)
+</script>
