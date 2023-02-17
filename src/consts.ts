@@ -94,8 +94,10 @@ export const CASEY_FACTS = [
   "😈 Once I was part of a Waluigi mob - 10 of us running around a convention going WAH!",
   "🦀 I grew up in Baltimore, Maryland - home of crabs.",
   "🎮 I've played over 100 games! I can't even name them all.",
-  "💃🏻 I dance! Lindy, swing, blues, contradance, two-step, line dance. I teach these, too!",
+  "💃🏻 I dance! Lindy, swing, blues, contradance, two-step, line dance. I teach these, too.",
   "🎤 Once I came in first place in a competitive Karaoke League.",
   '🦈 Won "best of show" award for rickrolling the audience with Baby Shark on accordion.',
-  "📱 I've had one TikTok go viral - a 3d animation, put to music, with a pun."
+  "📱 I've had one TikTok go viral - a 3d animation, put to music, with a pun.",
+  "🌎 I've been to 5/7 continents - Australia is on my list, but Antarctica is not.",
+  "🫧 I host bubble parties at parks! I own multiple crates of bubble-blowing equipment.",
 ]
