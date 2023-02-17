@@ -79,7 +79,7 @@ export const REDIRECT_FROMS = Object.keys(REDIRECTS);
 
 export const CASEY_FACTS = [
   "💔 I can play Bad Romance on 15+ instruments",
-  "🌈 I own an instrument in every color.",
+  "🌈 I own (and can play) an instrument in every color.",
   "💜 I used to work for Heroku, as an engineering manager and frontend developer.",
   "🔨 I used to work at Yale, leading a team of 300 students who repaired laptops, PCs, media equipment, and did software development.",
   "🛫 When I was 16 I learned how to fly a plane. I even soloed!",
@@ -88,5 +88,14 @@ export const CASEY_FACTS = [
   "🧑🏻‍🏫 I used to teach software development full-time, through the Yale Entrepreneurial Institute.",
   "🎨 I designed this whole website myself! Using Astro and Tailwind.",
   "🫡 I was in a pre-military program as a teen. They called me Major Watts (literally!)",
-  "📘 I wrote a book! Debugging Your Brain bring together my backgrounds in psychology and software development."
+  "📘 I wrote a book! Debugging Your Brain bring together my backgrounds in psychology and software development.",
+  "🎺 I'm in a queer marching band in DC. We march at every pride parade on the east coast!",
+  "🪗 I play accordion for a musical improv group - we make improvised musicals!",
+  "😈 Once I was part of a Waluigi mob - 10 of us running around a convention going WAH!",
+  "🦀 I grew up in Baltimore, Maryland - home of crabs.",
+  "🎮 I've played over 100 games! I can't even name them all.",
+  "💃🏻 I dance! Lindy, swing, blues, contradance, two-step, line dance. I teach these, too!",
+  "🎤 Once I came in first place in a competitive Karaoke League.",
+  '🦈 Won "best of show" award for rickrolling the audience with Baby Shark on accordion.',
+  "📱 I've had one TikTok go viral - a 3d animation, put to music, with a pun."
 ]
