@@ -87,7 +87,7 @@ export const CASEY_FACTS = [
   "🏛️ I used to work for the US Government, working on Asylum/Immigration as a Product Manager.",
   "🧑🏻‍🏫 I used to teach software development full-time, through the Yale Entrepreneurial Institute.",
   "🎨 I designed this whole website myself! Using Astro and Tailwind.",
-  "🫡 I was in a pre-military program as a teen. They called me Major Watts (literally!)",
+  "🫡 They used to call me Major Watts. I was in a pre-military program as a teen (CAP, Air Force).",
   "📘 I wrote a book! Debugging Your Brain bring together my backgrounds in psychology and software development.",
   "🎺 I'm in a queer marching band in DC. We march at every pride parade on the east coast!",
   "🪗 I play accordion for a musical improv group - we make improvised musicals!",
