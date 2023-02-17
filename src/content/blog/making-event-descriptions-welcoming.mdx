@@ -6,6 +6,8 @@ pubDate: "2023-2-15"
 mastodonURL: "https://social.coop/@heycaseywattsup/109873236987662562"
 ---
 
+import CheckboxListItem from "../../components/CheckboxListItem.astro";
+
 _This article is targeted to event organizers, but attendees can help with this, too!_
 
 ## Lot of Questions to Answer!
@@ -14,30 +16,78 @@ When someone is considering coming to your event, they have a lot of questions! 
 
 Do a **self-check**: how many of these are covered in your last event description?
 
-- Title
-  - [ ] From the title alone, without context, would someone know what the event was? (I like: group name, event type, location.)
-- Group Ethos
-  - [ ] What is the purpose/values of this group?
-  - [ ] Who is this group for?
-  - [ ] Who runs the group? (is it [community-led or company led](https://www.happyandeffective.com/blog/community-groups-community-led-vs-company-led)?)
-  - [ ] Is it paid for by companies/sponsors etc?
-- Safety
-  - [ ] Covid details? (Ventilation, masks, etc)
-  - [ ] Code of Conduct?
-  - [ ] Clear reporting / enforcement process?
-- Event Details
-  - [ ] What will we do there?
-  - [ ] Does it cost money?
-- Getting There
-  - [ ] Parking? Free/paid?
-  - [ ] Public transit?
-- Getting In
-  - [ ] Once I'm there, how will I get into the building/room?
-  - [ ] How will I know when I'm in the right place?
-  - [ ] If I come late, how will I get in?
-- Getting Involved
-  - [ ] Can we talk with others somewhere outside of the event? (Slack/Discord?)
-  - [ ] Can people like me get involved organizing/volunteering? How?
+<div class="grid md:grid-cols-2 md:space-x-7">
+
+<div>
+
+### Group
+
+#### Group Ethos
+
+<ul>
+  <CheckboxListItem>What is the purpose/values of this group?</CheckboxListItem>
+  <CheckboxListItem>Who is this group for?</CheckboxListItem>
+  <CheckboxListItem>Who runs the group? (is it [community-led or company led](https://www.happyandeffective.com/blog/community-groups-community-led-vs-company-led) ?)</CheckboxListItem>
+  <CheckboxListItem>Is it paid for by companies/sponsors etc?</CheckboxListItem>
+</ul>
+
+#### Getting Involved
+
+<ul>
+  <CheckboxListItem>Can we also talk outside of the event? (Slack/Discord?)</CheckboxListItem>
+  <CheckboxListItem>Can people like me get involved organizing/volunteering? How?</CheckboxListItem>
+</ul>
+
+#### Safety
+
+<ul>
+  <CheckboxListItem>Code of Conduct?</CheckboxListItem>
+  <CheckboxListItem>Clear reporting / enforcement process?</CheckboxListItem>
+  <CheckboxListItem>Will I be the only person like me there? (experience, race, gender, sexuality)</CheckboxListItem>
+</ul>
+
+</div>
+
+<div>
+
+### Event
+
+#### Title
+
+<ul>
+  <CheckboxListItem>From the title alone, would someone know what the event is?</CheckboxListItem>
+</ul>
+
+#### Event Details
+
+<ul>
+  <CheckboxListItem>What will we do there?</CheckboxListItem>
+  <CheckboxListItem>Does it cost money?</CheckboxListItem>
+</ul>
+
+#### Safety
+
+<ul>
+  <CheckboxListItem>Covid details? (ventilation, masks)</CheckboxListItem>
+</ul>
+
+#### Getting There
+
+<ul>
+  <CheckboxListItem>Parking? Free/paid?</CheckboxListItem>
+  <CheckboxListItem>Public transit?</CheckboxListItem>
+</ul>
+
+#### Getting In
+
+<ul>
+  <CheckboxListItem>How will I know I'm in the right place? How will I get in?</CheckboxListItem>
+  <CheckboxListItem>If I come late, how will I get in?</CheckboxListItem>
+</ul>
+
+</div>
+
+</div>
 
 import CheckboxCounter from "../../components/CheckboxCounter.astro";
 
