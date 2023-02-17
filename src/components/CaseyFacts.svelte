@@ -24,5 +24,5 @@
   </div>
 </div>
 <div class="text-center">
-  <div class="button-link inline-block" on:click={newCaseyFact} on:keyup={newCaseyFact}>🔄 new fact</div>
+  <button class="button-link inline-block" on:click={newCaseyFact} on:keyup={newCaseyFact}>🔄 new fact</button>
 </div>
