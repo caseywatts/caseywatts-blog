@@ -1,8 +1,8 @@
 ---
 import { Markup } from "astro-remote";
-// import "./src/styles.css";
-
 import Icon from "./icons/Icon.astro";
+import Webmentions from "../components/Webmentions.svelte";
+
 
 interface Props {
   url: String;
@@ -30,7 +30,7 @@ try {
 ---
 
 
-<div class:list={["container", variant || null]}>
+<div class:list={["container mx-auto", variant || null]}>
   {
     !toot ? (
       <p>Post not found.</p>
@@ -83,4 +83,8 @@ try {
       </div>
     )
   }
+</div>
+
+<div class="text-center">
+  <Webmentions url={url} client:only="svelte"/>
 </div>

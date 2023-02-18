@@ -14,6 +14,7 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, tagline, description, pubDate, updatedDate, heroImage, emoji, mastodonURL } = Astro.props;
 const titleWithEmoji = emoji + " " + title;
 const titleWithTagline = titleWithEmoji + " - " + tagline;
+const url = `https://www.caseywatts.com${Astro.url.pathname}`;
 ---
 
 <title slot="head">{titleWithEmoji}</title>
