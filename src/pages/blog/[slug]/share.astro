@@ -1,6 +1,10 @@
 ---
 import OuterLayout from '../../../layouts/OuterLayout.astro';
 import { CollectionEntry, getCollection } from 'astro:content';
+import TwitterLarge from '../../../components/opengraph/TwitterLarge.svelte';
+import TwitterSmall from '../../../components/opengraph/TwitterSmall.svelte';
+import FacebookLarge from '../../../components/opengraph/FacebookLarge.svelte';
+import defaultImage from "../assets/headshot-2.jpg";
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -12,12 +16,15 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { title, tagline, emoji } = post.data;
+const { title, tagline, emoji, heroImage } = post.data;
+const titleWithEmoji = `${emoji} ${title}`;
 const url = Astro.site.origin + `/blog/${post.slug}/`;
+const description = post.data.description || `${emoji} ${title} ${tagline}`;
+const imageSrc = heroImage || defaultImage;
 
 const sharedContent =
 `✨ Blog Post ✨%0A%0A
-${emoji} ${title}%0A
+${titleWithEmoji}%0A
 ${tagline}%0A%0A`;
 
 const tootContent =
@@ -33,7 +40,7 @@ const tweetLink = `https://twitter.com/intent/tweet?text=${tweetContent}`
 
 const linkedinContent =
 `✨ Blog Post ✨ (link in comments)
-${emoji} ${title}
+${titleWithEmoji}
 ${tagline}`
 
 const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
@@ -44,7 +51,19 @@ const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
   <div class="block panel hover:bg-blue-100">
     <a class="button-link" target="_blank" href={`https://cards-dev.twitter.com/validator?ref=${url}`}>Twitter Card Validation</a>
   </div>
-  <div class="block panel hover:bg-blue-100"></div>
+  <div class="block panel hover:bg-blue-100 max-w-sm">
+    <h2 class="text-2xl mb-4">Twitter Preview Small</h2>
+    <TwitterSmall title={titleWithEmoji} description={description} url={url} imageSrc={imageSrc}/>
+  </div>
+  <div class="block panel hover:bg-blue-100 max-w-sm">
+    <h2 class="text-2xl mb-4">Twitter Preview Large</h2>
+    <TwitterLarge title={titleWithEmoji} description={description} imageSrc={imageSrc}/>
+  </div>
+  <div class="block panel hover:bg-blue-100 max-w-sm">
+    <h2 class="text-2xl mb-4">Facebook Preview Large</h2>
+    <FacebookLarge title={titleWithEmoji} description={description} url={url} imageSrc={imageSrc}/>
+  </div>
+
   <div class="block panel hover:bg-blue-100">
     <div class="mb-4 text-2xl">Post to Mastodon</div>
     <pre class="bg-slate-50 p-4">{decodeURI(tootContent)}</pre>
