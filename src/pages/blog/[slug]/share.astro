@@ -18,7 +18,7 @@ type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const { title, tagline, emoji, heroImage } = post.data;
 const titleWithEmoji = `${emoji} ${title}`;
-const url = Astro.url.host + `/blog/${post.slug}/`;
+const url = "www.caseywatts.com" + `/blog/${post.slug}/`;
 const description = post.data.description || `${emoji} ${title} ${tagline}`;
 const imageSrc = heroImage || defaultImage;
 
@@ -49,9 +49,9 @@ const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
 
 <OuterLayout>
   <div class="block panel">
-    <a class="button-link block" target="_blank" href={encodeURI(`https://developers.facebook.com/tools/debug/?q=${url}`)}>Facebook Sharing Debugger</a>
-    <a class="button-link block" target="_blank" href={encodeURI(`https://www.linkedin.com/post-inspector/inspect/${url}`)}>LinkedIn Post Inspector</a>
-    <a class="button-link block" target="_blank" href={encodeURI(`https://twitter.com/intent/tweet?text=${url}`)}>Twitter Card Preview</a>
+    <a class="button-link block" target="_blank" href={`https://developers.facebook.com/tools/debug/?q=${encodeURIComponent(url)}`}>Facebook Sharing Debugger</a>
+    <a class="button-link block" target="_blank" href={`https://www.linkedin.com/post-inspector/inspect/${encodeURIComponent(url)}`}>LinkedIn Post Inspector</a>
+    <a class="button-link block" target="_blank" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(url)}`}>Twitter Card Preview</a>
   </div>
   <div class="block panel max-w-sm">
     <h2 class="text-2xl mb-4">Twitter Preview Small</h2>
