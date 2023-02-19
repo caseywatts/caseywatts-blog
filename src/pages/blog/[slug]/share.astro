@@ -15,40 +15,56 @@ const post = Astro.props;
 const { title, tagline, emoji } = post.data;
 const url = Astro.site.origin + `/blog/${post.slug}/`;
 
-const tootContent = 
+const sharedContent =
 `✨ Blog Post ✨%0A%0A
 ${emoji} ${title}%0A
-${tagline}%0A%0A
-${url}`
+${tagline}%0A%0A`;
+
+const tootContent =
+`${sharedContent}
+${url}?utm_medium=social&utm_source=mastodon`
+
+const tweetContent =
+`${sharedContent}
+${url}?utm_medium=social&utm_source=twitter`
 
 const tootLink = `https://social.coop/share?text=${tootContent}`
-const tweetLink = `https://twitter.com/intent/tweet?text=${tootContent}`
+const tweetLink = `https://twitter.com/intent/tweet?text=${tweetContent}`
 
-const linkedinContent = 
+const linkedinContent =
 `✨ Blog Post ✨ (link in comments)
 ${emoji} ${title}
 ${tagline}`
+
+const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
 ---
 
 
 <OuterLayout>
   <div class="block panel hover:bg-blue-100">
-    <a class="button-link" href=`https://cards-dev.twitter.com/validator?ref=${url}`>Twitter Card Validation</a>
+    <a class="button-link" target="_blank" href={`https://cards-dev.twitter.com/validator?ref=${url}`}>Twitter Card Validation</a>
   </div>
+  <div class="block panel hover:bg-blue-100"></div>
   <div class="block panel hover:bg-blue-100">
-    <div class="mb-4 text-2xl">Post to Mastodon/Twitter</div>
+    <div class="mb-4 text-2xl">Post to Mastodon</div>
     <pre class="bg-slate-50 p-4">{decodeURI(tootContent)}</pre>
     <div class="flex justify-end">
-      <a class="button-link" href={tootLink}>Toot</a>
-      <a class="button-link" href={tweetLink}>Tweet</a>
+      <a class="button-link" target="_blank" href={tootLink}>Toot</a>
+    </div>
+  </div>
+  <div class="block panel hover:bg-blue-100">
+    <div class="mb-4 text-2xl">Post to Twitter</div>
+    <pre class="bg-slate-50 p-4">{decodeURI(tweetContent)}</pre>
+    <div class="flex justify-end">
+      <a class="button-link" target="_blank" href={tweetLink}>Tweet</a>
     </div>
   </div>
   <div class="block panel hover:bg-blue-100">
     <div class="mb-4 text-2xl">Post to Linkedin</div>
     <pre class="bg-slate-50 p-4">{decodeURI(linkedinContent)}</pre>
-    <pre class="bg-slate-50 p-4">{url}</pre>
+    <pre class="bg-slate-50 p-4">{linkedinURL}</pre>
     <div class="flex justify-end">
-      <a class="button-link" href="https://www.linkedin.com/feed/">Linkedin Post</a>
+      <a class="button-link" target="_blank" href="https://www.linkedin.com/feed/">Linkedin Post</a>
     </div>
   </div>
 
