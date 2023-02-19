@@ -4,7 +4,7 @@ import { CollectionEntry, getCollection } from 'astro:content';
 import TwitterLarge from '../../../components/opengraph/TwitterLarge.svelte';
 import TwitterSmall from '../../../components/opengraph/TwitterSmall.svelte';
 import FacebookLarge from '../../../components/opengraph/FacebookLarge.svelte';
-import defaultImage from "../assets/headshot-2.jpg";
+import defaultImage from "../../../assets/headshot-2.jpg";
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -20,7 +20,7 @@ const { title, tagline, emoji, heroImage } = post.data;
 const titleWithEmoji = `${emoji} ${title}`;
 const url = Astro.site.origin + `/blog/${post.slug}/`;
 const description = post.data.description || `${emoji} ${title} ${tagline}`;
-const imageSrc = heroImage || defaultImage;
+const imageSrc =  defaultImage;
 
 const sharedContent =
 `✨ Blog Post ✨%0A%0A
