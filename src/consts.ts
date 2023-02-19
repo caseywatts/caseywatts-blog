@@ -100,4 +100,5 @@ export const CASEY_FACTS = [
   "📱 I've had one TikTok go viral - a 3d animation, put to music, with a pun.",
   "🌎 I've been to 5/7 continents - Australia is on my list, but Antarctica is not.",
   "🫧 I host bubble parties at parks! I own multiple crates of bubble-blowing equipment.",
+  "🤟🏻 I can 'speak' American Sign Language (ASL). My aunt is deaf, and that whole side of the family speaks it.",
 ]
