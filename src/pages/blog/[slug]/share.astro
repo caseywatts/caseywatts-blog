@@ -48,11 +48,6 @@ const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
 
 
 <OuterLayout>
-  <div class="block panel">
-    <a class="button-link block" target="_blank" href={`https://developers.facebook.com/tools/debug/?q=${encodeURIComponent(url)}`}>Facebook Sharing Debugger</a>
-    <a class="button-link block" target="_blank" href={`https://www.linkedin.com/post-inspector/inspect/${encodeURIComponent(url)}`}>LinkedIn Post Inspector</a>
-    <a class="button-link block" target="_blank" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(url)}`}>Twitter Card Preview</a>
-  </div>
   <div class="block panel max-w-sm">
     <h2 class="text-2xl mb-4">Twitter Preview Small</h2>
     <TwitterSmall title={titleWithEmoji} description={description} url={url} imageSrc={imageSrc}/>
@@ -64,6 +59,12 @@ const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
   <div class="block panel max-w-sm">
     <h2 class="text-2xl mb-4">Facebook Preview Large</h2>
     <FacebookLarge title={titleWithEmoji} description={description} url={url} imageSrc={imageSrc}/>
+  </div>
+
+  <div class="block panel">
+    <a class="button-link block" target="_blank" href={`https://developers.facebook.com/tools/debug/?q=${encodeURIComponent(url)}`}>Facebook Sharing Debugger</a>
+    <a class="button-link block" target="_blank" href={`https://www.linkedin.com/post-inspector/inspect/${encodeURIComponent(url)}`}>LinkedIn Post Inspector</a>
+    <!-- <a class="button-link block" target="_blank" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(url)}`}>Twitter Card Preview</a> -->
   </div>
 
   <div class="block panel hover:bg-blue-100">
