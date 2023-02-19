@@ -71,4 +71,5 @@ code, pre {
 	border: 1px solid #ddd;
 	padding: 4px;
 	font-weight: normal;
+	overflow-x: scroll;
 }
