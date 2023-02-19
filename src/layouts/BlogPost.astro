@@ -16,6 +16,7 @@ const titleWithEmoji = emoji + " " + title;
 const titleWithTagline = titleWithEmoji + " - " + tagline;
 const url = `https://www.caseywatts.com${Astro.url.pathname}`;
 const url2 = `www.caseywatts.com${Astro.url.pathname}`;
+const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${defaultImage}`
 ---
 
 <script is:inline define:vars={{url2}}>
@@ -34,13 +35,13 @@ const url2 = `www.caseywatts.com${Astro.url.pathname}`;
 	openGraph={{
 		basic: {
 			title: titleWithEmoji,
-			image: (heroImage || defaultImage),
+			image: image,
 			type: "website"
 		}
 	}}
 	twitter={{
 		creator: "@heycaseywattsup",
-		image: (heroImage || defaultImage),
+		image: image,
 		title: titleWithEmoji,
 		description: (description || titleWithTagline)
 	}}
