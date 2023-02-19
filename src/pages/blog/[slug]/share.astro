@@ -18,7 +18,7 @@ type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const { title, tagline, emoji, heroImage } = post.data;
 const titleWithEmoji = `${emoji} ${title}`;
-const url = Astro.site.origin + `/blog/${post.slug}/`;
+const url = Astro.url.host + `/blog/${post.slug}/`;
 const description = post.data.description || `${emoji} ${title} ${tagline}`;
 const imageSrc = heroImage || defaultImage;
 
