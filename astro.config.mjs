@@ -12,6 +12,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://caseywatts.com",
-  integrations: [mdx(), sitemap(), svelte(), tailwind()]
+  site: "https://www.caseywatts.com",
+  integrations: [mdx(), sitemap(), svelte(), tailwind()],
 });
