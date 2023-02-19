@@ -15,7 +15,16 @@ const { title, tagline, description, pubDate, updatedDate, heroImage, emoji, mas
 const titleWithEmoji = emoji + " " + title;
 const titleWithTagline = titleWithEmoji + " - " + tagline;
 const url = `https://www.caseywatts.com${Astro.url.pathname}`;
+const url2 = `www.caseywatts.com${Astro.url.pathname}`;
 ---
+
+<script is:inline define:vars={{url2}}>
+	const lol = `https://api.countapi.xyz/hit/:HOST:/:PATHNAME:`
+	console.log(lol)
+	fetch(lol).then(response => response.json()).then(json => {
+		console.log(json)
+	})
+</script>
 
 <title slot="head">{titleWithEmoji}</title>
 <SEO
@@ -81,6 +90,10 @@ const url = `https://www.caseywatts.com${Astro.url.pathname}`;
 		</div>
 		)
 	}
+
+<div class="panel">
+	clicks	
+</div>
 
 <div class="panel p-4">
 	<SuggestToSubscribe />
