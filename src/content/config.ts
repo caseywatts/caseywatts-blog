@@ -18,7 +18,8 @@ const blog = defineCollection({
 		heroImage: z.string().optional(),
 		tags: z.string().array().optional(),
 		emoji: z.string().optional(),
-		mastodonURL: z.string().optional()
+		mastodonURL: z.string().optional(),
+		hashtags: z.string().optional(),
 	}),
 });
 

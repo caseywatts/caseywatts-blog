@@ -16,32 +16,37 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { title, tagline, emoji, heroImage } = post.data;
+const { title, tagline, emoji, heroImage, hashtags } = post.data;
 const titleWithEmoji = `${emoji} ${title}`;
 const url = "www.caseywatts.com" + `/blog/${post.slug}/`;
 const description = post.data.description || `${emoji} ${title} ${tagline}`;
 const imageSrc = heroImage || defaultImage;
 
 const sharedContent =
-`✨ Blog Post ✨%0A%0A
-${titleWithEmoji}%0A
-${tagline}%0A%0A`;
+`✨ Blog Post ✨
+
+${titleWithEmoji}
+
+${description}
+`;
 
 const tootContent =
 `${sharedContent}
-${url}?utm_medium=social&utm_source=mastodon`
+${url}?utm_medium=social&utm_source=mastodon
+${hashtags}`
 
 const tweetContent =
 `${sharedContent}
-${url}?utm_medium=social&utm_source=twitter`
+${url}?utm_medium=social&utm_source=twitter
+${hashtags}`
 
-const tootLink = `https://social.coop/share?text=${tootContent}`
-const tweetLink = `https://twitter.com/intent/tweet?text=${tweetContent}`
+const tootLink = `https://social.coop/share?text=${encodeURIComponent(tootContent)}`
+const tweetLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetContent)}`
 
 const linkedinContent =
 `✨ Blog Post ✨ (link in comments)
 ${titleWithEmoji}
-${tagline}`
+${description}`
 
 const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
 ---
