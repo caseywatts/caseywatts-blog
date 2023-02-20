@@ -6,17 +6,8 @@
     return this[Math.floor(Math.random() * this.length)];
   };
 
-  const objToArray = function (object) {
-    return Object.entries(object).map((entry) => {
-      return {
-        src: encodeURIComponent(entry[0]),
-        alt: entry[1],
-      };
-    });
-  };
-
   const randomMeme = function () {
-    return objToArray(MEMES).random();
+    return MEMES.random();
   };
 
   $: currentMeme = randomMeme();
@@ -33,5 +24,5 @@
 </div>
 <figure class="space-y-6">
   <figcaption class="text-lg bg-blue-200 p-4">{currentMeme.alt}</figcaption>
-  <img class="mx-auto" src={currentMeme.src} />
+  <img class="mx-auto" src={currentMeme.path} />
 </figure>

@@ -104,12 +104,50 @@ export const CASEY_FACTS = [
   "🤟🏻 I can 'speak' American Sign Language (ASL). My aunt is deaf, and that whole side of the family speaks it.",
 ]
 
-export const MEMES = {
-  "/assets/memes/attend every meeting.jpeg": `Spongebob mocking someone, saying "make sure to attend every meeting."`,
-  "/assets/memes/B-flat A-sharp.jpeg": "Nervous man sweating, deciding which red button to hit: B-flat or A-sharp?",
-  "/assets/memes/chocolate chocolate chip ice cream.jpeg": `Not impressed with chocolate ice cream. Impressed with chocolate chocolate chip ice cream.`,
-  "/assets/memes/cors.jpeg": `Person A: "What's wrong?"; Person B: "CORS"; Pikachu *shocked face*`,
-  "/assets/memes/culture or snacks.jpeg": `Person A: "Corporate needs you to find the difference between these two pictures: A. Free snacks and foosball tables vs B. An environment where people trust and respect each other". Person B: "They're the same picture.`,
-  "/assets/memes/engineering manager no support.jpeg": `Situation: New engineering manager without training or support. Helpless shrugging man: "Guess I'll just keep engineering??"`
+export const MEMES = [
+  {
+    slug: "every-meeting",
+    path: "/assets/memes/attend every meeting.jpeg",
+    alt: `Spongebob mocking someone, saying "make sure to attend every meeting."`
+  },
+  {
+    slug: "b-flat",
+    path: "/assets/memes/B-flat A-sharp.jpeg",
+    alt: "Nervous man sweating, deciding which red button to hit: B-flat or A-sharp?"
+  },
+  {
+    slug: "chocolate-chip",
+    path: "/assets/memes/chocolate chocolate chip ice cream.jpeg",
+    alt: `Not impressed with chocolate ice cream. Impressed with chocolate chocolate chip ice cream.`
+  },
+  {
+    slug: "cors-pikachu",
+    path: "/assets/memes/cors.jpeg",
+    alt: `Person A: "What's wrong?"; Person B: "CORS"; Pikachu *shocked face*`
+  },
+  {
+    slug: "culture-or-snacks",
+    path: "/assets/memes/culture or snacks.jpeg",
+    alt:
+`Person A: "Corporate needs you to find the difference between these two pictures:
+A. Free snacks and foosball tables vs
+B. An environment where people trust and respect each other".
+Person B: "They're the same picture.`,
+  },
+  {
+    slug: "engineering-manager-without-support",
+    path: "/assets/memes/engineering manager no support.jpeg",
+    alt: `Situation: New engineering manager without training or support. Helpless shrugging man: "Guess I'll just keep engineering??"`
+  },
+  {
+    slug: "strategy-conspiracy",
+    path: "/assets/memes/having a strategy.jpeg",
+    alt: `Conspiracy theory guy has a wild look in his eyes, saying "having a strategy"`
+  },
+  {
+    slug: "feature-creep-everywhere",
+    path: "/assets/memes/feature creep.jpeg",
+    alt: `Buzz Lightyear telling Woody: "Feature creep, feature creep everywhere`
+  }
   // "/assets/memes/": ``,
-}
+];
