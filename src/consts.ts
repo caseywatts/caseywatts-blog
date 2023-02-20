@@ -148,6 +148,40 @@ Person B: "They're the same picture.`,
     slug: "feature-creep-everywhere",
     path: "/assets/memes/feature creep.jpeg",
     alt: `Buzz Lightyear telling Woody: "Feature creep, feature creep everywhere`
+  },
+  {
+    slug: "everything-due",
+    path: "/assets/memes/everything due.jpeg",
+    alt: `"Everything is due today!!" (Panik); "Today is over" (Kalm); "Everything was due yesterday!!" (Panik)`
+  },
+  {
+    slug: "failed-inclusive-company",
+    path: "/assets/memes/failed inclusive company.jpeg",
+    alt: `clown step 1: "we'll be the most inclusive company"; clown step 2: "hire based on who I'd get a beer with"; clown step 3: "only promote assholes"; clown step 4: "tell everyone else to work harder"`
+  },
+  {
+    slug: "feed-tickets",
+    path: "/assets/memes/feed the developers tickets.jpeg",
+    alt: `Spongebob mocking someone, saying "make sure to feed the developers tickets"`
+  },
+  {
+    slug: "gender-pay-gap",
+    path: "/assets/memes/gender pay gap.jpeg",
+    alt: `Skeleton slouching on a bench: "waiting for the gender pay gap to close"`
+  },
+  {
+    slug: "greener-pastures",
+    path: "/assets/memes/greener pastures.jpg",
+    alt: `Skeptical Fry: "Not sure if greener pastures, or toxic waste dump"`
+  },
+  {
+    slug: "is-this-strategy",
+    path: "/assets/memes/is this agile.jpeg",
+    alt: `Clueless guy asking "is this agile?" to a butterfly labeled "daily standups and weekly sprints"`
   }
-  // "/assets/memes/": ``,
+  // {
+  //   slug: "",
+  //   path: "/assets/memes/",
+  //   alt: ``
+  // },
 ];
