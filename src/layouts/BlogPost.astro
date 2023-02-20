@@ -8,6 +8,7 @@ import MastodonEmbed from '../components/MastodonEmbed.astro'
 import SuggestToSubscribe from '../components/SuggestToSubscribe.astro'
 import defaultImage from "../assets/headshot-2.jpg";
 import { SEO } from "astro-seo";
+import Webmentions from '../components/Webmentions.svelte';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -87,14 +88,9 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 		</article>
 	</div>
 
-	{
-		mastodonURL && (
-		<div class="panel">
-			<h2 class="text-3xl text-center pb-6">Mastodon Mentions</h2>
-			<MastodonEmbed url={mastodonURL} />
-		</div>
-		)
-	}
+<div class="panel text-center">
+	<Webmentions url={url} client:only="svelte"/>
+</div>
 
 <div class="panel p-4">
 	<SuggestToSubscribe />

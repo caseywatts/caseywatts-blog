@@ -15,7 +15,7 @@
 </script>
 
 {#if likes.length}
-  <div class="text-lg mt-6 mb-2">Twitter & Mastodon Likes</div>
+  <h2 class="text-2xl mb-2">Likes on Mastodon and Twitter</h2>
   {#each likes as mention}
     <div class="flex flex-row gap-4 justify-center">
       <a href={mention.url} class="bg-slate-200 hover:bg-slate-100 border border-slate-700 hover:border-slate-600 p-2 my-1 flex align-middle justify-center items-center gap-3 rounded-full">
