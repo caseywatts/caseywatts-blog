@@ -103,3 +103,13 @@ export const CASEY_FACTS = [
   "🫧 I host bubble parties at parks! I own multiple crates of bubble-blowing equipment.",
   "🤟🏻 I can 'speak' American Sign Language (ASL). My aunt is deaf, and that whole side of the family speaks it.",
 ]
+
+export const MEMES = {
+  "/assets/memes/attend every meeting.jpeg": `Spongebob mocking someone, saying "make sure to attend every meeting."`,
+  "/assets/memes/B-flat A-sharp.jpeg": "Nervous man sweating, deciding which red button to hit: B-flat or A-sharp?",
+  "/assets/memes/chocolate chocolate chip ice cream.jpeg": `Not impressed with chocolate ice cream. Impressed with chocolate chocolate chip ice cream.`,
+  "/assets/memes/cors.jpeg": `Person A: "What's wrong?"; Person B: "CORS"; Pikachu *shocked face*`,
+  "/assets/memes/culture or snacks.jpeg": `Person A: "Corporate needs you to find the difference between these two pictures: A. Free snacks and foosball tables vs B. An environment where people trust and respect each other". Person B: "They're the same picture.`,
+  "/assets/memes/engineering manager no support.jpeg": `Situation: New engineering manager without training or support. Helpless shrugging man: "Guess I'll just keep engineering??"`
+  // "/assets/memes/": ``,
+}
