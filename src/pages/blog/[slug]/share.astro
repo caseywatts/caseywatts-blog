@@ -76,27 +76,27 @@ const slackRandsURL = `${url}?utm_medium=social&utm_source=slack-rands`
     <FacebookLarge title={titleWithEmoji} description={description} url={url} imageSrc={imageSrc}/>
   </div>
 
-  <div class="block panel">
+  <div class="block panel space-y-4">
     <a class="button-link block" target="_blank" href={`https://developers.facebook.com/tools/debug/?q=${encodeURIComponent(url)}`}>Facebook Sharing Debugger</a>
     <a class="button-link block" target="_blank" href={`https://www.linkedin.com/post-inspector/inspect/${encodeURIComponent(url)}`}>LinkedIn Post Inspector</a>
     <!-- <a class="button-link block" target="_blank" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(url)}`}>Twitter Card Preview</a> -->
   </div>
 
-  <div class="block panel hover:bg-blue-100">
+  <div class="block panel hover:bg-blue-100 space-y-4">
     <div class="mb-4 text-2xl">Post to Mastodon</div>
     <pre class="bg-slate-50 p-4">{decodeURI(tootContent)}</pre>
     <div class="flex justify-end">
       <a class="button-link" target="_blank" href={tootLink}>Toot This</a>
     </div>
   </div>
-  <div class="block panel hover:bg-blue-100">
+  <div class="block panel hover:bg-blue-100 space-y-4">
     <div class="mb-4 text-2xl">Post to Twitter</div>
     <pre class="bg-slate-50 p-4">{decodeURI(tweetContent)}</pre>
     <div class="flex justify-end">
       <a class="button-link" target="_blank" href={tweetLink}>Tweet This</a>
     </div>
   </div>
-  <div class="block panel hover:bg-blue-100">
+  <div class="block panel hover:bg-blue-100 space-y-4">
     <div class="mb-4 text-2xl">Post to Linkedin</div>
     <pre class="bg-slate-50 p-4">{decodeURI(linkedinContent)}</pre>
     <pre class="bg-slate-50 p-4">{linkedinURL}</pre>
@@ -105,7 +105,7 @@ const slackRandsURL = `${url}?utm_medium=social&utm_source=slack-rands`
       <!-- <a class="button-link" target="_blank" href=`https://www.linkedin.com/sharing/share-offsite/?url=${url}`>Sharing Offsite Linkedin Post</a> -->
     </div>
   </div>
-  <div class="block panel hover:bg-blue-100">
+  <div class="block panel hover:bg-blue-100 space-y-4">
     <div class="mb-4 text-2xl">Share to Slack</div>
     <pre class="bg-slate-50 p-4">{decodeURI(slackContent)}</pre>
     <div><a class="link" target="_blank" href="https://dctech.slack.com/archives/C0J8UUH34">DC</a></div>
