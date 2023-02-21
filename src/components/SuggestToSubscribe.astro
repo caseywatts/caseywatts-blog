@@ -1,8 +1,29 @@
-<div class="space-y-6">
-  <div class="text-lg text-center">Found this interesting or helpful?</div>
-  <div class="text-center">
-    <a class="button-link inline-block" href="/newsletter">📥 Subscribe to Newsletter</a>
-    <a class="button-link inline-block" href="/blog">📜 Subscribe to RSS Feed</a>
-    <a class="button-link inline-block" href="/contact">Let Casey know! 💬 🎉</a>
-  </div>
+<div class="text-2xl text-center space-x-2">
+  <span>Liked this?</span>
+  <span class="text-lg text-center">You might like Casey's Newsletter ✨</span>
 </div>
+
+<form
+  action="
+    https://buttondown.email/api/emails/embed-subscribe/heycaseywattsup
+  "
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.email/heycaseywattsup', 'popupwindow')"
+  class="embeddable-buttondown-form plausible-event-name=Subscribe"
+>
+  <div class="mx-auto pb-4 md:pt-4">
+    <span class="flex flex-col md:flex-row justify-center items-start md:space-x-4 space-y-3 md:space-y-0">
+      <div class="flex items-center justify-center space-x-4">
+        <label for="email">Email</label>
+        <input class="bg-white hover:shadow-inner border-2 border-slate-300 hover:border-slate-400 w-64" type="email" name="email" placeholder="my.name@example.com" autofocus />
+      </div>
+      <div class="flex flex-col space-y-4">
+        <input class="bg-gradient-to-tr from-blue-100 via-blue-200 to-blue-100 shadow-lg hover:shadow-md border border-violet-400 hover:border-violet-600 p-2 rounded-lg" type="submit" value="Subscribe" />
+        <a href="/newsletter" class="text-sm bg-gradient-to-tr from-white via-blue-50 to-white shadow-lg hover:shadow-md border border-violet-400 hover:border-violet-600 p-1 rounded-lg">or Choose Categories</a>
+      </div>
+    </span>
+  </div>
+
+  <input type="hidden" value="1" name="embed" />
+</form>
