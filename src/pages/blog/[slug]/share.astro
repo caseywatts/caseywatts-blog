@@ -108,12 +108,21 @@ const slackRandsURL = `${url}?utm_medium=social&utm_source=slack-rands`
   <div class="block panel hover:bg-blue-100">
     <div class="mb-4 text-2xl">Share to Slack</div>
     <pre class="bg-slate-50 p-4">{decodeURI(slackContent)}</pre>
-    <div>DC</div>
-    <pre class="bg-slate-50 p-4">{slackDCURL}</pre>
+    <div><a class="link" target="_blank" href="https://dctech.slack.com/archives/C0J8UUH34">DC</a></div>
+    <pre class="bg-slate-50 p-4">
+{decodeURI(slackContent)}
+
+{slackDCURL}</pre>
     <div>Baltimore</div>
-    <pre class="bg-slate-50 p-4">{slackBaltimoreURL}</pre>
-    <div>Rands</div>
-    <pre class="bg-slate-50 p-4">{slackRandsURL}</pre>
+    <pre class="bg-slate-50 p-4">
+{decodeURI(slackContent)}
+
+{slackBaltimoreURL}</pre>
+    <div><a class="link" target="_blank" href="https://rands-leadership.slack.com/archives/C0R7KB37Z">Rands</a></div>
+    <pre class="bg-slate-50 p-4">
+{decodeURI(slackContent)}
+
+{slackRandsURL}</pre>
 
   </div>
 
