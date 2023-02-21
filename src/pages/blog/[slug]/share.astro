@@ -48,7 +48,17 @@ const linkedinContent =
 ${titleWithEmoji}
 ${description}`
 
+const slackContent =
+`I wrote a new blog post!
+
+${titleWithEmoji}
+${description}`
+
 const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
+const slackDCURL = `${url}?utm_medium=social&utm_source=slack-dc`
+const slackBaltimoreURL = `${url}?utm_medium=social&utm_source=slack-baltimore`
+const slackRandsURL = `${url}?utm_medium=social&utm_source=slack-rands`
+// const slackURL = `${url}?utm_medium=social&utm_source=slack`
 ---
 
 
@@ -94,6 +104,17 @@ const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
       <a class="button-link" target="_blank" href="https://www.linkedin.com/feed/">Create Linkedin Post Manually</a>
       <!-- <a class="button-link" target="_blank" href=`https://www.linkedin.com/sharing/share-offsite/?url=${url}`>Sharing Offsite Linkedin Post</a> -->
     </div>
+  </div>
+  <div class="block panel hover:bg-blue-100">
+    <div class="mb-4 text-2xl">Share to Slack</div>
+    <pre class="bg-slate-50 p-4">{decodeURI(slackContent)}</pre>
+    <div>DC</div>
+    <pre class="bg-slate-50 p-4">{slackDCURL}</pre>
+    <div>Baltimore</div>
+    <pre class="bg-slate-50 p-4">{slackBaltimoreURL}</pre>
+    <div>Rands</div>
+    <pre class="bg-slate-50 p-4">{slackRandsURL}</pre>
+
   </div>
 
 </OuterLayout>
