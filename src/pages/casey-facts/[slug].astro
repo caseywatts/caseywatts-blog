@@ -1,0 +1,17 @@
+---
+import { CASEY_FACTS } from '../../consts';
+import Page from '../../layouts/Page.astro';
+
+export async function getStaticPaths() {
+	return CASEY_FACTS.map((fact) => ({
+		params: { slug: fact.slug },
+		props: { fact },
+	}));
+}
+
+const { fact } = Astro.props;
+---
+
+<Page>
+	{fact.content}
+</Page>
