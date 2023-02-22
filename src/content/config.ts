@@ -20,7 +20,7 @@ const blog = defineCollection({
 		emoji: z.string().optional(),
 		mastodonURL: z.string().optional(),
 		hashtags: z.string().optional(),
-		draft: z.boolean()
+		draft: z.boolean().optional()
 	}),
 });
 
