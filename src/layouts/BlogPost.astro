@@ -84,13 +84,17 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 					</div>
 				</div>
 			</h1>
+			{
+				description && (
+					<div class="bg-violet-200 p-4">{description}</div>
+				)
+			}
 			<slot />
 		</article>
 	</div>
 
-<div class="panel text-center">
-	<Webmentions url={url} client:only="svelte"/>
-</div>
+
+<Webmentions url={url} client:only="svelte"/>
 
 <div class="panel p-4">
 	<SuggestToSubscribe />
