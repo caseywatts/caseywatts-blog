@@ -2,11 +2,20 @@
 import OuterLayout from '../layouts/OuterLayout.astro';
 import Linktree from "../components/Linktree.astro";
 import Bio from '../components/Bio.astro';
+import LatestPosts from '../components/LatestPosts.astro';
 ---
 
 <OuterLayout>
 	<div class="panel">
 		<Bio></Bio>
-		<Linktree></Linktree>
+	</div>
+	
+	<div class="panel">
+		<h2 class="text-3xl text-center">Latest Blog Posts</h2>
+	</div>
+	<LatestPosts />
+
+	<div class="panel">
+		<Linktree />
 	</div>
 </OuterLayout>
