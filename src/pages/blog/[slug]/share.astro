@@ -18,15 +18,16 @@ type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
 const { title, tagline, emoji, heroImage, hashtags } = post.data;
 const titleWithEmoji = `${emoji} ${title}`;
-const titleWithEmojiandTagline = `${emoji} ${title} — ${tagline}`;
-const url = "www.caseywatts.com" + `/blog/${post.slug}/`;
+const titleWithEmojiAndTagline = `${emoji} ${title} — ${tagline}`;
+const url = Astro.url.origin + `/blog/${post.slug}/`;
+const urlWithoutProtocol = "www.caseywatts.com" + `/blog/${post.slug}/`; // where was this needed?
 const description = post.data.description || `${emoji} ${title} ${tagline}`;
 const imageSrc = heroImage || defaultImage;
 
 const sharedContent =
 `✨ Blog Post ✨
 
-${titleWithEmojiandTagline}
+${titleWithEmojiAndTagline}
 
 ${description}
 `;
@@ -46,19 +47,19 @@ const tweetLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tw
 
 const linkedinContent =
 `✨ Blog Post ✨ (link in comments)
-${titleWithEmojiandTagline}
+${titleWithEmojiAndTagline}
 ${description}`
 
 const slackContent =
 `I wrote a new blog post!
 
-${titleWithEmojiandTagline}
+${titleWithEmojiAndTagline}
 ${description}`
 
 const mailingListContent =
 `I wrote a new blog post you might like! :)
 
-${titleWithEmojiandTagline}
+${titleWithEmojiAndTagline}
 ${description}`
 
 const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
@@ -73,15 +74,15 @@ const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
 <OuterLayout>
   <div class="block panel max-w-sm">
     <h2 class="text-2xl mb-4">Twitter Preview Small</h2>
-    <TwitterSmall title={titleWithEmojiandTagline} description={description} url={url} imageSrc={imageSrc}/>
+    <TwitterSmall title={titleWithEmojiAndTagline} description={description} url={url} imageSrc={imageSrc}/>
   </div>
   <div class="block panel max-w-sm">
     <h2 class="text-2xl mb-4">Twitter Preview Large</h2>
-    <TwitterLarge title={titleWithEmojiandTagline} description={description} imageSrc={imageSrc}/>
+    <TwitterLarge title={titleWithEmojiAndTagline} description={description} imageSrc={imageSrc}/>
   </div>
   <div class="block panel max-w-sm">
     <h2 class="text-2xl mb-4">Facebook Preview Large</h2>
-    <FacebookLarge title={titleWithEmojiandTagline} description={description} url={url} imageSrc={imageSrc}/>
+    <FacebookLarge title={titleWithEmojiAndTagline} description={description} url={url} imageSrc={imageSrc}/>
   </div>
 
   <div class="block panel space-y-4">
@@ -131,11 +132,33 @@ const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
 {decodeURI(slackContent)}
 
 {slackRandsURL}</pre>
-<div><a class="link" target="_blank" href="https://buttondown.email/emails">Mailing List</a></div>
-<pre class="bg-slate-50 p-4">
-{decodeURI(mailingListContent)}
 
-{mailingListURL}</pre>
+</div>
+<div class="panel">
+
+  <div><a class="link" target="_blank" href="https://buttondown.email/emails">Mailing List</a></div>
+<pre class="bg-slate-50 p-4">
+CATEGORY_GOES_HERE: {titleWithEmoji}
+</pre>
+<pre class="bg-slate-50 p-4">
+Hi, it's me - Casey!
+
+I wrote a new blog post you might like:
+
+---
+
+[{titleWithEmojiAndTagline}]({url})
+
+{description}
+
+[SCREENSHOT_GOES_HERE]({url})
+
+<3,
+
+[Casey Watts!](https://www.caseywatts.com)
+
+🎶 My jam today: SONG_GOES_HERE
+</pre>
 
   </div>
 
