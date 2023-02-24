@@ -1,4 +1,4 @@
-<script is:inline>
+<script>
   import { clearLocalStorage } from "../lib/localStorageCheckboxes";
   import { connectCheckboxesToLocalStorage } from "../lib/localStorageCheckboxes";
 
