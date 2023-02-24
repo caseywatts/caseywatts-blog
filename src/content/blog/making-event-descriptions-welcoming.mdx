@@ -10,7 +10,8 @@ mastodonURL: "https://social.coop/@heycaseywattsup/109873236987662562"
 ---
 
 import CheckboxListItem from "../../components/CheckboxListItem.svelte";
-import InputToLocalStorage from "../../components/InputToLocalStorage.svelte";
+import CheckboxCounter from "../../components/CheckboxCounter.astro";
+import ClearLocalStorageButtonWithSetup from "../../components/ClearLocalStorageButtonWithSetup.svelte";
 
 ## Who should read this article?
 
@@ -111,11 +112,8 @@ Do a **self-check**: how many of these are covered in your last event descriptio
 
 </div>
 
-import CheckboxCounter from "../../components/CheckboxCounter.astro";
-import ClearLocalStorage from "../../components/ClearLocalStorage.svelte";
-
 <CheckboxCounter />
-<ClearLocalStorage client:only="svelte" />
+<ClearLocalStorageButtonWithSetup client:only="svelte" />
 
 ## Example event description
 
@@ -200,5 +198,3 @@ Some tips for improving your "Welcomingness Score".
 I hope this checklist inspires you to make your event descriptions better! 🎉
 
 <div class="text-right">-- Casey Watts!</div>
-
-<InputToLocalStorage client:only="svelte" />
