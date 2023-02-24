@@ -20,13 +20,13 @@ const url2 = `www.caseywatts.com${Astro.url.pathname}`;
 const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${defaultImage}`
 ---
 
-<script is:inline define:vars={{url2}}>
+<!-- <script is:inline define:vars={{url2}}>
 	const lol = `https://api.countapi.xyz/hit/:HOST:/:PATHNAME:`
 	console.log(lol)
 	fetch(lol).then(response => response.json()).then(json => {
 		console.log(json)
 	})
-</script>
+</script> -->
 
 <title slot="head">{titleWithEmoji}</title>
 <SEO
