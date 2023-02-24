@@ -20,10 +20,11 @@ export function clearLocalStorage() {
   });
 }
 
-export function connectCheckboxes() {
+export function connectCheckboxesToLocalStorage() {
   document.querySelectorAll("input.save-to-local-storage").forEach((inputEl) => {
     const id = inputEl.id;
     inputEl.checked = localStorage.getItem(localStorageKey(id)) == "true";
+    inputEl.value = inputEl.value;
     inputEl.addEventListener("change", persist);
   });
 }

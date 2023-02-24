@@ -10,7 +10,7 @@ mastodonURL: "https://social.coop/@heycaseywattsup/109873236987662562"
 ---
 
 import CheckboxListItem from "../../components/CheckboxListItem.svelte";
-import CheckboxCounter from "../../components/CheckboxCounter.astro";
+import CheckboxCounter from "../../components/CheckboxCounter.svelte";
 import ClearLocalStorageButtonWithSetup from "../../components/ClearLocalStorageButtonWithSetup.svelte";
 
 ## Who should read this article?
@@ -112,8 +112,7 @@ Do a **self-check**: how many of these are covered in your last event descriptio
 
 </div>
 
-<CheckboxCounter />
-<ClearLocalStorageButtonWithSetup client:only="svelte" />
+<CheckboxCounter client:only="svelte" />
 
 ## Example event description
 
