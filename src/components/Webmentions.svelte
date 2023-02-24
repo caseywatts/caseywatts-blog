@@ -7,7 +7,7 @@
       return response.json();
     })
     .then((responseJson) => {
-      console.log(responseJson.children);
+      // console.log(responseJson.children);
       likes = responseJson.children;
     });
 
