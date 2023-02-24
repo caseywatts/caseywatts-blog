@@ -9,7 +9,8 @@ hashtags: "#community #organizing #events"
 mastodonURL: "https://social.coop/@heycaseywattsup/109873236987662562"
 ---
 
-import CheckboxListItem from "../../components/CheckboxListItem.astro";
+import CheckboxListItem from "../../components/CheckboxListItem.svelte";
+import InputToLocalStorage from "../../components/InputToLocalStorage.svelte";
 
 ## Who should read this article?
 
@@ -47,25 +48,25 @@ Do a **self-check**: how many of these are covered in your last event descriptio
 #### Group Ethos
 
 <ul>
-  <CheckboxListItem>What is the purpose/values of this group?</CheckboxListItem>
-  <CheckboxListItem>Who is this group for?</CheckboxListItem>
-  <CheckboxListItem>Who runs the group? (is it [community-led or company led](https://www.happyandeffective.com/blog/community-groups-community-led-vs-company-led) ?)</CheckboxListItem>
-  <CheckboxListItem>Is it paid for by companies/sponsors etc?</CheckboxListItem>
+  <CheckboxListItem id="values">Values: What is the purpose/values of this group?</CheckboxListItem>
+  <CheckboxListItem id="audience">Audience: Who is this group for?</CheckboxListItem>
+  <CheckboxListItem id="leadership">Leadership: Who runs the group? (is it [community-led or company led](https://www.happyandeffective.com/blog/community-groups-community-led-vs-company-led) ?)</CheckboxListItem>
+  <CheckboxListItem id="spansored">Sponsorship: Who pays for it?</CheckboxListItem>
 </ul>
 
 #### Getting Involved
 
 <ul>
-  <CheckboxListItem>Can we also talk outside of the event? (Slack/Discord?)</CheckboxListItem>
-  <CheckboxListItem>Can people like me get involved organizing/volunteering? How?</CheckboxListItem>
+  <CheckboxListItem id="connection">Connection: Can we also talk outside of the event? (Slack/Discord?)</CheckboxListItem>
+  <CheckboxListItem id="contributing">Contribution: Can people like me get involved organizing/volunteering? How?</CheckboxListItem>
 </ul>
 
 #### Safety
 
 <ul>
-  <CheckboxListItem>Code of Conduct?</CheckboxListItem>
-  <CheckboxListItem>Clear reporting / enforcement process?</CheckboxListItem>
-  <CheckboxListItem>Will I be the only person like me there? (experience, race, gender, sexuality)</CheckboxListItem>
+  <CheckboxListItem id="guidelines">Guidelines: Code of Conduct?</CheckboxListItem>
+  <CheckboxListItem id="enforcement">Enforcement: Clear reporting / enforcement process?</CheckboxListItem>
+  <CheckboxListItem id="not-alone">Not Alone: Will I be the only person like me there? (experience, race, gender, sexuality)</CheckboxListItem>
 </ul>
 
 </div>
@@ -77,33 +78,33 @@ Do a **self-check**: how many of these are covered in your last event descriptio
 #### Title
 
 <ul>
-  <CheckboxListItem>From the title alone, would someone know what the event is?</CheckboxListItem>
+  <CheckboxListItem id="descriptive-title">Descriptive Title: From the title alone, would someone know what the event is?</CheckboxListItem>
 </ul>
 
 #### Event Details
 
 <ul>
-  <CheckboxListItem>What will we do there?</CheckboxListItem>
-  <CheckboxListItem>Does it cost money?</CheckboxListItem>
+  <CheckboxListItem id="agenda">Agenda: What will we do there?</CheckboxListItem>
+  <CheckboxListItem id="cost">Cost: Does it cost money?</CheckboxListItem>
 </ul>
 
 #### Safety
 
 <ul>
-  <CheckboxListItem>Covid details? (ventilation, masks)</CheckboxListItem>
+  <CheckboxListItem id="covid">Covid details? (ventilation, masks)</CheckboxListItem>
 </ul>
 
 #### Getting There
 
 <ul>
-  <CheckboxListItem>Parking? Free/paid? Public transit?</CheckboxListItem>
+  <CheckboxListItem id="transportation">Transportation: Parking? Free/paid? Public transit?</CheckboxListItem>
 </ul>
 
 #### Getting In
 
 <ul>
-  <CheckboxListItem>How will I know I'm in the right place? How will I get in?</CheckboxListItem>
-  <CheckboxListItem>If I come late, how will I get in?</CheckboxListItem>
+  <CheckboxListItem id="getting-in">Geting In: How will I know I'm in the right place? How will I get in?</CheckboxListItem>
+  <CheckboxListItem id="coming-late">Coming Late: If I come late, how will I get in?</CheckboxListItem>
 </ul>
 
 </div>
@@ -111,8 +112,10 @@ Do a **self-check**: how many of these are covered in your last event descriptio
 </div>
 
 import CheckboxCounter from "../../components/CheckboxCounter.astro";
+import ClearLocalStorage from "../../components/ClearLocalStorage.svelte";
 
 <CheckboxCounter />
+<ClearLocalStorage client:only="svelte" />
 
 ## Example event description
 
@@ -197,3 +200,5 @@ Some tips for improving your "Welcomingness Score".
 I hope this checklist inspires you to make your event descriptions better! 🎉
 
 <div class="text-right">-- Casey Watts!</div>
+
+<InputToLocalStorage client:only="svelte" />
