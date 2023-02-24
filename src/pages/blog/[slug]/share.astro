@@ -5,6 +5,8 @@ import TwitterLarge from '../../../components/opengraph/TwitterLarge.svelte';
 import TwitterSmall from '../../../components/opengraph/TwitterSmall.svelte';
 import FacebookLarge from '../../../components/opengraph/FacebookLarge.svelte';
 import defaultImage from "../../../assets/headshot-2.jpg";
+import CheckboxListItem from "../../../components/CheckboxListItem.svelte";
+import CheckboxCounter from "../../../components/CheckboxCounter.svelte";
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -75,20 +77,25 @@ const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
   <div class="block panel max-w-sm">
     <h2 class="text-2xl mb-4">Twitter Preview Small</h2>
     <TwitterSmall title={titleWithEmojiAndTagline} description={description} url={url} imageSrc={imageSrc}/>
-  </div>
-  <div class="block panel max-w-sm">
+
     <h2 class="text-2xl mb-4">Twitter Preview Large</h2>
     <TwitterLarge title={titleWithEmojiAndTagline} description={description} imageSrc={imageSrc}/>
-  </div>
-  <div class="block panel max-w-sm">
+
     <h2 class="text-2xl mb-4">Facebook Preview Large</h2>
     <FacebookLarge title={titleWithEmojiAndTagline} description={description} url={url} imageSrc={imageSrc}/>
+
+    <div class="mx-auto text-2xl block text-right list-none mt-6">
+      <CheckboxListItem id="card-preview">Social Media Preview Cards</CheckboxListItem>
+    </div>
   </div>
 
   <div class="block panel space-y-4">
     <a class="button-link block" target="_blank" href={`https://developers.facebook.com/tools/debug/?q=${encodeURIComponent(url)}`}>Facebook Sharing Debugger</a>
     <a class="button-link block" target="_blank" href={`https://www.linkedin.com/post-inspector/inspect/${encodeURIComponent(url)}`}>LinkedIn Post Inspector</a>
     <!-- <a class="button-link block" target="_blank" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(url)}`}>Twitter Card Preview</a> -->
+    <div class="mx-auto text-2xl block text-right list-none mt-6">
+      <CheckboxListItem id="validation">Social Media Validation</CheckboxListItem>
+    </div>
   </div>
 
   <div class="block panel hover:bg-blue-100 space-y-4">
@@ -97,12 +104,18 @@ const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
     <div class="flex justify-end">
       <a class="button-link" target="_blank" href={tootLink}>Toot This</a>
     </div>
+    <div class="mx-auto text-2xl block text-right list-none mt-6">
+      <CheckboxListItem id="mastodon">Mastodon</CheckboxListItem>
+    </div>
   </div>
   <div class="block panel hover:bg-blue-100 space-y-4">
     <div class="mb-4 text-2xl">Post to Twitter</div>
     <pre class="bg-slate-50 p-4">{decodeURI(tweetContent)}</pre>
     <div class="flex justify-end">
       <a class="button-link" target="_blank" href={tweetLink}>Tweet This</a>
+    </div>
+    <div class="mx-auto text-2xl block text-right list-none mt-6">
+      <CheckboxListItem id="twitter">Twitter</CheckboxListItem>
     </div>
   </div>
   <div class="block panel hover:bg-blue-100 space-y-4">
@@ -113,26 +126,36 @@ const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
       <a class="button-link" target="_blank" href="https://www.linkedin.com/feed/">Create Linkedin Post Manually</a>
       <!-- <a class="button-link" target="_blank" href=`https://www.linkedin.com/sharing/share-offsite/?url=${url}`>Sharing Offsite Linkedin Post</a> -->
     </div>
+    <div class="mx-auto text-2xl block text-right list-none mt-6">
+      <CheckboxListItem id="linkedin">Linkedin</CheckboxListItem>
+    </div>
   </div>
   <div class="block panel hover:bg-blue-100 space-y-4">
     <div class="mb-4 text-2xl">Share to Slack</div>
-    <pre class="bg-slate-50 p-4">{decodeURI(slackContent)}</pre>
     <div><a class="link" target="_blank" href="https://dctech.slack.com/archives/C0J8UUH34">DC</a></div>
     <pre class="bg-slate-50 p-4">
 {decodeURI(slackContent)}
 
 {slackDCURL}</pre>
-    <div>Baltimore</div>
+<div class="mx-auto text-2xl block text-right list-none mt-6">
+  <CheckboxListItem id="dc">DC</CheckboxListItem>
+</div>
+<div>Baltimore</div>
     <pre class="bg-slate-50 p-4">
 {decodeURI(slackContent)}
 
 {slackBaltimoreURL}</pre>
+<div class="mx-auto text-2xl block text-right list-none mt-6">
+  <CheckboxListItem id="baltimore">Baltimore</CheckboxListItem>
+</div>
     <div><a class="link" target="_blank" href="https://rands-leadership.slack.com/archives/C0R7KB37Z">Rands</a></div>
     <pre class="bg-slate-50 p-4">
 {decodeURI(slackContent)}
 
 {slackRandsURL}</pre>
-
+<div class="mx-auto text-2xl block text-right list-none mt-6">
+  <CheckboxListItem id="rands">Rands</CheckboxListItem>
+</div>
 </div>
 <div class="panel">
 
@@ -160,6 +183,13 @@ I wrote a new blog post you might like:
 🎶 My jam today: SONG_GOES_HERE
 </pre>
 
+<div class="mx-auto text-2xl block text-right list-none mt-6">
+  <CheckboxListItem id="mailing-list">Mailing list</CheckboxListItem>
+</div>
   </div>
+
+<div class="panel">
+  <CheckboxCounter client:only="svelte" />
+</div>
 
 </OuterLayout>
