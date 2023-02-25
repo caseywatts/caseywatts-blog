@@ -9,6 +9,7 @@ import SuggestToSubscribe from '../components/SuggestToSubscribe.astro'
 import defaultImage from "../assets/headshot-2.jpg";
 import { SEO } from "astro-seo";
 import Webmentions from '../components/Webmentions.svelte';
+import SEOTags from '../components/SEOTags.svelte';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -28,51 +29,15 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 	})
 </script> -->
 
-<!-- Regular -->
-<title>{titleWithEmoji}</title>
-<meta name="title" content={titleWithEmoji}>
-<meta name="author" content="Casey Watts!">
-<meta name="url" content={url}>
-<meta name="description" content={ description || titleWithTagline }>
-<meta name="image" content={image}>
-
-<!-- OpenGraph -->
-<meta property="og:title" content={titleWithEmoji}>
-<meta property="og:url" content={url}>
-<meta property="og:description" content={ description || titleWithTagline }>
-<meta property="og:image" content={image}>
-<!-- <meta name="image" property="og:image:alt" content={imageDescription}> -->
-<meta property="og:type" content="article">
-
-<!-- Twitter -->
-<meta name="twitter:title" content={title}>
-<meta name="twitter:image" content={image}>
-<!-- <meta name="twitter:site" content={url}> -->
-<meta name="twitter:description" content={ description || titleWithTagline }>
-<meta name="twitter:creator" content="@heycaseywattsup">
-
-
-<!-- <SEO
-  slot="head"
+<SEOTags 
+	title={titleWithEmoji}
+	author="Casey Watts!"
+	url={url}
 	description={description || titleWithTagline}
-	openGraph={{
-		basic: {
-			title: titleWithEmoji,
-			image: image,
-			type: "website"
-		},
-		optional: {
-			description: (description || titleWithTagline),
-			siteName: "Hi, I'm Casey!"
-		}
-	}}
-	twitter={{
-		creator: "@heycaseywattsup",
-		image: image,
-		title: titleWithEmoji,
-		description: (description || titleWithTagline)
-	}}
-/> -->
+	image={image}
+	contentType="article"
+	twitterCreator="@heycaseywattsup"
+/>
 
 <OuterLayout>
 	<div class="panel">
