@@ -29,6 +29,10 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 </script> -->
 
 <title slot="head">{titleWithEmoji}</title>
+<meta slot="head" name="image" property="og:image" content={image}>
+<meta slot="head" name="author" content="Casey Watts!">
+<meta slot="head" name="title" property="og:title" content={titleWithEmoji}>
+
 <SEO
   slot="head"
   title={titleWithEmoji}
