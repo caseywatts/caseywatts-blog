@@ -29,24 +29,24 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 </script> -->
 
 <!-- Regular -->
-<title slot="head">{titleWithEmoji}</title>
-<meta slot="head" name="author" content="Casey Watts!">
+<title>{titleWithEmoji}</title>
+<meta name="author" content="Casey Watts!">
 
 <!-- OpenGraph -->
-<meta slot="head" name="title" property="og:title" content={titleWithEmoji}>
-<meta slot="head" property="og:type" content="article">
-<meta slot="head" property="og:url" content={url}>
-<meta slot="head" name="description" property="og:description" content={ description || titleWithTagline }>
-<meta slot="head" name="image" property="og:image" content={image}>
+<meta name="title" property="og:title" content={titleWithEmoji}>
+<meta property="og:type" content="article">
+<meta property="og:url" content={url}>
+<meta name="description" property="og:description" content={ description || titleWithTagline }>
+<meta name="image" property="og:image" content={image}>
 
 <!-- Twitter -->
-<meta slot="head" name="twitter:title" content={title}>
-<meta slot="head" name="twitter:image" content={image}>
-<!-- <meta slot="head" name="twitter:site" content={url}> -->
-<meta slot="head" name="twitter:description" content={ description || titleWithTagline }>
-<meta slot="head" name="twitter:creator" content="@heycaseywattsup">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:image" content={image}>
+<!-- <meta name="twitter:site" content={url}> -->
+<meta name="twitter:description" content={ description || titleWithTagline }>
+<meta name="twitter:creator" content="@heycaseywattsup">
 
-<!-- <meta slot="head" name="image" property="og:image:alt" content={imageDescription}> -->
+<!-- <meta name="image" property="og:image:alt" content={imageDescription}> -->
 
 <!-- <SEO
   slot="head"
