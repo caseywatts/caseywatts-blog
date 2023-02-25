@@ -33,10 +33,14 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 <meta name="author" content="Casey Watts!">
 
 <!-- OpenGraph -->
-<meta name="title" property="og:title" content={titleWithEmoji}>
-<meta name="url" property="og:url" content={url}>
-<meta name="description" property="og:description" content={ description || titleWithTagline }>
-<meta name="image" property="og:image" content={image}>
+<meta name="title" content={titleWithEmoji}>
+<meta name="url" content={url}>
+<meta name="description" content={ description || titleWithTagline }>
+<meta name="image" content={image}>
+<meta property="og:title" content={titleWithEmoji}>
+<meta property="og:url" content={url}>
+<meta property="og:description" content={ description || titleWithTagline }>
+<meta property="og:image" content={image}>
 <meta property="og:type" content="article">
 
 <!-- Twitter -->
