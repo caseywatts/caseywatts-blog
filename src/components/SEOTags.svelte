@@ -10,6 +10,7 @@
 
 <!-- Regular -->
 <title>{title}</title>
+<link rel="canonical" href={url} />
 <meta name="title" content={title} />
 <meta name="author" content={author} />
 <meta name="url" content={url} />
