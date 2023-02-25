@@ -24,6 +24,14 @@
 <!-- <meta name="image" property="og:image:alt" content={imageDescription}> -->
 <meta property="og:type" content={contentType} />
 
+<!-- Combo for LinkedIn -->
+<meta name="title" property="og:title" content={title} />
+<meta name="url" property="og:url" content={url} />
+<meta name="description" property="og:description" content={description} />
+<meta name="image" property="og:image" content={image} />
+<!-- <meta name="image" property="og:image:alt" content={imageDescription}> -->
+<!-- <meta name="type" property="og:type" content={contentType} /> -->
+
 <!-- Twitter -->
 <meta name="twitter:title" content={title} />
 <meta name="twitter:image" content={image} />
