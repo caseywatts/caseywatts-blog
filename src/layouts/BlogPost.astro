@@ -30,17 +30,18 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 
 <!-- Regular -->
 <title>{titleWithEmoji}</title>
-<meta name="author" content="Casey Watts!">
-
-<!-- OpenGraph -->
 <meta name="title" content={titleWithEmoji}>
+<meta name="author" content="Casey Watts!">
 <meta name="url" content={url}>
 <meta name="description" content={ description || titleWithTagline }>
 <meta name="image" content={image}>
+
+<!-- OpenGraph -->
 <meta property="og:title" content={titleWithEmoji}>
 <meta property="og:url" content={url}>
 <meta property="og:description" content={ description || titleWithTagline }>
 <meta property="og:image" content={image}>
+<!-- <meta name="image" property="og:image:alt" content={imageDescription}> -->
 <meta property="og:type" content="article">
 
 <!-- Twitter -->
@@ -50,7 +51,6 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 <meta name="twitter:description" content={ description || titleWithTagline }>
 <meta name="twitter:creator" content="@heycaseywattsup">
 
-<!-- <meta name="image" property="og:image:alt" content={imageDescription}> -->
 
 <!-- <SEO
   slot="head"
