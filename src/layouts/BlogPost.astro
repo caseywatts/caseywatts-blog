@@ -29,13 +29,14 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 </script> -->
 
 <title slot="head">{titleWithEmoji}</title>
-<meta slot="head" name="image" property="og:image" content={image}>
-<meta slot="head" name="author" content="Casey Watts!">
 <meta slot="head" name="title" property="og:title" content={titleWithEmoji}>
+<meta slot="head" property="og:type" content="article">
+<meta slot="head" name="description" property="og:description" content={description || titleWithTagline }>
+<meta slot="head" name="author" content="Casey Watts!">
+<meta slot="head" name="image" property="og:image" content={image}>
 
 <SEO
   slot="head"
-  title={titleWithEmoji}
 	description={description || titleWithTagline}
 	openGraph={{
 		basic: {
