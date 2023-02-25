@@ -15,7 +15,7 @@ export async function get(context) {
       return {
         ...post.data,
         description,
-        link: `/blog/${post.slug}/`,
+        link: `/blog/${post.slug}/?utm_medium=rss&utm_source=caseywattsblog`,
       };
     }),
   });
