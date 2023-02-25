@@ -34,10 +34,10 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 
 <!-- OpenGraph -->
 <meta name="title" property="og:title" content={titleWithEmoji}>
-<meta property="og:type" content="article">
-<meta property="og:url" content={url}>
+<meta name="url" property="og:url" content={url}>
 <meta name="description" property="og:description" content={ description || titleWithTagline }>
 <meta name="image" property="og:image" content={image}>
+<meta property="og:type" content="article">
 
 <!-- Twitter -->
 <meta name="twitter:title" content={title}>
