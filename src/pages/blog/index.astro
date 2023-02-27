@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import OuterLayout from '../../layouts/OuterLayout.astro';
 import BlogPostPreview from '../../components/BlogPostPreview.svelte'
+import SEOTags from '../../components/SEOTags.svelte';
 
 const posts = (await getCollection('blog'))
 .filter((post) => !post.data.draft)
@@ -9,6 +10,13 @@ const posts = (await getCollection('blog'))
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
+
+<SEOTags
+	title="Casey's Blog"
+	description="Casey writes about: programming, psychology, workplace culture, community development, personal updates, tech tips, local DMV-area events and online events."
+	contentType="website"
+	url={Astro.url.href}
+/>
 
 <OuterLayout>
 	<section>

@@ -5,7 +5,7 @@
   export let url = "";
   export let description = "";
   export let image = defaultImage;
-  export let contentType = "";
+  export let contentType = "website";
   export let twitterCreator = "@heycaseywattsup";
 </script>
 
