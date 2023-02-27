@@ -31,12 +31,10 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 
 <SEOTags 
 	title={titleWithEmoji}
-	author="Casey Watts!"
-	url={url}
 	description={description || titleWithTagline}
 	image={image}
 	contentType="article"
-	twitterCreator="@heycaseywattsup"
+	url={url}
 />
 
 <OuterLayout>

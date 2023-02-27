@@ -1,11 +1,12 @@
 <script>
+  import defaultImage from "../assets/headshot-2.jpg";
   export let title = "";
-  export let author = "";
+  export let author = "Casey Watts!";
   export let url = "";
   export let description = "";
-  export let image = "";
+  export let image = defaultImage;
   export let contentType = "";
-  export let twitterCreator = "";
+  export let twitterCreator = "@heycaseywattsup";
 </script>
 
 <!-- Regular -->
