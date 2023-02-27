@@ -1,6 +1,14 @@
 ---
 import Page from "../../src/layouts/Page.astro"
+import SEOTags from "../components/SEOTags.svelte";
 ---
+
+<SEOTags 
+	title="Soundboard"
+	description="You know those little sound bytes that live in your head forever? Here are some of Casey's!"
+	contentType="website"
+	url={Astro.url.href}
+/>
 
 <Page>
   <audio id="catbug-whoopsies" preload="auto" src="/soundboard/catbug-whoopsies.mp3"></audio>

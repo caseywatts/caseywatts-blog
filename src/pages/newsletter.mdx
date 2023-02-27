@@ -1,59 +1,55 @@
 ---
 title: Newsletter
+description: "Casey emails about: programming, psychology, workplace culture, community development, personal updates, tech tips, local DMV-area events and online events."
+layout: "../layouts/Page.astro"
 ---
 
 import EmailCheckbox from "../components/EmailCheckbox.astro";
-import OuterLayout from "../layouts/OuterLayout.astro";
 
-<OuterLayout>
-	<div class="panel">
-    <div class="mx-auto">
-    <form
-      action="
-        https://buttondown.email/api/emails/embed-subscribe/heycaseywattsup
-      "
-      method="post"
-      target="popupwindow"
-      onsubmit="window.open('https://buttondown.email/heycaseywattsup', 'popupwindow')"
-      class="embeddable-buttondown-form plausible-event-name=Subscribe"
-    >
-      <h2 class="text-2xl text-center mt-0 mb-5">👋🏻 Casey's Mailing List</h2>
-      <div class="text-center">I email <b>a few times per month.</b></div>
+<div class="mx-auto">
+<form
+  action="
+    https://buttondown.email/api/emails/embed-subscribe/heycaseywattsup
+  "
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.email/heycaseywattsup', 'popupwindow')"
+  class="embeddable-buttondown-form plausible-event-name=Subscribe"
+>
+  <h2 class="text-2xl text-center mt-0 mb-5">👋🏻 Casey's Mailing List</h2>
+  <div class="text-center">I email <b>a few times per month.</b></div>
 
-    <div class="text-center">Only get the emails you want.</div>
-    <div class="text-lg pt-3">Events</div>
-    <div class="grid md:grid-cols-2">
-      <EmailCheckbox tagName="🏛️ Local Events" description="DC, MD, VA area things" />
-      <EmailCheckbox tagName="🎥 Online Events" description="workshops, discussions" />
-    </div>
-    <div class="text-lg pt-3">Topics</div>
-    <div class="grid md:grid-cols-2">
-      <EmailCheckbox tagName="💻 Programming" description="javascript, coding, etc" />
-      <EmailCheckbox tagName="🧠 Psychology" description="burnout, validation etc" />
-      <EmailCheckbox tagName="👔 Workplace" description="culture, leadership, etc" />
-      <EmailCheckbox tagName="🌎 Community" description="volunteering, co-ownership, inclusion" />
-      <EmailCheckbox tagName="🙋🏻 Personal" description="music, improv, etc" />
-      <EmailCheckbox tagName="💡 Tips" description="gmail tricks, etc" />
-    </div>
+<div class="text-center">Only get the emails you want.</div>
+<div class="text-lg pt-3">Events</div>
+<div class="grid md:grid-cols-2">
+  <EmailCheckbox tagName="🏛️ Local Events" description="DC, MD, VA area things" />
+  <EmailCheckbox tagName="🎥 Online Events" description="workshops, discussions" />
+</div>
+<div class="text-lg pt-3">Topics</div>
+<div class="grid md:grid-cols-2">
+  <EmailCheckbox tagName="💻 Programming" description="javascript, coding, etc" />
+  <EmailCheckbox tagName="🧠 Psychology" description="burnout, validation etc" />
+  <EmailCheckbox tagName="👔 Workplace" description="culture, leadership, etc" />
+  <EmailCheckbox tagName="🌎 Community" description="volunteering, co-ownership, inclusion" />
+  <EmailCheckbox tagName="🙋🏻 Personal" description="music, improv, etc" />
+  <EmailCheckbox tagName="💡 Tips" description="gmail tricks, etc" />
+</div>
 
-    <div class="mx-auto pb-8 pt-3 md:pt-8">
-      <span class="flex flex-col md:flex-row justify-center items-center md:space-x-4 space-y-3 md:space-y-0">
-        <label for="email">Email</label>
-        <input class="bg-white hover:shadow-inner border-2 border-slate-300 hover:border-slate-400 w-64" type="email" name="email" placeholder="my.name@example.com" autofocus />
-        <input class="bg-gradient-to-tr from-blue-100 via-blue-200 to-blue-100 shadow-lg hover:shadow-md border border-violet-400 hover:border-violet-600 p-2 rounded-lg" type="submit" value="Subscribe" />
-      </span>
-    </div>
+<div class="mx-auto pb-8 pt-3 md:pt-8">
+  <span class="flex flex-col md:flex-row justify-center items-center md:space-x-4 space-y-3 md:space-y-0">
+    <label for="email">Email</label>
+    <input class="bg-white hover:shadow-inner border-2 border-slate-300 hover:border-slate-400 w-64" type="email" name="email" placeholder="my.name@example.com" autofocus />
+    <input class="bg-gradient-to-tr from-blue-100 via-blue-200 to-blue-100 shadow-lg hover:shadow-md border border-violet-400 hover:border-violet-600 p-2 rounded-lg" type="submit" value="Subscribe" />
+  </span>
+</div>
 
-    <div class="text-right text-slate-500">
-      Powered by <a class="link" href="https://buttondown.email" target="_blank">Buttondown</a>
-    </div>
-    <hr class="my-4" />
-    <div class="text-slate-500">
-      Maybe later you'll want to <b>update</b> your subscription categories -- come back to this page and re-subscribe to update them. <a href="https://github.com/buttondown-email/roadmap/issues/1168">Details.</a>
-    </div>
-    <input type="hidden" value="1" name="embed" />
-    </form>
-    </div>
-
-  </div>
-</OuterLayout>
+<div class="text-right text-slate-500">
+  Powered by <a class="link" href="https://buttondown.email" target="_blank">Buttondown</a>
+</div>
+<hr class="my-4" />
+<div class="text-slate-500">
+  Maybe later you'll want to <b>update</b> your subscription categories -- come back to this page and re-subscribe to update them. <a href="https://github.com/buttondown-email/roadmap/issues/1168">Details.</a>
+</div>
+<input type="hidden" value="1" name="embed" />
+</form>
+</div>

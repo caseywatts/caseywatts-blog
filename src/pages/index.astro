@@ -3,7 +3,16 @@ import OuterLayout from '../layouts/OuterLayout.astro';
 import Linktree from "../components/Linktree.astro";
 import Bio from '../components/Bio.astro';
 import LatestPosts from '../components/LatestPosts.astro';
+import SEOTags from '../components/SEOTags.svelte';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
+
+<SEOTags 
+	title={SITE_TITLE}
+	description={SITE_DESCRIPTION}
+	contentType="website"
+	url={Astro.url.href}
+/>
 
 <OuterLayout>
 	<div class="panel">
