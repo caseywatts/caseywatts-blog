@@ -12,7 +12,7 @@
 
   function keyPressed(e) {
     const key = e.key;
-    if (["1", "2", "3", "4"].includes(key)) {
+    if (["1", "2", "3", "4", "5", "6", "7"].includes(key)) {
       const radioButtonGroupParent = e.target.closest(".radio-group");
       const radioInput = radioButtonGroupParent.querySelector(`[data-keyboard-select='${key}']`);
 
