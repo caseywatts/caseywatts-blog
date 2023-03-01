@@ -18,102 +18,102 @@ export const SOCIAL_CONNECTNESS_SCALE = {
   scaleItems: [
     {
       number: 1,
-      question: "I feel comfortable in the presence of strangers",
-      reverseScored: false
+      question: "I feel distant from people.",
+      reverseScored: true
     },
     {
       number: 2,
-      question: "I am in tune with the world",
-      reverseScored: false
+      question: "I don't feel related to most people.",
+      reverseScored: true
     },
     {
       number: 3,
-      question: "Even among my friends, there is no sense of brother/sisterhood",
+      question: "I feel like an outsider.",
       reverseScored: true
     },
     {
       number: 4,
-      question: "I fit in well in new situations",
-      reverseScored: false
+      question: "I see myself as a loner.",
+      reverseScored: true
     },
     {
       number: 5,
-      question: "I feel close to people",
-      reverseScored: false
+      question: "I feel disconnected from the world around me.",
+      reverseScored: true
     },
     {
       number: 6,
-      question: "I feel disconnected from the world around me",
-      reverseScored: false
+      question: "I don't feel I participate with anyone or any group.",
+      reverseScored: true
     },
     {
       number: 7,
-      question: "Even around people I know, I don't feel that I really belong.",
+      question: "I feel close to people.",
       reverseScored: false
     },
     {
       number: 8,
-      question: "I see people as friendly and approachable",
-      reverseScored: false
+      question: "Even around people I know, I don't feel that I really belong.",
+      reverseScored: true
     },
     {
       number: 9,
-      question: "I feel like an outsider",
+      question: "I am able to relate to my peers.",
       reverseScored: false
     },
     {
       number: 10,
-      question: "I feel understood by the people I know",
-      reverseScored: false
+      question: "I catch myself losing a sense of connectedness with society.",
+      reverseScored: true
     },
     {
       number: 11,
-      question: "I feel distant from people",
+      question: "I am able to connect with other people.",
       reverseScored: false
     },
     {
       number: 12,
-      question: "I am able to relate to my peers",
+      question: "I feel understood by the people I know.",
       reverseScored: false
     },
     {
       number: 13,
-      question: "I have little sense of togetherness with my peers",
+      question: "I see people as friendly and approachable.",
       reverseScored: false
     },
     {
       number: 14,
-      question: "I find myself actively involved in people's lives",
+      question: "I fit in well in new situations.",
       reverseScored: false
     },
     {
       number: 15,
-      question: "I catch myself losing a sense of connectedness with society",
-      reverseScored: false
+      question: "I have little sense of togetherness with my peers.",
+      reverseScored: true
     },
     {
       number: 16,
-      question: "I am able to connect with other people",
+      question: "My friends feel like family.",
       reverseScored: false
     },
     {
       number: 17,
-      question: "I see myself as a loner",
+      question: "I find myself actively involved in people's lives.",
       reverseScored: false
     },
     {
       number: 18,
-      question: "I don't feel related to most people",
-      reverseScored: false
+      question: "Even among my friends, there is no sense of brother/sisterhood.",
+      reverseScored: true
     },
     {
       number: 19,
-      question: "My friends feel like family",
+      question: "I am in tune with the world.",
       reverseScored: false
     },
     {
       number: 20,
-      question: "I don't feel I participate with anyone or any group",
+      question: "I fee! comfortable in the presence of strangers.",
       reverseScored: false
     },
   ]
