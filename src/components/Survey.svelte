@@ -51,8 +51,9 @@
   }
 </script>
 
-<h2>
-  {scale.title}
+<h2 class="flex justify-between align-middle">
+  <span>{scale.title}</span>
+  <span class="text-base">Expected Time: {scale.expectedTime}</span>
 </h2>
 
 <form>
