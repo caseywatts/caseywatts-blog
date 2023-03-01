@@ -1,3 +1,124 @@
+export const SOCIAL_CONNECTNESS_SCALE = {
+  title: "Social Connectedness Scale",
+  otherName: "Social Connectedness Score",
+  source: {
+    name: "Social Connectedness Scale (Revised)",
+    url: "https://depts.washington.edu/uwcssc/sites/default/files/Social%20Connectedness%20Scale-Revised%20(SCS-R).pdf"
+  },
+  expectedTime: "3-5 minutes",
+  scaleLength: 6,
+  scaleLabels: [
+    "strongly disagree",
+    "disagree",
+    "mildly disagree",
+    "mildly agree",
+    "agree",
+    "strongly agree"
+  ],
+  scaleItems: [
+    {
+      number: 1,
+      question: "I feel comfortable in the presence of strangers",
+      reverseScored: false
+    },
+    {
+      number: 2,
+      question: "I am in tune with the world",
+      reverseScored: false
+    },
+    {
+      number: 3,
+      question: "Even among my friends, there is no sense of brother/sisterhood",
+      reverseScored: true
+    },
+    {
+      number: 4,
+      question: "I fit in well in new situations",
+      reverseScored: false
+    },
+    {
+      number: 5,
+      question: "I feel close to people",
+      reverseScored: false
+    },
+    {
+      number: 6,
+      question: "I feel disconnected from the world around me",
+      reverseScored: false
+    },
+    {
+      number: 7,
+      question: "Even around people I know, I don't feel that I really belong.",
+      reverseScored: false
+    },
+    {
+      number: 8,
+      question: "I see people as friendly and approachable",
+      reverseScored: false
+    },
+    {
+      number: 9,
+      question: "I feel like an outsider",
+      reverseScored: false
+    },
+    {
+      number: 10,
+      question: "I feel understood by the people I know",
+      reverseScored: false
+    },
+    {
+      number: 11,
+      question: "I feel distant from people",
+      reverseScored: false
+    },
+    {
+      number: 12,
+      question: "I am able to relate to my peers",
+      reverseScored: false
+    },
+    {
+      number: 13,
+      question: "I have little sense of togetherness with my peers",
+      reverseScored: false
+    },
+    {
+      number: 14,
+      question: "I find myself actively involved in people's lives",
+      reverseScored: false
+    },
+    {
+      number: 15,
+      question: "I catch myself losing a sense of connectedness with society",
+      reverseScored: false
+    },
+    {
+      number: 16,
+      question: "I am able to connect with other people",
+      reverseScored: false
+    },
+    {
+      number: 17,
+      question: "I see myself as a loner",
+      reverseScored: false
+    },
+    {
+      number: 18,
+      question: "I don't feel related to most people",
+      reverseScored: false
+    },
+    {
+      number: 19,
+      question: "My friends feel like family",
+      reverseScored: false
+    },
+    {
+      number: 20,
+      question: "I don't feel I participate with anyone or any group",
+      reverseScored: false
+    },
+  ]
+}
+
 export const LONELINESS_SCALE = {
   title: "Loneliness Scale",
   otherName: "Loneliness Score",
