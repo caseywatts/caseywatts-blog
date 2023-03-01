@@ -56,6 +56,8 @@
   <span class="text-base">Expected Time: {scale.expectedTime}</span>
 </h2>
 
+<div>You can also use the keyboard to select answers, by pressing <span class="kbd kbd-sm">1</span> <span class="kbd kbd-sm">2</span> <span class="kbd kbd-sm">3</span> etc.</div>
+
 <form>
   {#each scale.scaleItems as item, itemNumber}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
