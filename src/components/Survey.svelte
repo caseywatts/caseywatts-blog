@@ -76,14 +76,15 @@
 
 <div>
   {#if remainingQuestions}
-    <div class="text-xl text-center">
-      <div>Remaining Questions</div>
+    <div class="text-2xl text-center m-4">
       <div>{remainingQuestions}</div>
+      <div>remaining questions</div>
     </div>
   {:else}
-    <div class="text-xl text-center">
-      <div>Average Score</div>
+    <div class="text-2xl text-center m-4">
+      <div>{scale.otherName}</div>
       <div>{average} (out of {scale.scaleLength})</div>
+      <div class="text-base">via the <a href={scale.source.url}>{scale.source.name}</a></div>
     </div>
   {/if}
 </div>

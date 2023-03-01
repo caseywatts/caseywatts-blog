@@ -1,5 +1,10 @@
 export const LONELINESS_SCALE = {
   title: "Loneliness Scale",
+  otherName: "Loneliness Score",
+  source: {
+    name: "UCLA Loneliness Scale (version 3)",
+    url: "https://sparqtools.org/mobility-measure/ucla-loneliness-scale-version-3/#all-survey-questions"
+  },
   scaleLength: 4,
   scaleLabels: [
     "never",
