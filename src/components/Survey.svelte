@@ -66,7 +66,7 @@
 
 <div class="hidden sm:block">You can also use the keyboard to select answers, by pressing <span class="kbd kbd-sm">1</span> <span class="kbd kbd-sm">2</span> <span class="kbd kbd-sm">3</span> etc.</div>
 
-<form autofocus>
+<form>
   {#each scale.scaleItems as item, itemNumber}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="group p-4 radio-group">
