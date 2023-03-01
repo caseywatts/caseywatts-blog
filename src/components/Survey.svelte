@@ -56,23 +56,25 @@
   <span class="text-base">Expected Time: {scale.expectedTime}</span>
 </h2>
 
-<div>You can also use the keyboard to select answers, by pressing <span class="kbd kbd-sm">1</span> <span class="kbd kbd-sm">2</span> <span class="kbd kbd-sm">3</span> etc.</div>
+<div class="hidden sm:block">You can also use the keyboard to select answers, by pressing <span class="kbd kbd-sm">1</span> <span class="kbd kbd-sm">2</span> <span class="kbd kbd-sm">3</span> etc.</div>
 
 <form>
   {#each scale.scaleItems as item, itemNumber}
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <div class="group hover:bg-blue-100 p-4 radio-group">
+    <div class="group p-4 radio-group">
       <div>{item.question}</div>
       <div>
         {#each scale.scaleLabels as label, responseRangeNumber}
-          <label class="mx-2 inline-block my-1 md:my-0" on:keydown={keyPressed}>
-            {#if item.reverseScored}
-              <input type="radio" bind:group={responses[itemNumber]} name={`radio-group-${itemNumber}`} value={reverseScored(responseRangeNumber + 1)} data-keyboard-select={responseRangeNumber + 1} />
-            {:else}
-              <input type="radio" bind:group={responses[itemNumber]} name={`radio-group-${itemNumber}`} value={responseRangeNumber + 1} data-keyboard-select={responseRangeNumber + 1} />
-            {/if}
-            <span class="hidden md:inline kbd kbd-sm">{responseRangeNumber + 1}</span>
-            {label}
+          <label class="inline-block mt-3 mx-2 md:mx-4 text-center bg-blue-100 hover:bg-blue-200 p-2 indicator" on:keydown={keyPressed}>
+            <div class="flex items-center align-middle justify-center gap-2">
+              {#if item.reverseScored}
+                <input type="radio" bind:group={responses[itemNumber]} name={`radio-group-${itemNumber}`} value={reverseScored(responseRangeNumber + 1)} data-keyboard-select={responseRangeNumber + 1} />
+              {:else}
+                <input type="radio" bind:group={responses[itemNumber]} name={`radio-group-${itemNumber}`} value={responseRangeNumber + 1} data-keyboard-select={responseRangeNumber + 1} />
+              {/if}
+              <span class="indicator-item hidden sm:inline kbd kbd-sm">{responseRangeNumber + 1}</span>
+              <span class="">{label}</span>
+            </div>
           </label>
         {/each}
       </div>
