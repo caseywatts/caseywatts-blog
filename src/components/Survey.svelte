@@ -9,6 +9,10 @@
   $: remainingQuestions = -(responses.filter(String).length - responses.length);
   $: sum = responses.reduce((a, b) => a + b, 0);
   $: average = sum / scale.scaleLength;
+  function keyPressed(e) {
+    const radioButtonGroupParent = e.target.parentNode.parentNode;
+    console.log(radioButtonGroupParent);
+  }
 </script>
 
 <h2>
@@ -21,7 +25,7 @@
       <div>{item.question}</div>
       <div>
         {#each scale.scaleLabels as label, responseRangeNumber}
-          <label class="mx-2">
+          <label class="mx-2" on:keyup={keyPressed}>
             {#if item.reverseScored}
               <input type="radio" bind:group={responses[itemNumber]} name={itemNumber} value={reverseScored(responseRangeNumber + 1)} />
             {:else}
