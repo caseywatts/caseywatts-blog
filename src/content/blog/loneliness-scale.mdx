@@ -1,0 +1,14 @@
+---
+pubDate: "2023-3-1"
+emoji: "😞"
+title: The Loneliness Scale
+tagline: TAGLINE
+description: "DESCRIPTION"
+heroImage: "/assets/images/emoji/disappointed.png"
+hashtags: "HASHTAGS"
+---
+
+import Survey from "../../components/Survey.svelte";
+import { LONELINESS_SCALE } from "../../scales.ts";
+
+<Survey scale={LONELINESS_SCALE} client:only="svelte" />
