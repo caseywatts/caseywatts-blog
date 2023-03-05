@@ -3,6 +3,7 @@ import { defineCollection, z } from 'astro:content';
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
+		emoji: z.string(),
 		title: z.string(),
 		tagline: z.string(),
 		description: z.string().optional(),
@@ -17,7 +18,6 @@ const blog = defineCollection({
 			.transform((str) => (str ? new Date(str) : undefined)),
 		heroImage: z.string().optional(),
 		tags: z.string().array().optional(),
-		emoji: z.string().optional(),
 		mastodonURL: z.string().optional(),
 		hashtags: z.string().optional(),
 		draft: z.boolean().optional()

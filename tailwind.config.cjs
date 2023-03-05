@@ -20,5 +20,17 @@ module.exports = {
       },
     },
   },
+  daisyui: {
+    themes: [
+      {
+        heycaseywattsup: {
+          ...require("daisyui/src/colors/themes")["[data-theme=pastel]"],
+          primary: "rgb(221 214 254)",
+          secondary: "rgb(191 219 254)",
+          // "primary-focus": "mediumblue",
+        },
+      },
+    ],
+  },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/line-clamp"), require("daisyui")],
 };
