@@ -5,7 +5,7 @@ import SEOTags from '../../../components/SEOTags.svelte';
 import BlogPostList from '../../../components/BlogPostList.svelte';
 
 const draftPosts = (await getCollection('blog'))
-.filter((post) => post.data.draft);
+	.filter((post) => post.data.draft);
 ---
 
 <SEOTags
@@ -20,6 +20,6 @@ const draftPosts = (await getCollection('blog'))
 		<div class="panel space-y-6">
 			<h2 class="text-3xl text-center">DRAFT Blog Posts</h2>
 		</div>
-		<BlogPostList posts={draftPosts} />
+		<BlogPostList posts={draftPosts} client:load />
 	</section>
 </OuterLayout>
