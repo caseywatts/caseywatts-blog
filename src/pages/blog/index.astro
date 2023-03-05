@@ -1,14 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import OuterLayout from '../../layouts/OuterLayout.astro';
-import BlogPostPreview from '../../components/BlogPostPreview.svelte'
 import SEOTags from '../../components/SEOTags.svelte';
+import BlogPostList from '../../components/BlogPostList.svelte';
 
-const posts = (await getCollection('blog'))
-.filter((post) => !post.data.draft)
-.sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const allPosts = await getCollection('blog').then((posts) => posts)
 ---
 
 <SEOTags
@@ -33,12 +29,6 @@ const posts = (await getCollection('blog'))
 				</div>
 			</div>
 		</div>
-		<ul>
-			{
-				posts.map((post) => (
-					<BlogPostPreview post={post} />
-				))
-			}
-		</ul>
+		<BlogPostList allPosts={allPosts} />
 	</section>
 </OuterLayout>
