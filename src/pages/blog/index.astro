@@ -30,6 +30,6 @@ const publishedPosts = (await getCollection('blog'))
 				</div>
 			</div>
 		</div>
-		<BlogPostList posts={publishedPosts} />
+		<BlogPostList posts={publishedPosts} client:load />
 	</section>
 </OuterLayout>

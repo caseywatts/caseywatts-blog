@@ -2,17 +2,31 @@
   import BlogPostPreview from "./BlogPostPreview.svelte";
   export let posts = [];
   export let limit = posts.length;
+  let filter = "";
 
-  const filteredPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, limit);
-</script>
+  $: filteredPosts = posts
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, limit)
+    .filter((post) => {
+      if (filter) {
+        if (post.data.tags && filter !== "") {
+          return post.data.tags.includes(filter);
+        } else {
+          return false;
+        }
+      } else {
+        return true;
+      }
+    });
 
-<!-- <script> 
-  const searchParams = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop),
+  import { onMount } from "svelte";
+  onMount(() => {
+    const searchParams = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    filter = searchParams.category;
   });
-  
-  console.log(searchParams.category);
-  </script> -->
+</script>
 
 <ul>
   {#each filteredPosts as post}
