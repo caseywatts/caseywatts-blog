@@ -1,4 +1,4 @@
-export const SOCIAL_CONNECTNESS_SCALE = {
+export const SOCIAL_CONNECTEDNESS_SCALE = {
   title: "Social Connectedness Scale",
   otherName: "Social Connectedness Score",
   source: {
