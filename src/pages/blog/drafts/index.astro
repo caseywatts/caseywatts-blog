@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import OuterLayout from '../../../layouts/OuterLayout.astro';
+import BlogPostPreview from '../../../components/BlogPostPreview.svelte'
+import SEOTags from '../../../components/SEOTags.svelte';
+
+const posts = (await getCollection('blog'))
+.filter((post) => post.data.draft)
+.sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<SEOTags
+	title="Draft Blog Posts"
+	description="Casey writes about: programming, psychology, workplace culture, community development, personal updates, tech tips, local DMV-area events and online events."
+	contentType="website"
+	url={Astro.url.href}
+/>
+
+<OuterLayout>
+	<section>
+		<div class="panel">
+			<h2 class="text-3xl text-center mb-6">DRAFT Blog Posts</h2>
+		</div>
+		<ul>
+			{
+				posts.map((post) => (
+					<BlogPostPreview post={post} />
+				))
+			}
+		</ul>
+	</section>
+</OuterLayout>

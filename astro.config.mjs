@@ -20,6 +20,9 @@ export default defineConfig({
         if (/blog\/.*\/share/.test(item.url)) {
           return undefined;
         }
+        if (/blog\/drafts.*/.test(item.url)) {
+          return undefined;
+        }
         return item;
       },
     }),
