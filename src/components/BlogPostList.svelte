@@ -1,8 +1,9 @@
 <script>
   import BlogPostPreview from "./BlogPostPreview.svelte";
-  export let allPosts = [];
+  export let posts = [];
+  export let limit = posts.length;
 
-  const posts = allPosts.filter((post) => !post.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  const filteredPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, limit);
 </script>
 
 <!-- <script> 
@@ -14,7 +15,7 @@
   </script> -->
 
 <ul>
-  {#each posts as post}
+  {#each filteredPosts as post}
     <BlogPostPreview {post} />
   {/each}
 </ul>

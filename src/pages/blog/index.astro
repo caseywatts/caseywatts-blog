@@ -4,7 +4,8 @@ import OuterLayout from '../../layouts/OuterLayout.astro';
 import SEOTags from '../../components/SEOTags.svelte';
 import BlogPostList from '../../components/BlogPostList.svelte';
 
-const allPosts = await getCollection('blog').then((posts) => posts)
+const publishedPosts = (await getCollection('blog'))
+	.filter((post) => !post.data.draft);
 ---
 
 <SEOTags
@@ -29,6 +30,6 @@ const allPosts = await getCollection('blog').then((posts) => posts)
 				</div>
 			</div>
 		</div>
-		<BlogPostList allPosts={allPosts} />
+		<BlogPostList posts={publishedPosts} />
 	</section>
 </OuterLayout>

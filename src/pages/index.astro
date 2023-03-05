@@ -1,10 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import OuterLayout from '../layouts/OuterLayout.astro';
 import Linktree from "../components/Linktree.astro";
 import Bio from '../components/Bio.astro';
-import LatestPosts from '../components/LatestPosts.astro';
+import BlogPostList from '../components/BlogPostList.svelte';
 import SEOTags from '../components/SEOTags.svelte';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const publishedPosts = (await getCollection('blog'))
+	.filter((post) => !post.data.draft);
 ---
 
 <SEOTags 
@@ -22,8 +26,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<div class="panel">
 		<h2 class="text-3xl text-center">Latest Blog Posts</h2>
 	</div>
-	<LatestPosts />
-
+	<BlogPostList posts={publishedPosts} limit={3} />
 	<div class="panel">
 		<Linktree />
 	</div>
