@@ -113,7 +113,7 @@ export const SOCIAL_CONNECTNESS_SCALE = {
     },
     {
       number: 20,
-      question: "I fee! comfortable in the presence of strangers.",
+      question: "I feel comfortable in the presence of strangers.",
       reverseScored: false
     },
   ]
@@ -124,7 +124,8 @@ export const LONELINESS_SCALE = {
   otherName: "Loneliness Score",
   source: {
     name: "UCLA Loneliness Scale (version 3)",
-    url: "https://sparqtools.org/mobility-measure/ucla-loneliness-scale-version-3/#all-survey-questions"
+    url: "https://sparqtools.org/mobility-measure/ucla-loneliness-scale-version-3/#all-survey-questions",
+    about: "https://en.wikipedia.org/wiki/UCLA_Loneliness_Scale"
   },
   expectedTime: "3-5 minutes",
   scaleLength: 4,
