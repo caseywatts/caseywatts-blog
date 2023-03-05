@@ -6,9 +6,10 @@ tagline: TAGLINE
 description: "DESCRIPTION"
 heroImage: "/assets/images/emoji/disappointed.png"
 hashtags: "HASHTAGS"
+draft: true
 ---
 
 import Survey from "../../components/Survey.svelte";
-import { SOCIAL_CONNECTNESS_SCALE } from "../../scales.ts";
+import { LONELINESS_SCALE } from "../../scales.ts";
 
-<Survey scale={SOCIAL_CONNECTNESS_SCALE} client:only="svelte" />
+<Survey scale={LONELINESS_SCALE} client:only="svelte" />
