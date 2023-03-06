@@ -26,7 +26,7 @@
 <div class="panel space-y-6">
   <h2 class="text-3xl text-center">Upcoming Events</h2>
 </div>
-<div class="mt-12 space-y-12">
+<div class="my-12 space-y-12">
   {#each upcomingEvents as event}
     <EventCard {event} />
   {/each}
@@ -37,7 +37,7 @@
 <div class="panel space-y-6">
   <h2 class="text-3xl text-center">Past Events</h2>
 </div>
-<div class="mt-12 space-y-12">
+<div class="my-12 space-y-12">
   {#each pastEvents as event}
     <EventCard {event} inPast="true" />
   {/each}

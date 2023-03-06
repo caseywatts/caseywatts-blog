@@ -4,6 +4,7 @@ import OuterLayout from '../layouts/OuterLayout.astro';
 import FormattedDate from '../components/FormattedDate.svelte';
 import Bio from '../components/Bio.astro';
 import CaseyFacts from '../components/CaseyFacts.svelte';
+import Tag from '../components/Tag.svelte';
 import MastodonEmbed from '../components/MastodonEmbed.astro'
 import SuggestToSubscribe from '../components/SuggestToSubscribe.astro'
 import defaultImage from "../assets/headshot-2.jpg";
@@ -13,7 +14,7 @@ import SEOTags from '../components/SEOTags.svelte';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, tagline, description, pubDate, updatedDate, heroImage, emoji, mastodonURL } = Astro.props;
+const { title, tagline, description, pubDate, updatedDate, heroImage, emoji, mastodonURL, tags } = Astro.props;
 const titleWithEmoji = emoji + " " + title;
 const titleWithTagline = titleWithEmoji + " - " + tagline;
 const url = `https://www.caseywatts.com${Astro.url.pathname}`;
@@ -39,6 +40,13 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 
 <OuterLayout>
 	<div class="panel">
+		<span class="text-2xl">
+		{
+			tags && (
+				<Tag>{tags}</Tag>
+			)
+		}
+		</span>
 		<div class="flex mb-4">
 			<div class="mb-5"><a href="/blog">⬅️ other posts</a></div>
 			<div class="text-right italic text-violet-500 text-sm flex-1">

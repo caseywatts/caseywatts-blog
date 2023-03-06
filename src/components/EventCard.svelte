@@ -2,10 +2,11 @@
   export let event;
   export let inPast = "false";
   import FormattedDateB from "./FormattedDateB.svelte";
+  import Tag from "./Tag.svelte";
 </script>
 
 <a href={event.url} class="link-card space-y-4">
-  <span class="absolute top-0 right-0 -translate-y-1/2 md:translate-x-1/2 rotate-3 hover:-rotate-3 transition p-1 mx-0.5 bg-slate-100 border border-violet-300">{event.category}</span>
+  <Tag>{event.category}</Tag>
   <div class="flex flex-col md:flex-row justify-between align-bottom">
     <div>
       <div class="text-2xl">
