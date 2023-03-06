@@ -31,5 +31,5 @@
       <a class="button-link whitespace-nowrap" href="/blog?category=💡 Tips">💡 Tips</a>
     </div>
   </div>
-  <BlogPostList {posts} client:load />
+  <BlogPostList {posts} />
 </section>

@@ -16,5 +16,5 @@ const publishedPosts = (await getCollection('blog'))
 />
 
 <OuterLayout>
-	<BlogPostIndex posts={publishedPosts} />
+	<BlogPostIndex posts={publishedPosts} client:load />
 </OuterLayout>
