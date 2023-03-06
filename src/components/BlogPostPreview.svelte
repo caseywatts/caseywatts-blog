@@ -6,6 +6,9 @@
 </script>
 
 <a href={url} class="link-card">
+  {#if post.data.tags}
+    <span class="absolute top-0 right-0 -translate-y-1/2 md:translate-x-1/2 rotate-3 hover:-rotate-3 transition p-1 mx-0.5 bg-slate-200 border border-violet-300">{post.data.tags}</span>
+  {/if}
   <div class="flex flex-col md:flex-row justify-between space-x-0 md:space-x-5 space-y-4 md:space-y-0 align-middle">
     <div class="text-6xl flex items-center align-middle justify-center">
       <span>{post.data.emoji}</span>

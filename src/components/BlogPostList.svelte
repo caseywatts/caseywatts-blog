@@ -28,7 +28,7 @@
   });
 </script>
 
-<ul>
+<ul class="my-10 space-y-10 mb-10">
   {#each filteredPosts as post}
     <BlogPostPreview {post} />
   {/each}
