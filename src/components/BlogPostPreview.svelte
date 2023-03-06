@@ -6,7 +6,7 @@
   let url = post.data.draft ? `/blog/drafts/${post.slug}/` : `/blog/${post.slug}/`;
 </script>
 
-<a href={url} class="link-card group">
+<a href={url} class="link-card group relative">
   {#if post.data.tags}
     <Tag>{post.data.tags}</Tag>
   {/if}
