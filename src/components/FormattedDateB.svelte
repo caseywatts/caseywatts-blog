@@ -1,9 +1,12 @@
 <script>
+  import { DateTime } from "luxon";
+
   export let date;
+  const luxonDate = DateTime.fromISO(date);
 </script>
 
-<time class="inline" datetime={date.toISOString()}>
-  {date.toLocaleDateString("en-us", {
+<time class="" datetime={luxonDate.toISO()}>
+  {luxonDate.toLocaleString({
     weekday: "long",
     month: "long",
     day: "numeric",
