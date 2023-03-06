@@ -4,7 +4,7 @@
 </script>
 
 <section>
-  <div class="panel space-y-6">
+  <div class="panel panel-main space-y-6">
     <h2 class="text-3xl text-center">Blog Posts</h2>
     <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 justify-around text-lg">
       <div class="text-center space-y-0">
@@ -17,7 +17,7 @@
       </div>
     </div>
   </div>
-  <div class="panel space-y-4">
+  <div class="panel panel-main space-y-4">
     <h2 class="text-center text-2xl">Categories</h2>
     <div>
       <a class="button-link block whitespace-nowrap" href="/blog">All</a>

@@ -15,7 +15,7 @@
 </script>
 
 {#if likes.length}
-  <div class="panel text-center">
+  <div class="panel panel-main text-center">
     <h2 class="text-2xl mb-2">Likes on Mastodon and Twitter</h2>
     {#each likes as mention}
       <div class="flex flex-row gap-4 justify-center">

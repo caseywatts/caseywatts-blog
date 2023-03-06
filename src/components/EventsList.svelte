@@ -23,7 +23,7 @@
   });
 </script>
 
-<div class="panel space-y-6">
+<div class="panel panel-main space-y-6">
   <h2 class="text-3xl text-center">Upcoming Events</h2>
 </div>
 <div class="my-12 space-y-12">
@@ -34,7 +34,7 @@
 
 <div class="my-36" />
 
-<div class="panel space-y-6">
+<div class="panel panel-main space-y-6">
   <h2 class="text-3xl text-center">Past Events</h2>
 </div>
 <div class="my-12 space-y-12">

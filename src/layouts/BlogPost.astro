@@ -39,7 +39,7 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 />
 
 <OuterLayout>
-	<div class="panel">
+	<div class="panel panel-main">
 		<span class="text-2xl">
 		{
 			tags && (
@@ -85,18 +85,18 @@ const image = `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${default
 
 <Webmentions url={url} client:only="svelte"/>
 
-<div class="panel p-4">
+<div class="panel panel-main p-4">
 	<SuggestToSubscribe />
 </div>
 
-<!-- <div class="panel">
+<!-- <div class="panel panel-main">
 	<a href="/blog" class="button-link block">other blog posts</a>
 </div> -->
 
-<div class="panel">
+<div class="panel panel-main">
 	<CaseyFacts client:only="svelte" />
 </div>
-<div class="panel">
+<div class="panel panel-main">
 	<Bio />
 </div>
 </OuterLayout>

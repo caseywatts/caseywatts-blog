@@ -17,7 +17,7 @@ const draftPosts = (await getCollection('blog'))
 
 <OuterLayout>
 	<section>
-		<div class="panel space-y-6">
+		<div class="panel panel-main space-y-6">
 			<h2 class="text-3xl text-center">DRAFT Blog Posts</h2>
 		</div>
 		<BlogPostList posts={draftPosts} client:load />
