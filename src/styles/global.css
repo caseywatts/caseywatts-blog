@@ -28,7 +28,7 @@ body {
 }
 
 .button-link {
-	@apply bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200 active:to-violet-200 active:from-violet-200 text-center rounded-full p-4 shadow-md hover:shadow-sm no-underline
+	@apply bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200 active:to-violet-200 active:from-violet-200 text-center rounded-full p-4 shadow-md shadow-violet-400 hover:shadow-violet-400/50 no-underline
 }
 
 

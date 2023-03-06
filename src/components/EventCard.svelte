@@ -13,11 +13,8 @@
         {event.emoji}
         {event.name}
       </div>
-      <div class="py-1 text-slate-500">
-        <div>
-          Casey {inPast == "true" ? "was" : "is"}
-          {event.participating}
-        </div>
+      <div class="font-light">
+        {event.cost}, {event.location}
       </div>
     </div>
     <div class="text-right">
@@ -27,8 +24,11 @@
           <br />to <FormattedDateB date={event.endDate} />
         {/if}
       </div>
-      <div class="font-light">
-        {event.cost}, {event.location}
+      <div class="py-1 font-light">
+        <div>
+          Casey {inPast == "true" ? "was" : "is"}
+          {event.participating}
+        </div>
       </div>
     </div>
   </div>
