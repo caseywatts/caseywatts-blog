@@ -1,0 +1,18 @@
+---
+import OuterLayout from "../../src/layouts/OuterLayout.astro"
+import SEOTags from "../components/SEOTags.svelte";
+import EventsList from "../components/EventsList.svelte";
+---
+
+<SEOTags 
+	title="Events"
+	description="Events Casey is going to and/or hosting. Both in-person (DMV area) and online events."
+	contentType="website"
+	url={Astro.url.href}
+/>
+
+<OuterLayout>
+	<div class="">
+		<EventsList client:load />
+	</div>
+</OuterLayout>

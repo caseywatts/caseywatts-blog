@@ -5,7 +5,7 @@
   let url = post.data.draft ? `/blog/drafts/${post.slug}/` : `/blog/${post.slug}/`;
 </script>
 
-<a href={url} class="panel block bg-blue-100 visited:bg-purple-100 border border-blue-500 visited:border-purple-500 p-2 md:p-6 my-2 md:my-6 mx-auto prose lg:prose-lg drop-shadow-2xl hover:drop-shadow-xl transition ease-in-out duration-500">
+<a href={url} class="link-card">
   <div class="flex flex-col md:flex-row justify-between space-x-0 md:space-x-5 space-y-4 md:space-y-0 align-middle">
     <div class="text-6xl flex items-center align-middle justify-center">
       <span>{post.data.emoji}</span>

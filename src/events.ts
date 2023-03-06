@@ -7,7 +7,8 @@ export const EVENTS = [
     participating: "hosting",
     category: "💻 tech",
     cost: "$200",
-    date: "2023-03-10"
+    date: "2023-03-10",
+    url: "https://frontrunners.tech/"
   },
   {
     name: "DC Product & Pastries",
@@ -17,7 +18,8 @@ export const EVENTS = [
     participating: "hosting",
     category: "💻 tech",
     cost: "free",
-    date: "2023-02-21"
+    date: "2023-02-21",
+    url: "https://www.meetup.com/product-and-pastries/events/291038771/"
   },
   {
     name: "Alexa's Birthday Comedy Show",
@@ -37,7 +39,8 @@ export const EVENTS = [
     participating: "hosting",
     category: "💻 tech",
     cost: "free",
-    date: "2023-02-25"
+    date: "2023-02-25",
+    url: "https://www.meetup.com/baltimore-code-and-coffee/events/291624405/"
   },
   {
     emoji: "🎶",
@@ -47,7 +50,8 @@ export const EVENTS = [
     participating: "hosting",
     category: "🛝 fun",
     cost: "free",
-    date: "2023-03-01"
+    date: "2023-03-01",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/pmcbctyfcfbcb/"
   },
   {
     emoji: "👬",
@@ -57,7 +61,8 @@ export const EVENTS = [
     participating: "hosting",
     category: "🤓 training",
     cost: "$86",
-    date: "2023-03-13"
+    date: "2023-03-13",
+    url: "https://lu.ma/studio/events/manage/evt-426hK6po0rCnAux"
   },
   {
     emoji: "🎲",
@@ -68,7 +73,8 @@ export const EVENTS = [
     category: "🛝 fun",
     cost: "free",
     date: "2023-03-15",
-    endDate: "2023-03-20"
+    endDate: "2023-03-20",
+    url: "https://unpub.net/unpub-2023"
   },
   {
     emoji: "🎨",
@@ -78,7 +84,8 @@ export const EVENTS = [
     participating: "attending",
     category: "💻 tech",
     cost: "free",
-    date: "2023-03-25"
+    date: "2023-03-25",
+    url: "https://designfest.weebly.com/"
   },
   {
     emoji: "🥇",
@@ -88,6 +95,7 @@ export const EVENTS = [
     participating: "performing",
     category: "🛝 fun",
     cost: "free",
-    date: "2023-04-01"
+    date: "2023-04-01",
+    url: "https://lu.ma/casey-first-improv-show"
   },
 ]

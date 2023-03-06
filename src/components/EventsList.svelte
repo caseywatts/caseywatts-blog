@@ -8,7 +8,6 @@
   let today = DateTime.now(); // default to the date deployed, but update it client-side
 
   $: inPast = (event) => {
-    debugger;
     return DateTime.fromISO(event.date).valueOf() < today.valueOf();
   };
   $: inFuture = (event) => {
@@ -24,12 +23,22 @@
   });
 </script>
 
-<h2 class="text-4xl">Upcoming Events</h2>
-{#each upcomingEvents as event}
-  <EventCard {event} />
-{/each}
+<div class="panel space-y-6">
+  <h2 class="text-3xl text-center">Upcoming Events</h2>
+</div>
+<div class="mt-12 space-y-12">
+  {#each upcomingEvents as event}
+    <EventCard {event} />
+  {/each}
+</div>
 
-<h2 class="text-4xl">Past Events</h2>
-{#each pastEvents as event}
-  <EventCard {event} inPast="true" />
-{/each}
+<div class="my-36" />
+
+<div class="panel space-y-6">
+  <h2 class="text-3xl text-center">Past Events</h2>
+</div>
+<div class="mt-12 space-y-12">
+  {#each pastEvents as event}
+    <EventCard {event} inPast="true" />
+  {/each}
+</div>
