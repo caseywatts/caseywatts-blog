@@ -5,7 +5,7 @@
   import Tag from "./Tag.svelte";
 </script>
 
-<a href={event.url} class="link-card space-y-4 group">
+<a href={event.url} target="_blank" rel="noreferrer" class="link-card space-y-4 group">
   <Tag>{event.category}</Tag>
   <div class="flex flex-col md:flex-row justify-between align-bottom">
     <div>
