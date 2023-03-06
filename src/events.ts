@@ -62,7 +62,7 @@ export const EVENTS = [
     category: "🤓 training",
     cost: "$86",
     date: "2023-03-13",
-    url: "https://lu.ma/studio/events/manage/evt-426hK6po0rCnAux"
+    url: "https://lu.ma/community-led-community-feb-2023"
   },
   {
     emoji: "🎲",
