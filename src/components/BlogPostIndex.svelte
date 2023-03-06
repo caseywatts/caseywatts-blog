@@ -1,7 +1,17 @@
 <script>
   import BlogPostList from "./BlogPostList.svelte";
   export let posts;
+  function updateCategory(category) {
+    return function () {
+      const path = `/blog?category=${category}`;
+      window.location = path;
+      // window.history.pushState({}, {}, path);
+    };
+  }
 </script>
+
+<button on:click={updateCategory("lol")}>lol</button>
+<button on:click={updateCategory("ha")}>ha</button>
 
 <section>
   <div class="panel panel-main space-y-6">
@@ -23,12 +33,12 @@
       <a class="button-link block whitespace-nowrap" href="/blog">All</a>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-      <a class="button-link whitespace-nowrap" href="/blog?category=💻 Programming">💻 Programming</a>
-      <a class="button-link whitespace-nowrap" href="/blog?category=🧠 Psychology">🧠 Psychology</a>
-      <a class="button-link whitespace-nowrap" href="/blog?category=👔 Workplace">👔 Workplace</a>
-      <a class="button-link whitespace-nowrap" href="/blog?category=🌎 Community">🌎 Community</a>
-      <a class="button-link whitespace-nowrap" href="/blog?category=🙋🏻 Personal">🙋🏻 Personal</a>
-      <a class="button-link whitespace-nowrap" href="/blog?category=💡 Tips">💡 Tips</a>
+      <button class="button-link whitespace-nowrap" on:click={updateCategory("💻 Programming")}>💻 Programming</button>
+      <button class="button-link whitespace-nowrap" on:click={updateCategory("🧠 Psychology")}>🧠 Psychology</button>
+      <button class="button-link whitespace-nowrap" on:click={updateCategory("👔 Workplace")}>👔 Workplace</button>
+      <button class="button-link whitespace-nowrap" on:click={updateCategory("🌎 Community")}>🌎 Community</button>
+      <button class="button-link whitespace-nowrap" on:click={updateCategory("🙋🏻 Personal")}>🙋🏻 Personal</button>
+      <button class="button-link whitespace-nowrap" on:click={updateCategory("💡 Tips")}>💡 Tips</button>
     </div>
   </div>
   <BlogPostList {posts} />
