@@ -20,7 +20,7 @@
     const searchParams = new Proxy(new URLSearchParams(window.location.search), {
       get: (searchParams, prop) => searchParams.get(prop),
     });
-    categoryFilter = searchParams.category;
+    categoryFilter = searchParams.category || "";
   });
 </script>
 

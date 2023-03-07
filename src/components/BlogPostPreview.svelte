@@ -1,5 +1,6 @@
 <script>
   export let post = {};
+  export let categoryFilter = "";
   import FormattedDate from "./FormattedDate.svelte";
   import Tag from "./Tag.svelte";
 
