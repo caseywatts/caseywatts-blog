@@ -3,7 +3,6 @@
   export let categoryFilter = "";
   import FormattedDate from "./FormattedDate.svelte";
   import Tag from "./Tag.svelte";
-  console.log(categoryFilter);
 
   let url = post.data.draft ? `/blog/drafts/${post.slug}/` : `/blog/${post.slug}/`;
 </script>
