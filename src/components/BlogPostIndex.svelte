@@ -1,17 +1,28 @@
 <script>
   import BlogPostList from "./BlogPostList.svelte";
   export let posts;
+  let categoryFilter = "";
   function updateCategory(category) {
     return function () {
-      const path = `/blog?category=${category}`;
-      window.location = path;
-      // window.history.pushState({}, {}, path);
+      if (category) {
+        categoryFilter = category;
+        const path = `/blog?category=${category}`;
+        window.history.replaceState({}, {}, path);
+      } else {
+        categoryFilter = "";
+        window.history.replaceState({}, {}, "/blog");
+      }
     };
   }
-</script>
 
-<button on:click={updateCategory("lol")}>lol</button>
-<button on:click={updateCategory("ha")}>ha</button>
+  import { onMount } from "svelte";
+  onMount(() => {
+    const searchParams = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    categoryFilter = searchParams.category;
+  });
+</script>
 
 <section>
   <div class="panel panel-main space-y-6">
@@ -30,7 +41,7 @@
   <div class="panel panel-main space-y-4">
     <h2 class="text-center text-2xl">Categories</h2>
     <div>
-      <a class="button-link block whitespace-nowrap" href="/blog">All</a>
+      <button class="button-link block whitespace-nowrap w-full" on:click={updateCategory("")}>All</button>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
       <button class="button-link whitespace-nowrap" on:click={updateCategory("💻 Programming")}>💻 Programming</button>
@@ -41,5 +52,5 @@
       <button class="button-link whitespace-nowrap" on:click={updateCategory("💡 Tips")}>💡 Tips</button>
     </div>
   </div>
-  <BlogPostList {posts} />
+  <BlogPostList {posts} {categoryFilter} />
 </section>
