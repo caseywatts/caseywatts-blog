@@ -18,6 +18,7 @@ export async function get(context) {
     calendar.createEvent({
       summary: `${event.emoji} ${event.name}`,
       start: event.date,
+      end: event.endDate,
       allDay: true,
       description: `${event.category} ${event.cost}
 ${event.description}
