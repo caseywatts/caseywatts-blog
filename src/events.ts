@@ -1,5 +1,16 @@
 export const EVENTS = [
   {
+    emoji: "☕️",
+    name: "Baltimore Code and Coffee",
+    location: "Baltimore (Hampden)",
+    description: "a social event for tech people",
+    participating: "hosting",
+    category: "💻 tech",
+    cost: "free",
+    date: "2023-03-11",
+    url: "https://www.meetup.com/baltimore-code-and-coffee/events/291982633/"
+  },
+  {
     name: "DC Product & Pastries + EdTech DMV",
     emoji: "🥐",
     location: "downtown DC",
