@@ -1,0 +1,32 @@
+---
+layout: ../layouts/Page.astro
+title: Casey's Handy Bookmarklets
+# description: "Casey's handy bookmarklets"
+---
+
+<h2>
+  <a href="#">Copy Meetup Details</a>
+</h2>
+
+```js
+javascript: (function () {
+  const meetupData = JSON.parse(document.querySelectorAll("script[type='application/ld+json']")[1].innerHTML);
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    let dd = date.getDate().toString();
+    let mm = (date.getMonth() + 1).toString();
+    let yyyy = date.getFullYear();
+    return `${yyyy}-${mm}-${dd}`;
+  }
+  const extractedData = {
+    name: meetupData.name,
+    startDate: formatDate(meetupData.startDate),
+    url: meetupData.url,
+  };
+  window.prompt("", JSON.stringify(extractedData));
+})();
+```
+
+import CopyBlockBefore from "../components/CopyBlockBefore.svelte";
+
+<CopyBlockBefore client:only="svelte" />
