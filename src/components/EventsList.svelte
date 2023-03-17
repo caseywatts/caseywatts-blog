@@ -28,7 +28,7 @@
 </div>
 
 <div class="mx-auto hidden md:block">
-  <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmlpaWQwZzVlcjEzMnVnMW9zc2FtajJhcDExZHFwbHFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23ddd6fe&mode=AGENDA" class="mx-auto" style="border:solid 1px #777" width="766" height="300" frameborder="0" scrolling="no" />
+  <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmlpaWQwZzVlcjEzMnVnMW9zc2FtajJhcDExZHFwbHFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23ddd6fe" class="mx-auto" style="border:solid 1px #777" width="766" height="400" frameborder="0" scrolling="no" />
 </div>
 
 <div class="my-12 space-y-12">
