@@ -20,7 +20,8 @@ export async function get(context) {
       start: event.date,
       end: event.endDate,
       allDay: true,
-      description: `${event.category} ${event.cost}
+      description: `${event.category}
+${event.cost}
 ${event.description}
 Casey is ${event.participating}
 ${event.url}
