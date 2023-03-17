@@ -22,6 +22,7 @@ export async function get(context) {
       allDay: true,
       description: `${event.category} ${event.cost}
 ${event.description}
+${event.url}
 via Casey's Community Calendar`,
       location: event.location,
       url: event.url,
