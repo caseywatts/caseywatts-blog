@@ -1,5 +1,27 @@
 export const EVENTS = [
   {
+    name: "DC Product & Pastries + EdTech DMV",
+    emoji: "🥐",
+    location: "downtown DC",
+    description: "a social event / discussion for Product Designers + Product Managers",
+    participating: "hosting",
+    category: "💻 tech",
+    cost: "free",
+    date: "2023-03-30",
+    url: "https://www.meetup.com/product-and-pastries/events/292041025/"
+  },
+  {
+    emoji: "🦀",
+    name: "Code for Baltimore",
+    location: "North of Baltimore",
+    description: "Use your technology skills to help local nonprofits and government groups become more effective.",
+    participating: "hosting",
+    category: "💻 tech",
+    cost: "free",
+    date: "2023-03-02",
+    url: "https://www.meetup.com/code-for-baltimore/events/291774037/"
+  },
+  {
     emoji: "🎶",
     name: "Baltimore Musical Improv Meetup",
     location: "Downtown Baltimore",
