@@ -10,6 +10,7 @@ export async function get(context) {
     calendar.createEvent({
       summary: `${event.emoji} ${event.name}`,
       start: event.date,
+      allDay: true,
       description: event.description,
       location: event.location,
       url: SITE_URL,
