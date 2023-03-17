@@ -26,6 +26,11 @@
 <div class="panel panel-main space-y-6">
   <h2 class="text-3xl text-center">Upcoming Events</h2>
 </div>
+
+<div class="mx-auto hidden md:block">
+  <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmlpaWQwZzVlcjEzMnVnMW9zc2FtajJhcDExZHFwbHFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23ddd6fe&mode=AGENDA" class="mx-auto" style="border:solid 1px #777" width="766" height="300" frameborder="0" scrolling="no" />
+</div>
+
 <div class="my-12 space-y-12">
   {#each upcomingEvents as event}
     <EventCard {event} />
