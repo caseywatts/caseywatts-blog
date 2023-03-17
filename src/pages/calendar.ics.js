@@ -7,6 +7,11 @@ export async function get(context) {
   const calendar = ical({
     name: "CaseyWatts.com Events",
     url: `${SITE_URL}/calendar.ics`,
+    prodId: {
+      company: "CaseyWatts.com",
+      product: "Events Calendar",
+      language: "EN", // optional, defaults to EN
+    },
   });
 
   EVENTS.forEach((event) => {
@@ -14,7 +19,9 @@ export async function get(context) {
       summary: `${event.emoji} ${event.name}`,
       start: event.date,
       allDay: true,
-      description: event.description,
+      description: `${event.category} ${event.cost}
+${event.description}
+via Casey's Community Calendar`,
       location: event.location,
       url: event.url,
     });
