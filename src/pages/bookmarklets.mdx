@@ -11,19 +11,15 @@ title: Casey's Handy Bookmarklets
 ```js
 javascript: (function () {
   const meetupData = JSON.parse(document.querySelectorAll("script[type='application/ld+json']")[1].innerHTML);
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    let dd = date.getDate().toString();
-    let mm = (date.getMonth() + 1).toString();
-    let yyyy = date.getFullYear();
-    return `${yyyy}-${mm}-${dd}`;
+  function toYYYYMMDD(date) {
+    return new Date(date).toISOString().split("T")[0];
   }
   const extractedData = {
-    name: meetupData.name,
-    startDate: formatDate(meetupData.startDate),
+    date: toYYYYMMDD(meetupData.startDate),
     url: meetupData.url,
   };
-  window.prompt("", JSON.stringify(extractedData));
+  const formattedData = JSON.stringify(extractedData).replace(/"([^"]+)":/g, "$1:");
+  window.prompt("", formattedData);
 })();
 ```
 

@@ -1,5 +1,16 @@
 export const EVENTS = [
   {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "hosting",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2023-04-05",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/291983711/"
+  },
+  {
     name: "Frontrunners Tech Conference",
     emoji: "🌎",
     location: "Arlington, VA",
