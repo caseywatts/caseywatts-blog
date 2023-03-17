@@ -23,8 +23,9 @@
   });
 </script>
 
-<div class="panel panel-main space-y-6">
-  <h2 class="text-3xl text-center">Upcoming Events</h2>
+<div class="panel panel-main space-y-4">
+  <h2 class="text-3xl text-center">Casey's Community Calendar</h2>
+  <div class="text-center">DC, MD, VA and Online</div>
 </div>
 
 <div class="mx-auto hidden md:block">
@@ -33,6 +34,10 @@
 
 <div class="panel panel-main text-center space-y-4">
   Add to your calendar: <code class="text-sm">https://www.caseywatts.com/calendar.ics</code>
+</div>
+
+<div class="panel panel-main space-y-6">
+  <h2 class="text-3xl text-center">Upcoming Events</h2>
 </div>
 
 <div class="my-12 space-y-12">
