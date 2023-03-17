@@ -1,5 +1,16 @@
 export const EVENTS = [
   {
+    emoji: "🤣",
+    name: "Improv Night (Highwire Improv)",
+    location: "Downtown Baltimore",
+    description: "an improvised comedy show",
+    participating: "performing",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2023-03-11",
+    url: "https://www.eventbrite.com/e/improv-comedy-night-at-charm-city-meadworks-tickets-532682978127?aff=eand"
+  },
+  {
     emoji: "☕️",
     name: "Baltimore Code and Coffee",
     location: "Baltimore (Hampden)",
