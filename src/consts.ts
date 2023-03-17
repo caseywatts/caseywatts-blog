@@ -6,6 +6,7 @@ export const SITE_DESCRIPTION = `
 I love to help people and groups become more happy and effective 🌈.
 I like: singing, dancing, blowing bubbles, enthusiasm, clear communication.
 `;
+export const SITE_URL = `https://www.caseywatts.com`;
 export const REDIRECTS = {
   "bashautocomplete": "https://gist.github.com/caseywatts/6c989ed8e942a75f97f5e05dcda003f1",
   "browsersync": "https://gist.github.com/caseywatts/8266527a24667aad80b7d6127130de06",
