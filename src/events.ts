@@ -1,5 +1,16 @@
 export const EVENTS = [
   {
+    emoji: "🎭",
+    name: "2023 Baltimore Playwrights Festival: People Should Talk About What's Real",
+    location: "Downtown Baltimore",
+    description: "My partner Brian is in this! A play about infertility, miscarriage, abortion, and adoption.",
+    participating: "attending",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2023-03-18",
+    url: "https://www.eventbrite.com/e/2023-baltimore-playwrights-festival-people-should-talk-about-whats-real-tickets-576232375547"
+  },
+  {
     emoji: "🤣",
     name: "Improv Night (Highwire Improv)",
     location: "Downtown Baltimore",
