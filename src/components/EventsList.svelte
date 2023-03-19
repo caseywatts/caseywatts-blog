@@ -32,6 +32,10 @@
   <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmlpaWQwZzVlcjEzMnVnMW9zc2FtajJhcDExZHFwbHFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23ddd6fe" class="mx-auto" style="border:solid 1px #777" width="766" height="400" frameborder="0" scrolling="no" />
 </div>
 
+<div class="mx-auto md:hidden">
+  <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmlpaWQwZzVlcjEzMnVnMW9zc2FtajJhcDExZHFwbHFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23ddd6fe&mode=AGENDA" class="mx-auto" style="border:solid 1px #777" width="300" height="400" frameborder="0" scrolling="no" />
+</div>
+
 <div class="panel panel-main text-center space-y-4">
   Add to your calendar: <code class="text-sm">https://www.caseywatts.com/calendar.ics</code>
 </div>
