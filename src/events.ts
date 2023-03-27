@@ -1,5 +1,16 @@
 export const EVENTS = [
   {
+    emoji: "🦀",
+    name: "Code for Baltimore",
+    location: "online",
+    description: "Use your technology skills to help local nonprofits and government groups become more effective.",
+    participating: "hosting",
+    category: "💻 tech",
+    cost: "free",
+    date: "2023-04-12",
+    url:"https://www.meetup.com/code-for-baltimore/events/292410995/"
+  },
+  {
     emoji: "🎭",
     name: "2023 Baltimore Playwrights Festival: People Should Talk About What's Real",
     location: "Downtown Baltimore",
