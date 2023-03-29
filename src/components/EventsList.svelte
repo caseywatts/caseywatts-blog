@@ -2,6 +2,7 @@
   import { DateTime } from "luxon";
   import { EVENTS } from "../events.ts";
   import EventCard from "./EventCard.svelte";
+  import CalEmbed from "./CalEmbed.svelte";
   const soonestFirst = (a, b) => DateTime.fromISO(a.date).valueOf() - DateTime.fromISO(b.date).valueOf();
   const mostRecentFirst = (a, b) => DateTime.fromISO(b.date).valueOf() - DateTime.fromISO(a.date).valueOf();
 
@@ -28,12 +29,8 @@
   <div class="text-center">DC, MD, VA and Online</div>
 </div>
 
-<div class="mx-auto hidden md:block">
-  <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmlpaWQwZzVlcjEzMnVnMW9zc2FtajJhcDExZHFwbHFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23ddd6fe" class="mx-auto" style="border:solid 1px #777" width="766" height="400" frameborder="0" scrolling="no" />
-</div>
-
-<div class="mx-auto md:hidden">
-  <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmlpaWQwZzVlcjEzMnVnMW9zc2FtajJhcDExZHFwbHFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23ddd6fe&mode=AGENDA" class="mx-auto" style="border:solid 1px #777" width="300" height="400" frameborder="0" scrolling="no" />
+<div class="panel">
+  <CalEmbed url="https://calendar.google.com/calendar/embed?wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=ZmlpaWQwZzVlcjEzMnVnMW9zc2FtajJhcDExZHFwbHFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23ddd6fe" />
 </div>
 
 <div class="panel panel-main text-center space-y-4">

@@ -1,5 +1,16 @@
 export const EVENTS = [
   {
+    emoji: "🎮",
+    name: "Baltimore Gamer Symphony \"Goes to Space\" Concert",
+    location: "East of Baltimore",
+    description: "This orchestra/chorus plays video game music!",
+    participating: "attending",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2023-05-12",
+    url: "https://baltimoregso.org/bgso-events"
+  },
+  {
     emoji: "🦀",
     name: "Code for Baltimore",
     location: "online",
