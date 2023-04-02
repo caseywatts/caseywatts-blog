@@ -1,21 +1,20 @@
-<div class="w-64 bg-blue-200 mx-auto clip overflow-clip m-4">
-  <svg width="100%" viewBox="0 0 1080 1080">
-    <g name="background">
-      <rect name="cloud" x="200px" y="200px" />
-      <rect name="cloud" x="300px" y="300px" />
-      <rect name="cloud" x="600px" y="100px" />
-      <rect name="cloud" x="1000px" y="400px" />
-      <rect name="plant" x="200px" y="990px" />
-      <rect name="plant" x="600px" y="990px" />
-    </g>
-    <rect name="border" />
-    <rect name="margin" />
-    <rect name="floor" />
-    <g style="transform: translate(540px,60px)">
-      <circle class="ball" stroke="black" stroke-width="3px" />
-    </g>
-  </svg>
-</div>
+<svg width="100%" viewBox="0 0 1080 1080">
+  <rect name="sky" />
+  <g name="moving-background">
+    <rect name="cloud" x="200px" y="200px" />
+    <rect name="cloud" x="300px" y="300px" />
+    <rect name="cloud" x="600px" y="100px" />
+    <rect name="cloud" x="1000px" y="400px" />
+    <rect name="plant" x="200px" y="990px" />
+    <rect name="plant" x="600px" y="990px" />
+  </g>
+  <rect name="border" />
+  <rect name="margin" />
+  <rect name="floor" />
+  <g style="transform: translate(540px,60px)">
+    <circle class="ball" stroke="black" stroke-width="3px" />
+  </g>
+</svg>
 
 <style>
   /* DEBUGGING */
@@ -44,10 +43,16 @@
     --stretch-squish-strength: 0.15;
   }
 
+  rect[name="sky"] {
+    height: 100%;
+    width: 100%;
+    fill: rgb(180, 216, 255);
+  }
+
   rect[name="border"] {
+    fill: none;
     stroke: black;
     stroke-width: calc(var(--margin) * 2);
-    fill: none;
     width: var(--canvas-outer-size);
     height: var(--canvas-outer-size);
   }
@@ -90,7 +95,7 @@
   }
 
   /* MOVING BACKGROUND */
-  g[name="background"] {
+  g[name="moving-background"] {
     animation-name: background-scrolling;
     animation-duration: calc(0.7s * 7);
     animation-timing-function: linear;
