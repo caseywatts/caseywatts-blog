@@ -8,6 +8,8 @@ heroImage: /assets/images/emoji-robot.png
 draft: true
 ---
 
+import CheckboxListItem from "../../components/CheckboxListItem.svelte";
+
 This post is for you if:
 
 - you are a **community organizer/volunteer**
@@ -35,13 +37,15 @@ People want to join a group that is alive, thriving and ready for new members. T
 
 ## Human-Style Writing
 
-When someone shares an event, what makes that effective, compelling, and human?
+How do you share an event in a way that's effective, compelling, authentic, and human?
 
-- [ ] A **human** (with a name and photo!) shares the event, not a bot.
-- [ ] They share a **personal connection** to the event.
-- [ ] They mention what makes **THIS event** unique.
-- [ ] They frame the event for **THIS group** they are sharing it to.
-- [ ] You can ask them questions -- and when you ask, they **respond**.
+<ul>
+  <CheckboxListItem id="human">Share it as yourself, a **human**, with a name and photo.</CheckboxListItem>
+  <CheckboxListItem id="connection">Share a **personal connection** to the event.</CheckboxListItem>
+  <CheckboxListItem id="this-event">Mention what makes **THIS event** unique.</CheckboxListItem>
+  <CheckboxListItem id="this-group">Frame it for **THIS group** you are sharing it to.</CheckboxListItem>
+  <CheckboxListItem id="respond">When someone asks questions, **respond** (which means monitoring the post).</CheckboxListItem>
+</ul>
 
 My favorite trick for writing like a human is to write TO a human. Pick a **specific friend** who might be interested, then draft a text or Slack message or [toot](https://www.caseywatts.com/blog/welcome-to-mastodon/) to them. That'll be much closer to being actually authentic!
 
@@ -72,11 +76,13 @@ By including more humans in the process of spreading the word, you get a ton of 
 
 So HOW do you get your members to do this?
 
-- [ ] Determine if you have a shared goal in the first place (do members WANT to grow the group?)
-- [ ] Share that **goal** (e.g. increasing attendance at the next event)
-- [ ] Share the **why** behind that goal (To help more people? More connections for jobs etc? To justify the venue?)
-- [ ] Ask the **wider group** several times, in person and online (people will almost volunteer)
-- [ ] Ask some likely-willing **individuals** privately and politely (this step really works! supported by the earlier steps)
+<ul>
+  <CheckboxListItem id="shared-goal">Determine if you have a shared goal in the first place (do members WANT to grow the group?)</CheckboxListItem>
+  <CheckboxListItem id="goal">Share that **goal** (e.g. increasing attendance at the next event)</CheckboxListItem>
+  <CheckboxListItem id="why">Share the **why** behind that goal (To help more people? More connections for jobs etc? To justify the venue?)</CheckboxListItem>
+  <CheckboxListItem id="wider-group">Ask the **wider group** several times, in person and online (people will almost volunteer)</CheckboxListItem>
+  <CheckboxListItem id="individual">Ask some likely-willing **individuals** privately and politely (this step really works! supported by the earlier steps)</CheckboxListItem>
+</ul>
 
 ## When TO Automate?
 
@@ -115,7 +121,7 @@ Here's what some of my friends have to say about it:
 
 > "Automated stuff tends to get neglected and break, but not until the damage has been done and all the humans have abandoned the area."
 >
-> -- [lis](https://ruby.social/@holytoastr), [toot](https://ruby.social/@holytoastr/110271574143882174)
+> -- [Melissa](https://ruby.social/@holytoastr), [toot](https://ruby.social/@holytoastr/110271574143882174)
 
 <div class="text-right">
   <div>stay human,</div>
