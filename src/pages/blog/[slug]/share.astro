@@ -76,6 +76,7 @@ const haeSlackURL = `${url}?utm_medium=social&utm_source=hae-discord`
 const redditURL = `${url}?utm_medium=social&utm_source=reddit`
 const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
 const meetupDiscordURL = `${url}?utm_medium=social&utm_source=meetup-discord`
+const actDiscordURL = `${url}?utm_medium=social&utm_source=act-discord`
 // const slackURL = `${url}?utm_medium=social&utm_source=slack`
 ---
 
@@ -188,7 +189,16 @@ const meetupDiscordURL = `${url}?utm_medium=social&utm_source=meetup-discord`
 
 {meetupDiscordURL}</pre>
 <div class="mx-auto text-2xl block text-right list-none mt-6">
-<CheckboxListItem id="hcwu-reddit">Meetup Discord</CheckboxListItem>
+<CheckboxListItem id="meetup-discord">Meetup Discord</CheckboxListItem>
+</div>
+
+<div><a class="link" target="_blank" href="https://www.reddit.com/r/heycaseywattsup/">ACT Discord</a></div>
+<pre class="bg-slate-50 p-4">
+{decodeURI(slackContent)}
+
+{actDiscordURL}</pre>
+<div class="mx-auto text-2xl block text-right list-none mt-6">
+<CheckboxListItem id="act-discord">ACT Discord</CheckboxListItem>
 </div>
 
 </div>
