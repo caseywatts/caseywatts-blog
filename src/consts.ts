@@ -77,7 +77,8 @@ export const REDIRECTS = {
   "2020/09/14/my-path-to-programming.html": "/blog/my-path-to-programming",
   "2021/06/22/casey-s-writing-process.html": "/blog/casey-s-writing-process",
   "subscribe": "newsletter",
-  "bios": "https://docs.google.com/document/d/1i7Xyea0BQKFfIP7pNJgGevO_M3RkfbE91hBWYjhlb54/edit?usp=sharing"
+  "bios": "https://docs.google.com/document/d/1i7Xyea0BQKFfIP7pNJgGevO_M3RkfbE91hBWYjhlb54/edit?usp=sharing",
+  "bookpay": "https://buy.stripe.com/5kA5mKbM3cipae49AD"
 }
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);
 
