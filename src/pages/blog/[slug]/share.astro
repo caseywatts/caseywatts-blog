@@ -75,6 +75,7 @@ const slackRandsURL = `${url}?utm_medium=social&utm_source=slack-rands`
 const haeSlackURL = `${url}?utm_medium=social&utm_source=hae-discord`
 const redditURL = `${url}?utm_medium=social&utm_source=reddit`
 const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
+const meetupDiscordURL = `${url}?utm_medium=social&utm_source=meetup-discord`
 // const slackURL = `${url}?utm_medium=social&utm_source=slack`
 ---
 
@@ -181,7 +182,18 @@ const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
 <CheckboxListItem id="hcwu-reddit">HCWU Reddit</CheckboxListItem>
 </div>
 
+<div><a class="link" target="_blank" href="https://www.reddit.com/r/heycaseywattsup/">Meetup Discord</a></div>
+<pre class="bg-slate-50 p-4">
+{decodeURI(slackContent)}
+
+{meetupDiscordURL}</pre>
+<div class="mx-auto text-2xl block text-right list-none mt-6">
+<CheckboxListItem id="hcwu-reddit">HCWU Reddit</CheckboxListItem>
 </div>
+
+</div>
+
+
 <div class="panel panel-main">
 
   <div><a class="link" target="_blank" href="https://buttondown.email/emails">Mailing List</a></div>
