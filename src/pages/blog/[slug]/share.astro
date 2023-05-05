@@ -73,6 +73,7 @@ const slackDCURL = `${url}?utm_medium=social&utm_source=slack-dc`
 const slackBaltimoreURL = `${url}?utm_medium=social&utm_source=slack-baltimore`
 const slackRandsURL = `${url}?utm_medium=social&utm_source=slack-rands`
 const haeDiscordURL = `${url}?utm_medium=social&utm_source=hae-discord`
+const ccDiscordURL = `${url}?utm_medium=social&utm_source=cc-discord`
 const redditURL = `${url}?utm_medium=social&utm_source=reddit`
 const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
 const meetupDiscordURL = `${url}?utm_medium=social&utm_source=meetup-discord`
@@ -90,6 +91,9 @@ ${slackRandsURL}`;
 const haeDiscordContent = `${decodeURI(slackContent)}
 
 ${haeDiscordURL}`;
+const ccDiscordContent = `${decodeURI(slackContent)}
+
+${ccDiscordURL}`;
 const redditContent = `${decodeURI(slackContent)}
 
 ${redditURL}`;
@@ -185,6 +189,13 @@ import CopyableText from "../../../components/CopyableText.svelte";
 <div class="mx-auto text-2xl block text-right list-none mt-6">
 <CheckboxListItem id="hae-discord">HAE Discord</CheckboxListItem>
 </div>
+
+<div><a class="link" target="_blank" href="$">Code and Coffee Discord</a></div>
+<CopyableText text={ccDiscordContent} client:only="svelte"></CopyableText>
+<div class="mx-auto text-2xl block text-right list-none mt-6">
+<CheckboxListItem id="hae-discord">Code and Coffee Discord</CheckboxListItem>
+</div>
+
 
 <div><a class="link" target="_blank" href="https://www.reddit.com/r/heycaseywattsup/">HCWU Reddit</a></div>
 
