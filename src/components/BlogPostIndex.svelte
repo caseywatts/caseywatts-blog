@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class="panel panel-main space-y-4">
-    <h2 class="text-center text-2xl">Categories</h2>
+    <h2 class="text-center text-2xl">Filter by Category</h2>
     <div>
       <button class="button-link block whitespace-nowrap w-full" on:click={updateCategory("")}>All</button>
     </div>
