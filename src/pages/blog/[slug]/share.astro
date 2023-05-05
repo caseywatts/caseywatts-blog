@@ -72,12 +72,35 @@ const linkedinURL = `${url}?utm_medium=social&utm_source=linkedin`
 const slackDCURL = `${url}?utm_medium=social&utm_source=slack-dc`
 const slackBaltimoreURL = `${url}?utm_medium=social&utm_source=slack-baltimore`
 const slackRandsURL = `${url}?utm_medium=social&utm_source=slack-rands`
-const haeSlackURL = `${url}?utm_medium=social&utm_source=hae-discord`
+const haeDiscordURL = `${url}?utm_medium=social&utm_source=hae-discord`
 const redditURL = `${url}?utm_medium=social&utm_source=reddit`
 const mailingListURL = `${url}?utm_medium=newsletter&utm_source=heycaseywattsup`
 const meetupDiscordURL = `${url}?utm_medium=social&utm_source=meetup-discord`
 const actDiscordURL = `${url}?utm_medium=social&utm_source=act-discord`
 // const slackURL = `${url}?utm_medium=social&utm_source=slack`
+const slackDCContent = `${decodeURI(slackContent)}
+
+${slackDCURL}`;
+const slackBaltimoreContent = `${decodeURI(slackContent)}
+
+${slackBaltimoreURL}`;
+const slackRandsContent = `${decodeURI(slackContent)}
+
+${slackRandsURL}`;
+const haeDiscordContent = `${decodeURI(slackContent)}
+
+${haeDiscordURL}`;
+const redditContent = `${decodeURI(slackContent)}
+
+${redditURL}`;
+const meetupDiscordContent = `${decodeURI(slackContent)}
+
+${meetupDiscordURL}`;
+const actDiscordContent = `${decodeURI(slackContent)}
+
+${actDiscordURL}`;
+
+
 import CopyableText from "../../../components/CopyableText.svelte";
 ---
 
@@ -142,62 +165,42 @@ import CopyableText from "../../../components/CopyableText.svelte";
   <div class="block panel space-y-4">
     <div class="mb-4 text-2xl">Share to Slack</div>
     <div><a class="link" target="_blank" href="https://dctech.slack.com/archives/C0J8UUH34">DC</a></div>
-    <pre class="bg-slate-50 p-4">
-{decodeURI(slackContent)}
-
-{slackDCURL}</pre>
+    <CopyableText text={slackDCContent} client:only="svelte"></CopyableText>
 <div class="mx-auto text-2xl block text-right list-none mt-6">
   <CheckboxListItem id="dc">DC</CheckboxListItem>
 </div>
 <div>Baltimore</div>
-    <pre class="bg-slate-50 p-4">
-{decodeURI(slackContent)}
-
-{slackBaltimoreURL}</pre>
+  <CopyableText text={slackBaltimoreContent} client:only="svelte"></CopyableText>
 <div class="mx-auto text-2xl block text-right list-none mt-6">
   <CheckboxListItem id="baltimore">Baltimore</CheckboxListItem>
 </div>
     <div><a class="link" target="_blank" href="https://rands-leadership.slack.com/archives/C0R7KB37Z">Rands</a></div>
-    <pre class="bg-slate-50 p-4">
-{decodeURI(slackContent)}
-
-{slackRandsURL}</pre>
+    <CopyableText text={slackRandsContent} client:only="svelte"></CopyableText>
 <div class="mx-auto text-2xl block text-right list-none mt-6">
   <CheckboxListItem id="rands">Rands</CheckboxListItem>
 </div>
 
 <div><a class="link" target="_blank" href="https://discord.com/channels/1005230939472924772/1077328231369293874">HAE Discord</a></div>
-<pre class="bg-slate-50 p-4">
-{decodeURI(slackContent)}
-
-{haeSlackURL}</pre>
+<CopyableText text={haeDiscordContent} client:only="svelte"></CopyableText>
 <div class="mx-auto text-2xl block text-right list-none mt-6">
 <CheckboxListItem id="hae-discord">HAE Discord</CheckboxListItem>
 </div>
 
 <div><a class="link" target="_blank" href="https://www.reddit.com/r/heycaseywattsup/">HCWU Reddit</a></div>
-<pre class="bg-slate-50 p-4">
-{decodeURI(slackContent)}
 
-{redditURL}</pre>
+<CopyableText text={redditContent} client:only="svelte"></CopyableText>
 <div class="mx-auto text-2xl block text-right list-none mt-6">
 <CheckboxListItem id="hcwu-reddit">HCWU Reddit</CheckboxListItem>
 </div>
 
 <div><a class="link" target="_blank" href="https://www.reddit.com/r/heycaseywattsup/">Meetup Discord</a></div>
-<pre class="bg-slate-50 p-4">
-{decodeURI(slackContent)}
-
-{meetupDiscordURL}</pre>
+<CopyableText text={meetupDiscordContent} client:only="svelte"></CopyableText>
 <div class="mx-auto text-2xl block text-right list-none mt-6">
 <CheckboxListItem id="meetup-discord">Meetup Discord</CheckboxListItem>
 </div>
 
 <div><a class="link" target="_blank" href="https://www.reddit.com/r/heycaseywattsup/">ACT Discord</a></div>
-<pre class="bg-slate-50 p-4">
-{decodeURI(slackContent)}
-
-{actDiscordURL}</pre>
+<CopyableText text={actDiscordContent} client:only="svelte"></CopyableText>
 <div class="mx-auto text-2xl block text-right list-none mt-6">
 <CheckboxListItem id="act-discord">ACT Discord</CheckboxListItem>
 </div>
