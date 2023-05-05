@@ -78,7 +78,9 @@ export const REDIRECTS = {
   "2021/06/22/casey-s-writing-process.html": "/blog/casey-s-writing-process",
   "subscribe": "newsletter",
   "bios": "https://docs.google.com/document/d/1i7Xyea0BQKFfIP7pNJgGevO_M3RkfbE91hBWYjhlb54/edit?usp=sharing",
-  "bookpay": "https://buy.stripe.com/5kA5mKbM3cipae49AD"
+  "bookpay": "https://buy.stripe.com/5kA5mKbM3cipae49AD",
+  "tweetthetoot": "https://gist.github.com/caseywatts/be0674debcfe35ee26bcc6d4a64f0f3d",
+  "youtubemarkdownlink": "https://gist.github.com/caseywatts/e3fffc47abec13c0cec90ff84983818a"
 }
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);
 
