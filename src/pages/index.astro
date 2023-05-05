@@ -27,6 +27,9 @@ const publishedPosts = (await getCollection('blog'))
 		<h2 class="text-3xl text-center">Latest Blog Posts</h2>
 	</div>
 	<BlogPostList posts={publishedPosts} limit={3} client:load />
+	<div class="panel text-center pb-12">
+		<a class="button-link" href="/blog">all blog posts</a>
+	</div>
 	<div class="panel panel-main">
 		<Linktree />
 	</div>
