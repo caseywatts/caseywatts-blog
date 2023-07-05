@@ -21,8 +21,8 @@ const feed = new Podcast({
   language: "en",
   pubDate: Date.now(),
   itunesAuthor: podcastMeta.author,
-  itunesSubtitle: podcastMeta.description,
-  itunesSummary: podcastMeta.description,
+  itunesSubtitle: "subtitle subtitle",
+  itunesSummary: "summary summary",
   itunesOwner: { name: podcastMeta.author, email: podcastMeta.email },
   itunesExplicit: false,
   itunesCategory: [
