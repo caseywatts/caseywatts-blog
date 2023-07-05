@@ -8,7 +8,7 @@ const podcastMeta = {
   description: "Casey Watts! The Podcast",
   author: "Casey Watts!",
   email: "casey@happyandeffective.com",
-  imageUrl: "https://www.caseywatts.com/public/headshot.jpg",
+  imageUrl: "https://www.caseywatts.com/headshot.jpg",
 };
 
 const feed = new Podcast({
