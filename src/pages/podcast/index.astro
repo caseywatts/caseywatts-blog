@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import OuterLayout from '../../layouts/OuterLayout.astro';
+import SEOTags from '../../components/SEOTags.svelte';
+import PodcastEpisodesIndex from '../../components/PodcastEpisodesIndex.svelte';
+
+const publishedPodcastEpisodes = (await getCollection('podcast'))
+	.filter((episode) => !episode.data.draft);
+---
+
+<SEOTags
+	title="Casey Watts! The Podcast"
+	description="Casey writes about: programming, psychology, workplace culture, community development, personal updates, tech tips, local DMV-area events and online events."
+	contentType="website"
+	url={Astro.url.href}
+/>
+
+<OuterLayout>
+	<PodcastEpisodesIndex episodes={publishedPodcastEpisodes} client:load />
+</OuterLayout>
