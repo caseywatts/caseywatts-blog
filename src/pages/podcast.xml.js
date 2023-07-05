@@ -51,7 +51,7 @@ export async function get(context) {
       enclosure: {
         url: episode.data.audioUrl,
       },
-      guid: episode.slug,
+      guid: episode.data.date + "-" + episode.slug,
     });
   });
 
