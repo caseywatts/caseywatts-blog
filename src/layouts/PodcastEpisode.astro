@@ -70,7 +70,9 @@ const image = `${Astro.url.origin}${defaultImage}`
 				)
 			}
 			<AudioWidget {audioUrl} />
-			<slot />
+			<div id="hypertranscript" class="hyperaudio-transcript">
+				<slot />
+			</div>
 		</article>
 	</div>
 
@@ -97,4 +99,14 @@ const image = `${Astro.url.origin}${defaultImage}`
 	// allow checkboxes on blog posts
 	// I'd rather do this in a [rehype plugin](https://github.com/remarkjs/remark-gfm/issues/41), but this works for now
 	document.querySelectorAll("input[type=checkbox]").forEach((node) => node.disabled = false)
+</script>
+
+<script is:inline>
+	let minimizedMode = false;
+	let autoScroll = true;
+	let doubleClick = false;
+	let webMonetization = false;
+	let playOnClick = true;
+
+	new HyperaudioLite("hypertranscript", "hyperplayer", minimizedMode, autoScroll, doubleClick, webMonetization, playOnClick);
 </script>
