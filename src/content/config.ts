@@ -34,7 +34,8 @@ const podcast = defineCollection({
 			.string()
 			.or(z.date())
 			.transform((val) => new Date(val)),
-		draft: z.boolean().optional()
+		draft: z.boolean().optional(),
+		audioUrl: z.string().url()
 	}),
 });
 
