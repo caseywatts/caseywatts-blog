@@ -3,11 +3,9 @@
     <div class="background w-full h-full" />
   </div>
   <svg class="absolute">
-    <g style="transform: translate(10,10)">
-      <circle class="ball" r="10" stroke="black" stroke-width="3px" />
-    </g>
-    <g>
-      <rect h="1px" w="10px" stroke="black" />
+    hi
+    <g style="transform: translate(50,50)">
+      <text font-size="larger">hi</text>
     </g>
   </svg>
 </div>

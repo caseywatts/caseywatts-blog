@@ -66,6 +66,9 @@ body {
 	@apply list-none -indent-6
 }
 
+.prose img {
+	margin: auto;
+}
 
 /* blockquotes; code blocks */
 
