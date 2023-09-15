@@ -124,6 +124,7 @@ export const LONELINESS_SCALE = {
   otherName: "Loneliness Score",
   source: {
     name: "UCLA Loneliness Scale (version 3)",
+    citation: "Russell D. W. (1996). UCLA Loneliness Scale (Version 3): reliability, validity, and factor structure. Journal of personality assessment, 66(1), 20–40. https://doi.org/10.1207/s15327752jpa6601_2",
     url: "https://sparqtools.org/mobility-measure/ucla-loneliness-scale-version-3/#all-survey-questions",
     about: "https://en.wikipedia.org/wiki/UCLA_Loneliness_Scale"
   },

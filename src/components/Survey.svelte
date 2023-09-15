@@ -90,7 +90,8 @@
   {/each}
 </form>
 
-<div class="text-2xl text-center m-4">
+<div class="text-2xl text-center m-4 bg-blue-100 p-4">
+  <div class="text-2xl">Results</div>
   {#if remainingQuestions}
     <div>
       <div>{remainingQuestions}</div>
@@ -100,7 +101,15 @@
     <div>
       <div>{scale.otherName}</div>
       <div>{average} (out of {scale.scaleLength})</div>
+      <!-- <div class="bg-pink-400 h-12 min-w-full">
+        <div class="bg-blue-400" style="width: {average / scale.scaleLength}%" />
+      </div> -->
     </div>
   {/if}
-  <div class="text-base">via the <a href={scale.source.url}>{scale.source.name}</a></div>
+</div>
+<div class="m-4 bg-blue-100 p-4">
+  <div class="text-base">
+    <a href={scale.source.url}>{scale.source.name}</a>
+    <div class="mt-2">{scale.source.citation}</div>
+  </div>
 </div>
