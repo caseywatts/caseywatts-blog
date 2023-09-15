@@ -13,8 +13,18 @@
   $: sum = responses.reduce((a, b) => a + b, 0);
   $: average = (sum / max) * scale.scaleLength;
 
-  $: sum, console.log(sum);
-  $: average, console.log(`${sum} / ${max} = ${average}`);
+  // $: sum, console.log(sum);
+  // $: average, console.log(`${sum} / ${max} = ${average}`);
+
+  function touchStart(e) {
+    const target = e.target.closest("label");
+
+    target.querySelector("input").checked = true;
+    target.querySelector("input").dispatchEvent(new Event("change"));
+
+    e.stopPropagation();
+    focusNextCard(e);
+  }
 
   function keyPressed(e) {
     const key = e.key;
@@ -80,7 +90,7 @@
       <div>
         {#each scale.scaleLabels as label, responseRangeNumber}
           <label class="inline-block mt-3 sm:mt-5 mx-2 md:mx-3 text-center bg-blue-100 hover:bg-blue-200 p-2 indicator" on:keydown={keyPressed}>
-            <div class="flex items-center align-middle justify-center gap-2">
+            <div class="flex items-center align-middle justify-center gap-2" on:touchend={touchStart}>
               {#if item.reverseScored}
                 <input type="radio" bind:group={responses[itemNumber]} name={`radio-group-${itemNumber}`} value={reverseScored(responseRangeNumber + 1)} data-keyboard-select={responseRangeNumber + 1} />
               {:else}
