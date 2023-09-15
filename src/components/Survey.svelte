@@ -1,6 +1,9 @@
 <script>
   export let scale = {};
+  import ProgressBar from "../components/ProgressBar.svelte";
+
   let responses = Array(scale.scaleItems.length);
+  let max = scale.scaleItems.length * scale.scaleLength;
 
   function reverseScored(number) {
     // ((Number of scale points) + 1) - (Respondent’s answer)
@@ -8,7 +11,10 @@
   }
   $: remainingQuestions = -(responses.filter(String).length - responses.length);
   $: sum = responses.reduce((a, b) => a + b, 0);
-  $: average = sum / scale.scaleItems.length;
+  $: average = (sum / max) * scale.scaleLength;
+
+  $: sum, console.log(sum);
+  $: average, console.log(`${sum} / ${max} = ${average}`);
 
   function keyPressed(e) {
     const key = e.key;
@@ -91,7 +97,6 @@
 </form>
 
 <div class="text-2xl text-center m-4 bg-blue-100 p-4">
-  <div class="text-2xl">Results</div>
   {#if remainingQuestions}
     <div>
       <div>{remainingQuestions}</div>
@@ -100,16 +105,14 @@
   {:else}
     <div>
       <div>{scale.otherName}</div>
-      <div>{average} (out of {scale.scaleLength})</div>
-      <!-- <div class="bg-pink-400 h-12 min-w-full">
-        <div class="bg-blue-400" style="width: {average / scale.scaleLength}%" />
-      </div> -->
+      <div class="text-sm">(scale of 1 to {scale.scaleLength})</div>
+      <ProgressBar amount={average} max={scale.scaleLength} />
+    </div>
+    <div class="mt-2 bg-slate-100">
+      <div class="text-base text-left p-2">
+        <a href={scale.source.url}>{scale.source.name}</a>
+        <div class="mt-2">{scale.source.citation}</div>
+      </div>
     </div>
   {/if}
-</div>
-<div class="m-4 bg-blue-100 p-4">
-  <div class="text-base">
-    <a href={scale.source.url}>{scale.source.name}</a>
-    <div class="mt-2">{scale.source.citation}</div>
-  </div>
 </div>
