@@ -115,7 +115,6 @@
   {:else}
     <div>
       <div>{scale.otherName}</div>
-      <div class="text-sm">(scale of 1 to {scale.scaleLength})</div>
       <ProgressBar amount={average} max={scale.scaleLength} />
     </div>
     <div class="mt-2 bg-slate-100">
