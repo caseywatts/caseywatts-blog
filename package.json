@@ -1,38 +1,50 @@
 {
-	"name": "caseywatts-blog",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/mdx": "^0.16.0",
-		"@astrojs/rss": "^2.1.0",
-		"@astrojs/sitemap": "^1.0.1",
-		"@astrojs/svelte": "^2.0.1",
-		"@astrojs/tailwind": "^3.0.1",
-		"@tailwindcss/aspect-ratio": "^0.4.2",
-		"@tailwindcss/forms": "^0.5.3",
-		"@tailwindcss/line-clamp": "^0.4.2",
-		"@vercel/analytics": "^0.1.8",
-		"astro": "^2.0.10",
-		"astro-mastodon-embed": "^0.0.4",
-		"astro-remote": "^0.2.3",
-		"astro-seo": "^0.7.0",
-		"daisyui": "^2.51.2",
-		"ical-generator": "^3.6.1",
-		"luxon": "^3.3.0",
-		"podcast": "^2.0.1",
-		"svelte": "^3.55.1",
-		"tailwindcss": "^3.2.6"
-	},
-	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.9",
-		"prettier": "^2.8.4",
-		"prettier-plugin-tailwindcss": "^0.2.4"
-	}
+  "name": "caseywatts-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.16.0",
+    "@astrojs/rss": "^2.1.0",
+    "@astrojs/sitemap": "^1.0.1",
+    "@astrojs/svelte": "^2.0.1",
+    "@astrojs/tailwind": "^3.0.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@vercel/analytics": "^0.1.8",
+    "astro": "^2.0.10",
+    "astro-mastodon-embed": "^0.0.4",
+    "astro-remote": "^0.2.3",
+    "astro-seo": "^0.7.0",
+    "daisyui": "^2.51.2",
+    "ical-generator": "^3.6.1",
+    "luxon": "^3.3.0",
+    "podcast": "^2.0.1",
+    "svelte": "^3.55.1",
+    "tailwindcss": "^3.2.6"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.4.2",
+    "@storybook/addon-interactions": "^7.4.2",
+    "@storybook/addon-links": "^7.4.2",
+    "@storybook/blocks": "^7.4.2",
+    "@storybook/svelte": "^7.4.2",
+    "@storybook/svelte-vite": "^7.4.2",
+    "@storybook/testing-library": "^0.2.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.4.2"
+  }
 }
