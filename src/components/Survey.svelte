@@ -89,8 +89,8 @@
       <div>{item.question}</div>
       <div>
         {#each scale.scaleLabels as label, responseRangeNumber}
-          <label class="inline-block mt-3 sm:mt-5 mx-2 md:mx-3 text-center bg-blue-100 hover:bg-blue-200 p-2 indicator" on:keydown={keyPressed}>
-            <div class="flex items-center align-middle justify-center gap-2" on:touchend={touchStart}>
+          <label class="inline-block mt-3 sm:mt-5 mx-2 md:mx-3 text-center bg-blue-100 hover:bg-blue-200 p-2 indicator" on:keydown={keyPressed} on:touchend={touchStart}>
+            <div class="flex items-center align-middle justify-center gap-2">
               {#if item.reverseScored}
                 <input type="radio" bind:group={responses[itemNumber]} name={`radio-group-${itemNumber}`} value={reverseScored(responseRangeNumber + 1)} data-keyboard-select={responseRangeNumber + 1} />
               {:else}
