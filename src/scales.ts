@@ -3,6 +3,7 @@ export const SOCIAL_CONNECTEDNESS_SCALE = {
   otherName: "Social Connectedness Score",
   source: {
     name: "Social Connectedness Scale (Revised)",
+    citation: "Lee, R. M., Draper, M., & Lee, S. (2001). Social connectedness, dysfunctional interpersonal behaviors, and psychological distress: Testing a mediator model. Journal of Counseling Psychology, 48(3), 310–318. https://doi.org/10.1037/0022-0167.48.3.310",
     url: "https://depts.washington.edu/uwcssc/sites/default/files/Social%20Connectedness%20Scale-Revised%20(SCS-R).pdf"
   },
   expectedTime: "3-5 minutes",
