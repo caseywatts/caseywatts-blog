@@ -4,9 +4,6 @@
   $: amountRounded = amount.toFixed(1);
   $: percentage = ((amount - 1) / (max - 1)) * 100;
   $: percentageRemainder = 100 - percentage;
-  // $: percentage, console.log(`${amount} - 1 = ${amount - 1}`);
-  // $: percentage, console.log(`${max} - 1 = ${max - 1}`);
-  // $: percentage, console.log(`${percentage}`);
   $: scale = Array.from(Array(max).keys()).map((x) => x + 1);
   $: showValueInsideAmount = percentage > 20;
 </script>
