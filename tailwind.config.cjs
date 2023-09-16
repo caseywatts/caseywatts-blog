@@ -24,7 +24,7 @@ module.exports = {
     themes: [
       {
         heycaseywattsup: {
-          ...require("daisyui/src/colors/themes")["[data-theme=pastel]"],
+          ...require("daisyui/src/theming/themes")["[data-theme=pastel]"],
           primary: "rgb(221 214 254)",
           secondary: "rgb(191 219 254)",
           // "primary-focus": "mediumblue",
