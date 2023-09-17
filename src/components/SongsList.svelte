@@ -1,6 +1,5 @@
 <script>
   export let songs;
-  import Tag from "./Tag.svelte";
   import SongsGroup from "./SongsGroup.svelte";
 
   $: fiveStarSongs = songs.filter((song) => song.Tier == 5);

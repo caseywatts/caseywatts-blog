@@ -3,6 +3,8 @@
   import { initializeApp } from "firebase/app";
   import { getFirestore } from "firebase/firestore";
   import { getAuth } from "firebase/auth";
+  import { signInAnonymously } from "firebase/auth";
+  import LogInNav from "./LogInNav.svelte";
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
@@ -19,8 +21,10 @@
   const app = initializeApp(firebaseConfig);
   const firestore = getFirestore(app);
   const auth = getAuth(app);
+  signInAnonymously(auth);
 </script>
 
 <FirebaseApp {auth} {firestore}>
+  <LogInNav />
   <slot />
 </FirebaseApp>
