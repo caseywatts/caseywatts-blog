@@ -2,6 +2,7 @@
   import { Collection } from "sveltefire";
   import FireBaseApp from "./FireBaseApp.svelte";
   import SongsList from "./SongsList.svelte";
+  import { SignedIn } from "sveltefire";
 </script>
 
 <FireBaseApp>
@@ -10,7 +11,11 @@
     <div>Star Rating = <b>popularity</b> * how much Casey <b>enjoys</b> it * Casey's <b>skill</b> at it</div>
   </div>
 
-  <Collection ref="Songs" let:data={songs}>
-    <SongsList {songs} />
-  </Collection>
+  <SignedIn let:user>
+    <Collection ref="Songs" let:data={songs}>
+      <Collection ref="Stars" let:data={stars}>
+        <SongsList {songs} {user} {stars} />
+      </Collection>
+    </Collection>
+  </SignedIn>
 </FireBaseApp>
