@@ -13,8 +13,8 @@
 
   <SignedIn let:user>
     <Collection ref="Songs" let:data={songs}>
-      <Collection ref="Stars" let:data={stars}>
-        <SongsList {songs} {user} {stars} />
+      <Collection ref="Stars" let:data={starredSongs}>
+        <SongsList {songs} {starredSongs} />
       </Collection>
     </Collection>
   </SignedIn>

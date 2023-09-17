@@ -1,15 +1,20 @@
 <script>
   export let songs;
-  export let user;
-  export let stars;
+  export let starredSongs;
 
   import SongsGroup from "./SongsGroup.svelte";
   import SongCard from "./SongCard.svelte";
   import { Doc } from "sveltefire";
 
+  $: myStarredSongs = starredSongs[0]?.starredSongs || [];
+
   $: fiveStarSongs = songs.filter((song) => song.Tier == 5);
   $: fourStarSongs = songs.filter((song) => song.Tier == 4);
   $: threeStarSongs = songs.filter((song) => song.Tier == 3);
+
+  function songLookup(songId) {
+    return songs.find((song) => song.id == songId);
+  }
 </script>
 
 <div class="panel panel-main">
@@ -17,12 +22,8 @@
 </div>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-  {#each stars as star}
-    {#each star.stars as songRef}
-      <Doc ref={songRef} let:data={song} let:ref>
-        <SongCard {song} {ref} />
-      </Doc>
-    {/each}
+  {#each myStarredSongs as starredSong}
+    <SongCard song={songLookup(starredSong)} />
   {/each}
 </div>
 

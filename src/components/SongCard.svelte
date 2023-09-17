@@ -1,6 +1,5 @@
 <script>
   export let song;
-  export let ref;
   import Tag from "./Tag.svelte";
   import { firestoreObjects } from "../stores.js";
   import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
@@ -11,13 +10,13 @@
   async function starSong() {
     debugger;
     await updateDoc(starsRef, {
-      stars: arrayUnion(`Songs/${ref.id}`),
+      starredSongs: arrayUnion(`${song.id}`),
     });
   }
   async function unStarSong() {
     debugger;
     await updateDoc(starsRef, {
-      stars: arrayRemove(`Songs/${ref.id}`),
+      starredSongs: arrayRemove(`${song.id}`),
     });
   }
 </script>
