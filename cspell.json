@@ -4,7 +4,11 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
-        "firestore"
+        "appspot",
+        "firebaseapp",
+        "FirebaseApp",
+        "firestore",
+        "sveltefire"
     ],
     "ignoreWords": [],
     "import": []
