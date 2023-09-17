@@ -5,7 +5,10 @@
 </script>
 
 <FireBaseApp>
-  <h2 class="panel panel-main text-2xl text-center">Songs</h2>
+  <div class="panel panel-main text-center">
+    <h2 class="text-2xl mb-4">Songs</h2>
+    <div>Star Rating = <b>popularity</b> * how much Casey <b>enjoys</b> it * Casey's <b>skill</b> at it</div>
+  </div>
 
   <Collection ref="Songs" let:data={songs}>
     <SongsList {songs} />
