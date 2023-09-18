@@ -1,21 +1,20 @@
 <script>
-  import { Collection } from "sveltefire";
-  import FireBaseApp from "./FireBaseApp.svelte";
+  import SupabaseApp from "./SupabaseApp.svelte";
+  import { supabase } from "../supabaseClient";
+
   import SongsList from "./SongsList.svelte";
-  import { SignedIn } from "sveltefire";
+  import SongCard from "./SongCard.svelte";
+
+  const SongsPromise = supabase.from("Songs").select();
+  // const StarsPromise = supabase.from("Stars").select();
 </script>
 
-<FireBaseApp>
-  <div class="panel panel-main text-center">
-    <h2 class="text-2xl mb-4">Songs</h2>
-    <div>Star Rating = <b>popularity</b> * how much Casey <b>enjoys</b> it * Casey's <b>skill</b> at it</div>
-  </div>
+<!-- <SupabaseApp /> -->
 
-  <SignedIn let:user>
-    <Collection ref="Songs" let:data={songs}>
-      <Collection ref="Stars" let:data={starredSongs}>
-        <SongsList {songs} {starredSongs} />
-      </Collection>
-    </Collection>
-  </SignedIn>
-</FireBaseApp>
+{#await SongsPromise}
+  <p>...waiting</p>
+{:then songs}
+  <SongsList songs={songs.data} />
+{:catch error}
+  <p style="color: red">{error.message}</p>
+{/await}
