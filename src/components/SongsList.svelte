@@ -17,7 +17,7 @@
   }
 </script>
 
-<div class="panel panel-main">
+<!-- <div class="panel panel-main">
   <div class="text-2xl text-center">Starred</div>
 </div>
 
@@ -25,7 +25,7 @@
   {#each myStarredSongs as starredSong}
     <SongCard song={songLookup(starredSong)} />
   {/each}
-</div>
+</div> -->
 
 <div class="panel panel-main text-2xl text-center mt-24">Five Star Songs</div>
 <SongsGroup songs={fiveStarSongs} />
