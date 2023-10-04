@@ -1,5 +1,38 @@
 export const EVENTS = [
   {
+    emoji: "🎶",
+    name: "A Cappella Musical Improv Intensive",
+    location: "Downtown Baltimore",
+    description: "a one-day intensive workshop with Lisa Lynn of Acaprov",
+    participating: "attending",
+    category: "🛝 fun",
+    cost: "$60",
+    date: "2023-10-01",
+    url: "https://www.eventbrite.com/e/a-cappella-musical-improv-intensive-tickets-707113223687"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "hosting",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2023-10-18",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/296438738/"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "hosting",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2023-10-04",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/295961142/"
+  },
+  {
     emoji: "🎮",
     name: "Baltimore Gamer Symphony \"Goes to Space\" Concert",
     location: "East of Baltimore",
