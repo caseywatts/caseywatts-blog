@@ -1,5 +1,16 @@
 export const EVENTS = [
   {
+    name: "Frontrunners Tech Conference 2024",
+    emoji: "🌎",
+    location: "Arlington, VA",
+    description: "A tech conference focused on javascript and frontend development. I'll be the emcee!",
+    participating: "emceeing",
+    category: "💻 tech",
+    cost: "$200",
+    date: "2024-03-08",
+    url: "https://frontrunners.tech/"
+  },
+  {
     emoji: "🎶",
     name: "A Cappella Musical Improv Intensive",
     location: "Downtown Baltimore",
@@ -165,7 +176,7 @@ export const EVENTS = [
     url: "https://www.meetup.com/baltimoremusicalimprov/events/291983711/"
   },
   {
-    name: "Frontrunners Tech Conference",
+    name: "Frontrunners Tech Conference 2023",
     emoji: "🌎",
     location: "Arlington, VA",
     description: "A tech conference focused on javascript and frontend development. I'll be the emcee!",
