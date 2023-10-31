@@ -1,0 +1,18 @@
+---
+import OuterLayout from "../../src/layouts/OuterLayout.astro"
+import SEOTags from "../components/SEOTags.svelte";
+import BingoPage from "../components/BingoPage.svelte";
+---
+
+<SEOTags 
+	title="Bingo"
+	description="bingo"
+	contentType="website"
+	url={Astro.url.href}
+/>
+
+<OuterLayout>
+	<div class="">
+		<BingoPage client:load />
+	</div>
+</OuterLayout>
