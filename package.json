@@ -16,9 +16,6 @@
     "@astrojs/svelte": "^4.0.2",
     "@astrojs/tailwind": "^5.0.0",
     "@supabase/supabase-js": "^2.33.2",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.6",
-    "@tailwindcss/line-clamp": "^0.4.4",
     "@vercel/analytics": "^1.0.2",
     "astro": "^3.1.0",
     "astro-mastodon-embed": "^0.0.4",
@@ -31,12 +28,17 @@
     "podcast": "^2.0.1",
     "svelte": "^4.2.0",
     "sveltefire": "^0.4.2",
-    "svupa": "github:jfreyberg/svupa",
-    "tailwindcss": "^3.3.3"
+    "svupa": "github:jfreyberg/svupa"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
     "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.4"
+    "prettier-plugin-tailwindcss": "^0.2.4",
+    "tailwindcss": "^3.3.5"
   }
 }
