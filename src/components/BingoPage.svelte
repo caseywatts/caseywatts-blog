@@ -3,7 +3,7 @@
   import BingoTile from "./BingoTile.svelte";
 </script>
 
-<div class="mx-64">
+<div class="">
   <div class="bingo-sheet">
     {#each length25 as word}
       <BingoTile {word} />
@@ -11,9 +11,13 @@
   </div>
 </div>
 
-<style>
+<style lang="postcss">
   .bingo-sheet {
-    @apply grid grid-cols-5 gap-2;
+    @apply grid select-none grid-cols-5 gap-2 text-xs xs:text-base sm:text-lg;
+    line-height: 1;
+    word-wrap: break-word;
+    hyphens: auto;
     max-height: 80vh;
+    aspect-ratio: 1 / 1;
   }
 </style>

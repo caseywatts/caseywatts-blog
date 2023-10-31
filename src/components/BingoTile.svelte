@@ -7,27 +7,25 @@
   }
 </script>
 
-<div class="bingo-card flex-center" on:click={toggleMarked} on:keyup={toggleMarked} role="button">
+<div class="bingo-tile flex-center" on:click={toggleMarked} on:keyup={toggleMarked} role="button" tabindex="auto">
   <div class="bingo-content">{word}</div>
   <div class:bingo-marker={isMarked} />
 </div>
 
-<style>
-  .xyz {
-    /* display: relative; */
-  }
-  .bingo-card {
-    @apply bg-blue-100 p-3;
+<style lang="postcss">
+  .bingo-tile {
+    @apply bg-blue-100 md:p-3;
     aspect-ratio: 1 / 1;
     text-align: center;
+    width: 100%;
+    height: 100%;
   }
   .bingo-content {
     z-index: 2;
   }
   .bingo-marker {
-    @apply absolute h-32 w-32 rounded-full bg-red-300;
+    @apply absolute flex h-10 rounded-full bg-red-300 xs:h-14 xs:bg-green-300 sm:h-24 sm:bg-orange-300 md:h-28 md:bg-purple-300 lg:h-32 lg:bg-blue-300;
+    aspect-ratio: 1 / 1;
     z-index: 1;
-    /* height: 100%;
-    width: 100%; */
   }
 </style>
