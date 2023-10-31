@@ -106,3 +106,9 @@ code, pre {
   top: 0;
   width: 100%;
 }
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

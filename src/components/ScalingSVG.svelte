@@ -1,5 +1,4 @@
 <script>
-  import BouncingBall from "./BouncingBall.svelte";
 </script>
 
 <slot />
