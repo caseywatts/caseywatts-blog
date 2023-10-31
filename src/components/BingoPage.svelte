@@ -15,8 +15,8 @@
   .bingo-sheet {
     @apply m-auto grid select-none grid-cols-5 gap-2 text-xs xs:text-base sm:text-lg;
     line-height: 1;
-    word-wrap: break-word;
     hyphens: auto;
+    word-break: break-word;
     max-height: 80vh;
     aspect-ratio: 1 / 1;
   }
