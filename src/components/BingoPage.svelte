@@ -1,27 +1,31 @@
 <script>
-  $: bingoTileTerms = ["initiation", "emotion", "backstory", "object work", "yes, and", "two peas in a pod", "a desire", "beat", "denial", "callback", "time travel", "game of the scene", "FREE", "heightening", "raising the stakes", "status", "walk on", "sound effects", "improv", "improv", "improv", "improv", "improv", "improv", "improv"];
+  $: bingoTileTerms = ["B", "I", "N", "G", "O", "B", "I", "N", "G", "O", "B", "I", "FREE", "G", "O", "B", "I", "N", "G", "O", "B", "I", "N", "G", "O"];
+  $: title = "Bingo";
   import BingoTile from "./BingoTile.svelte";
-  import shuffle from "../lib/shuffle.js";
-
-  let seed = 12345;
 
   import { onMount } from "svelte";
   onMount(() => {
     let termsFromURL = new URLSearchParams(window.location.search).get("terms");
+    let titleFromURL = new URLSearchParams(window.location.search).get("title");
     if (termsFromURL) {
       bingoTileTerms = termsFromURL.split(";");
     } else {
       // nothing
     }
+    if (titleFromURL) {
+      title = titleFromURL;
+    }
   });
 </script>
 
 <div class="w-full">
+  <h1 class="text-2xl bg-blue-200 text-center p-4 m-4">{title}</h1>
   <div class="bingo-sheet">
     {#each bingoTileTerms as word, tileNumber}
       <BingoTile {word} {tileNumber} />
     {/each}
   </div>
+  <div class="bg-blue-200 text-center p-4 m-4">Want to make your own BINGO card? Copy the <a class="link" href="https://docs.google.com/spreadsheets/d/1t42gP8CUVmKVNfK4cX7yWbqiNJl2e3jt5fjBf5WE9Ig/edit#gid=0">spreadsheet template</a></div>
 </div>
 
 <style lang="postcss">
