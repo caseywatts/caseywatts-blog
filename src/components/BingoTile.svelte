@@ -1,11 +1,21 @@
 <script>
-  export let word = "";
-  // let isMarked = Math.random() > 0.5;
-  let isMarked = false;
+  import { onMount } from "svelte";
+  export let word;
+  export let tileNumber;
+  import { localStorageGet, localStorageSet } from "../lib/localStorageBingo.js";
+  let isMarked;
+
   function toggleMarked() {
-    console.log(`toggling ${isMarked} to ${!isMarked}`);
     isMarked = !isMarked;
+    localStorageSet(tileNumber, isMarked);
   }
+
+  onMount(() => {
+    isMarked = localStorageGet(tileNumber);
+    if (word == "FREE") {
+      isMarked = true;
+    }
+  });
 </script>
 
 <div class="bingo-tile flex-center" on:click={toggleMarked} on:keyup={toggleMarked} role="button" tabindex="auto">

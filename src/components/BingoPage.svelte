@@ -1,12 +1,25 @@
 <script>
-  let length25 = ["initiation", "emotion", "backstory", "object work", "yes, and", "two peas in a pod", "a desire", "beat", "denial", "callback", "time travel", "game of the scene", "FREE", "heightening", "raising the stakes", "status", "walk on", "sound effects", "improv", "improv", "improv", "improv", "improv", "improv", "improv"];
+  $: bingoTileTerms = ["initiation", "emotion", "backstory", "object work", "yes, and", "two peas in a pod", "a desire", "beat", "denial", "callback", "time travel", "game of the scene", "FREE", "heightening", "raising the stakes", "status", "walk on", "sound effects", "improv", "improv", "improv", "improv", "improv", "improv", "improv"];
   import BingoTile from "./BingoTile.svelte";
+  import shuffle from "../lib/shuffle.js";
+
+  let seed = 12345;
+
+  import { onMount } from "svelte";
+  onMount(() => {
+    let termsFromURL = new URLSearchParams(window.location.search).get("terms");
+    if (termsFromURL) {
+      bingoTileTerms = termsFromURL.split(";");
+    } else {
+      // nothing
+    }
+  });
 </script>
 
 <div class="w-full">
   <div class="bingo-sheet">
-    {#each length25 as word}
-      <BingoTile {word} />
+    {#each bingoTileTerms as word, tileNumber}
+      <BingoTile {word} {tileNumber} />
     {/each}
   </div>
 </div>
