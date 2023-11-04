@@ -1,0 +1,18 @@
+---
+import OuterLayout from "../../src/layouts/OuterLayout.astro"
+import SEOTags from "../components/SEOTags.svelte";
+import YouTubeCrossfader from "../components/YouTubeCrossfader.svelte";
+---
+
+<SEOTags 
+	title="YouTube Crossfader"
+	description="YouTube Crossfader"
+	contentType="website"
+	url={Astro.url.href}
+/>
+
+<OuterLayout>
+	<div class="">
+		<YouTubeCrossfader client:load />
+	</div>
+</OuterLayout>
