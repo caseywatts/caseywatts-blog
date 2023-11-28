@@ -1,5 +1,93 @@
 export const EVENTS = [
   {
+    emoji: "🤣",
+    name: "Spoken Improv @ Baltimore Improv Group",
+    location: "Downtown Baltimore",
+    description: "Several improvised comedy shows in one night.",
+    participating: "AV tech-ing",
+    category: "🛝 fun",
+    cost: "$10",
+    date: "2023-11-11",
+    url: "https://www.bigimprov.org/"
+  },
+  {
+    emoji: "🤣",
+    name: "Spoken Improv @ Baltimore Improv Group",
+    location: "Downtown Baltimore",
+    description: "Several improvised comedy shows in one night.",
+    participating: "AV tech-ing",
+    category: "🛝 fun",
+    cost: "$10",
+    date: "2023-11-03",
+    url: "https://www.bigimprov.org/"
+  },
+  {
+    emoji: "🎅",
+    name: "Elf: The Musical",
+    location: "North of Baltimore",
+    description: "a musical, based on the movie Elf",
+    participating: "AV tech-ing",
+    category: "🛝 fun",
+    cost: "$23",
+    date: "2023-12-10",
+    url: "https://thirdwall.org/"
+  },
+  {
+    emoji: "🎅",
+    name: "Elf: The Musical",
+    location: "North of Baltimore",
+    description: "a musical, based on the movie Elf",
+    participating: "AV tech-ing",
+    category: "🛝 fun",
+    cost: "$23",
+    date: "2023-12-08",
+    url: "https://thirdwall.org/"
+  },
+  {
+    emoji: "🎅",
+    name: "Elf: The Musical",
+    location: "North of Baltimore",
+    description: "a musical, based on the movie Elf",
+    participating: "AV tech-ing",
+    category: "🛝 fun",
+    cost: "$23",
+    date: "2023-12-03",
+    url: "https://thirdwall.org/"
+  },
+  {
+    emoji: "🎅",
+    name: "Elf: The Musical",
+    location: "North of Baltimore",
+    description: "a musical, based on the movie Elf",
+    participating: "AV tech-ing",
+    category: "🛝 fun",
+    cost: "$23",
+    date: "2023-12-01",
+    url: "https://thirdwall.org/"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "teaching",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2023-12-06",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/297146521/"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "teaching",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2023-11-08",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/296623460/"
+  },
+  {
     name: "Frontrunners Tech Conference 2024",
     emoji: "🌎",
     location: "Arlington, VA",
