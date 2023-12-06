@@ -7,6 +7,17 @@ export const EVENTS = [
     participating: "AV tech-ing",
     category: "🛝 fun",
     cost: "$10",
+    date: "2023-12-07",
+    url: "https://www.bigimprov.org/"
+  },
+  {
+    emoji: "🤣",
+    name: "Spoken Improv @ Baltimore Improv Group",
+    location: "Downtown Baltimore",
+    description: "Several improvised comedy shows in one night.",
+    participating: "AV tech-ing",
+    category: "🛝 fun",
+    cost: "$10",
     date: "2023-11-11",
     url: "https://www.bigimprov.org/"
   },
