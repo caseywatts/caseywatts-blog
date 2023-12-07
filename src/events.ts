@@ -40,6 +40,17 @@ export const EVENTS = [
     participating: "AV tech-ing",
     category: "🛝 fun",
     cost: "$23",
+    date: "2023-12-09",
+    url: "https://thirdwall.org/"
+  },
+  {
+    emoji: "🎅",
+    name: "Elf: The Musical",
+    location: "North of Baltimore",
+    description: "a musical, based on the movie Elf",
+    participating: "AV tech-ing",
+    category: "🛝 fun",
+    cost: "$23",
     date: "2023-12-10",
     url: "https://thirdwall.org/"
   },
