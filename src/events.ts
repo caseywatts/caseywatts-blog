@@ -1,5 +1,71 @@
 export const EVENTS = [
   {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "teaching",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2024-06-05",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "teaching",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2024-05-01",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "teaching",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2024-04-03",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "teaching",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2024-03-06",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "teaching",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2024-02-07",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/"
+  },
+  {
+    emoji: "🎶",
+    name: "Baltimore Musical Improv Meetup",
+    location: "Downtown Baltimore",
+    description: "free interactive workshop - learn musical improv. no music or improv background required.",
+    participating: "teaching",
+    category: "🛝 fun",
+    cost: "free",
+    date: "2024-01-03",
+    url: "https://www.meetup.com/baltimoremusicalimprov/events/"
+  },
+  {
     emoji: "🤣",
     name: "Spoken Improv @ Baltimore Improv Group",
     location: "Downtown Baltimore",
