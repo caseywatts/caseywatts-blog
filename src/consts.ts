@@ -80,7 +80,9 @@ export const REDIRECTS = {
   "bios": "https://docs.google.com/document/d/1i7Xyea0BQKFfIP7pNJgGevO_M3RkfbE91hBWYjhlb54/edit?usp=sharing",
   "bookpay": "https://buy.stripe.com/5kA5mKbM3cipae49AD",
   "tweetthetoot": "https://gist.github.com/caseywatts/be0674debcfe35ee26bcc6d4a64f0f3d",
-  "youtubemarkdownlink": "https://gist.github.com/caseywatts/e3fffc47abec13c0cec90ff84983818a"
+  "youtubemarkdownlink": "https://gist.github.com/caseywatts/e3fffc47abec13c0cec90ff84983818a",
+  "culturesmithing-devops-columbia-2024": "https://docs.google.com/document/d/18JaByiNngk2sqUce1NXPsEQepH77z7_I6zqFPirF9h8/edit",
+  "coaching": "https://docs.google.com/document/d/1qat3-ghzTQPWqIywitsfegXFcod_BNOlkLvNAYmb8O8/edit?usp=drive_web&ouid=110271797069168069839"
 }
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);
 
