@@ -1,6 +1,6 @@
 import ical from "ical-generator";
 
-import { EVENTS } from "../events.ts";
+import EVENTS from "../events.json";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "../consts";
 
 export async function get(context) {
