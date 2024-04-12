@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "pullEvents": "node src/lib/grabEventsFromGoogleSheets.js"
+    "pullEvents": "node src/lib/grabEventsFromGoogleSheets.js",
+    "pullSongs": "node src/lib/grabSongsFromGoogleSheets.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.0",
