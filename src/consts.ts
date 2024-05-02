@@ -82,7 +82,8 @@ export const REDIRECTS = {
   "youtubemarkdownlink": "https://gist.github.com/caseywatts/e3fffc47abec13c0cec90ff84983818a",
   "culturesmithing-devops-columbia-2024": "https://docs.google.com/document/d/18JaByiNngk2sqUce1NXPsEQepH77z7_I6zqFPirF9h8/edit",
   "coaching": "https://docs.google.com/document/d/1qat3-ghzTQPWqIywitsfegXFcod_BNOlkLvNAYmb8O8/edit?usp=drive_web&ouid=110271797069168069839",
-  "qlab-feb-2024": "https://docs.google.com/document/d/1f8TMJgjT_KjuzuMcE0-WpMHvidoeK68VqWMmyGC2-E8/edit"
+  "qlab-feb-2024": "https://docs.google.com/document/d/1f8TMJgjT_KjuzuMcE0-WpMHvidoeK68VqWMmyGC2-E8/edit",
+  "coffeeshops": "https://maps.app.goo.gl/uHzPv8F1TXXnTuaL7"
 }
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);
 
