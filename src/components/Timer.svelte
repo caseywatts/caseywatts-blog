@@ -3,4 +3,4 @@
 </script>
 
 <!-- {timer.quantity} -->
-<span style="background-color:khaki; padding:2px; border-radius:3px;">{timer.quantity} {timer.units}</span>
+<span class="bg-red-200 p-1 rounded-sm">{timer.quantity} {timer.units}</span>

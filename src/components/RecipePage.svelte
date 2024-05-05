@@ -1,12 +1,11 @@
 <script>
   export let recipe = {};
-  export let title = "";
   import Ingredient from "./Ingredient.svelte";
   import Cookware from "./Cookware.svelte";
   import Step from "./Step.svelte";
 </script>
 
-<div class="flex">
+<div class="flex justify-around">
   <div>
     <h1>{recipe.metadata.name}</h1>
 
@@ -47,9 +46,11 @@
   </div>
 </div>
 
-<div>Steps</div>
-<ol>
-  {#each recipe.steps as step}
-    <li><Step {step} /></li>
-  {/each}
-</ol>
+<div>
+  <div>Steps</div>
+  <ol>
+    {#each recipe.steps as step}
+      <li><Step {step} /></li>
+    {/each}
+  </ol>
+</div>
