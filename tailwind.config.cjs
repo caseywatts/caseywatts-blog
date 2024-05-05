@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     screens: {
       xs: { min: "320px", max: "640px" },
-      ...defaultTheme.screens
+      ...defaultTheme.screens,
     },
     extend: {
       typography: {
@@ -39,5 +39,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/line-clamp"), require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("daisyui")],
 };
