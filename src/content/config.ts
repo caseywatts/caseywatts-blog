@@ -1,3 +1,4 @@
+import { recipeSchema } from "astro-cooklang";
 import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
@@ -39,4 +40,14 @@ const podcast = defineCollection({
 	}),
 });
 
-export const collections = { blog, podcast };
+const recipes = defineCollection({
+	schema: z.object({
+		// Add recipe properties.
+		...recipeSchema,
+
+		// Metadata is top level.
+		title: z.string().optional(),
+	}),
+});
+
+export const collections = { blog, podcast, recipes };

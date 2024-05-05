@@ -1,16 +1,12 @@
+// https://astro.build/config
+
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
-
-// https://astro.build/config
 import svelte from "@astrojs/svelte";
-
-// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
+import cooklang from "astro-cooklang";
 
-// https://astro.build/config
-
-// https://astro.build/config
 export default defineConfig({
   site: "https://www.caseywatts.com",
   integrations: [
@@ -28,5 +24,6 @@ export default defineConfig({
     }),
     svelte(),
     tailwind(),
+    cooklang(),
   ],
 });
