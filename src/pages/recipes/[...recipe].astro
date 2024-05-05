@@ -20,19 +20,19 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 
-// // You can access recipe data like this...
-const { ingredients, cookwares, metadata, steps, shoppingList } = entry.data;
+// // // You can access recipe data like this...
+// const { ingredients, cookwares, metadata, steps, shoppingList } = entry.data;
 
-const recipe = entry.data;
+// const recipe = recipe.data;
 
-// // But metadata is also top level...
-const title = entry.data.title || entry.slug;
+// // // But metadata is also top level...
+// const title = entry.data.title || entry.slug;
 
-// // Use the Content component to render the recipe to HTML in your template.
-// const { Content } = await entry.render();
+// // // Use the Content component to render the recipe to HTML in your template.
+// // const { Content } = await entry.render();
 
 ---
 
 <PageLayout>
-  <RecipePage {recipe} client:load />
+  <RecipePage recipe={entry.data} client:load />
 </PageLayout>
