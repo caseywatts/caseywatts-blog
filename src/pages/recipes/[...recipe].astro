@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import RecipePage from '../../components/RecipePage.svelte';
+import PageLayout from '../../layouts/Page.astro';
 
 export async function getStaticPaths() {
   const recipeEntries = await getCollection("recipes");
@@ -32,4 +33,6 @@ const title = entry.data.title || entry.slug;
 
 ---
 
-<RecipePage {recipe} client:load />
+<PageLayout>
+  <RecipePage {recipe} client:load />
+</PageLayout>
