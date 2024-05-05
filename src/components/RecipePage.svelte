@@ -5,13 +5,12 @@
   import Step from "./Step.svelte";
 </script>
 
-<div class="flex justify-around">
-  <div>
-    <h1>{recipe.metadata.name}</h1>
-
-    {#if recipe.metadata.source}
+<div class="grid grid-cols-2">
+  <div><h1>{recipe.metadata.name} {recipe.metadata.emoji}</h1></div>
+  <div class="text-right">
+    {#if recipe.metadata.sourceurl}
       <div>
-        Source: {recipe.metadata.source}
+        <a href={recipe.metadata.sourceurl}>Source</a>
       </div>
     {/if}
 
@@ -27,30 +26,34 @@
       </div>
     {/if}
   </div>
-
-  <div>
-    <div class="text-2xl">Ingredients</div>
-    <ul>
-      {#each recipe.ingredients as ingredient}
-        <li><Ingredient {ingredient} /></li>
-      {/each}
-    </ul>
-  </div>
-  <div>
-    <div class="text-2xl">Cookware</div>
-    <ul>
-      {#each recipe.cookwares as cookware}
-        <li><Cookware {cookware} /></li>
-      {/each}
-    </ul>
-  </div>
 </div>
 
-<div>
-  <div class="text-2xl">Steps</div>
-  <ol>
-    {#each recipe.steps as step}
-      <li><Step {step} /></li>
-    {/each}
-  </ol>
+<div class="grid grid-cols-2">
+  <div>
+    <div>
+      <div class="text-2xl">Ingredients</div>
+      <ul>
+        {#each recipe.ingredients as ingredient}
+          <li><Ingredient {ingredient} /></li>
+        {/each}
+      </ul>
+    </div>
+    <div>
+      <div class="text-2xl">Cookware</div>
+      <ul>
+        {#each recipe.cookwares as cookware}
+          <li><Cookware {cookware} /></li>
+        {/each}
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-2xl">Steps</div>
+    <ol>
+      {#each recipe.steps as step}
+        <li><Step {step} /></li>
+      {/each}
+    </ol>
+  </div>
 </div>
