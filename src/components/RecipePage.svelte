@@ -29,7 +29,7 @@
   </div>
 
   <div>
-    <div>Ingredients</div>
+    <div class="text-2xl">Ingredients</div>
     <ul>
       {#each recipe.ingredients as ingredient}
         <li><Ingredient {ingredient} /></li>
@@ -37,7 +37,7 @@
     </ul>
   </div>
   <div>
-    <div>Cookware</div>
+    <div class="text-2xl">Cookware</div>
     <ul>
       {#each recipe.cookwares as cookware}
         <li><Cookware {cookware} /></li>
@@ -47,7 +47,7 @@
 </div>
 
 <div>
-  <div>Steps</div>
+  <div class="text-2xl">Steps</div>
   <ol>
     {#each recipe.steps as step}
       <li><Step {step} /></li>
