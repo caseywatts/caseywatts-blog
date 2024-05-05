@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import OuterLayout from '../../layouts/OuterLayout.astro';
+import SEOTags from '../../components/SEOTags.svelte';
+import RecipesIndex from '../../components/RecipesIndex.svelte';
+
+const recipes = await getCollection('recipes')
+---
+
+<SEOTags
+	title="Casey's Recipes"
+	description="Casey's Recipes"
+	contentType="website"
+	url={Astro.url.href}
+/>
+
+<OuterLayout>
+	<RecipesIndex recipes={recipes} client:load />
+</OuterLayout>

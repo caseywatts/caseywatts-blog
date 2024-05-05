@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import RecipePage from '../../components/RecipePage.svelte';
+
+export async function getStaticPaths() {
+  const recipeEntries = await getCollection("recipes");
+
+  return recipeEntries.map((entry) => {
+    console.log(entry)
+    return {
+      params: {
+        // e.g `spec/fried-rice`
+        recipe: entry.slug,
+      },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+
+// // You can access recipe data like this...
+const { ingredients, cookwares, metadata, steps, shoppingList } = entry.data;
+
+const recipe = entry.data;
+
+// // But metadata is also top level...
+const title = entry.data.title || entry.slug;
+
+// // Use the Content component to render the recipe to HTML in your template.
+// const { Content } = await entry.render();
+
+---
+
+<RecipePage {recipe} client:load />

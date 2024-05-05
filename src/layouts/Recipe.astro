@@ -1,0 +1,116 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import OuterLayout from '../layouts/OuterLayout.astro';
+import FormattedDate from '../components/FormattedDate.svelte';
+import Bio from '../components/Bio.astro';
+import CaseyFacts from '../components/CaseyFacts.svelte';
+import SuggestToSubscribe from '../components/SuggestToSubscribe.astro';
+import AudioWidget from '../components/AudioWidget.svelte';
+import defaultImage from "../assets/headshot-2.jpg";
+import Webmentions from '../components/Webmentions.svelte';
+import SEOTags from '../components/SEOTags.svelte';
+
+import { Recipe } from 'cooklang'
+
+const recipeString = `` // <- Your CookLang recipe
+const recipe = new Recipe(recipeString);
+console.log(recipe);
+
+
+type Props = CollectionEntry<'podcast'>['data'];
+
+const { title, description, date, audioUrl } = Astro.props;
+const url = `https://www.caseywatts.com${Astro.url.pathname}`;
+const url2 = `www.caseywatts.com${Astro.url.pathname}`;
+const image = `${Astro.url.origin}${defaultImage}`
+---
+
+<!-- <script is:inline define:vars={{url2}}>
+	const lol = `https://api.countapi.xyz/hit/:HOST:/:PATHNAME:`
+	console.log(lol)
+	fetch(lol).then(response => response.json()).then(json => {
+		console.log(json)
+	})
+</script> -->
+
+<SEOTags 
+	title={title}
+	description={description}
+	image={image}
+	contentType="article"
+	url={url}
+/>
+
+<OuterLayout>
+	<div class="panel panel-main">
+		<span class="text-2xl">
+		<!-- {
+			tags && (
+				<Tag>{tags}</Tag>
+			)
+		} -->
+		</span>
+		<div class="flex mb-5 align-baseline">
+			<div class="text-sm"><a href="/podcast">⬅️ other episodes</a></div>
+			<div class="text-right italic text-violet-500 text-sm flex-1 align-bottom">
+				Published <FormattedDate date={date} />
+			</div>
+		</div>
+		<article class="prose lg:prose-lg mx-auto">
+			<!-- {heroImage && <img width={720} height={360} src={heroImage} alt="" />} -->
+			<h1 class="flex flex-col md:flex-row justify-center items-center align-middle md:space-x-5">
+				<div class="text-8xl flex align-middle justify-center items-center">
+					<span>🎙️</span>
+				</div>
+				<div class="mb-0 flex-1 flex flex-col align-middle justify-center">
+					<div>
+						{title}
+					</div>
+				</div>
+			</h1>
+			{
+				description && (
+					<div class="bg-violet-200 p-4">{description}</div>
+				)
+			}
+			<AudioWidget {audioUrl} />
+			<div id="hypertranscript" class="hyperaudio-transcript">
+				<slot />
+			</div>
+		</article>
+	</div>
+
+
+<Webmentions url={url} client:only="svelte"/>
+
+<div class="panel panel-main p-4">
+	<SuggestToSubscribe />
+</div>
+
+<!-- <div class="panel panel-main">
+	<a href="/blog" class="button-link block">other blog posts</a>
+</div> -->
+
+<div class="panel panel-main">
+	<CaseyFacts client:only="svelte" />
+</div>
+<div class="panel panel-main">
+	<Bio />
+</div>
+</OuterLayout>
+
+<script is:inline>
+	// allow checkboxes on blog posts
+	// I'd rather do this in a [rehype plugin](https://github.com/remarkjs/remark-gfm/issues/41), but this works for now
+	document.querySelectorAll("input[type=checkbox]").forEach((node) => node.disabled = false)
+</script>
+
+<script is:inline>
+	let minimizedMode = false;
+	let autoScroll = true;
+	let doubleClick = false;
+	let webMonetization = false;
+	let playOnClick = true;
+
+	new HyperaudioLite("hypertranscript", "hyperplayer", minimizedMode, autoScroll, doubleClick, webMonetization, playOnClick);
+</script>

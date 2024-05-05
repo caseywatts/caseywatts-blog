@@ -1,3 +1,4 @@
+import { recipeSchema } from "astro-cooklang";
 import { defineCollection, z } from 'astro:content';
 import { title } from '../components/SEOTags.svelte';
 
@@ -49,4 +50,14 @@ const feeds = defineCollection({
 	})
 })
 
-export const collections = { blog, podcast, feeds };
+const recipes = defineCollection({
+	schema: z.object({
+		// Add recipe properties.
+		...recipeSchema,
+
+		// Metadata is top level.
+		title: z.string().optional(),
+	}),
+});
+
+export const collections = { blog, podcast, recipes, feeds };

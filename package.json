@@ -34,14 +34,14 @@
     "pocketbase": "^0.21.4",
     "podcast": "^2.0.1",
     "svelte": "^4.2.2",
-    "sveltefire": "^0.4.2",
-    "svupa": "github:jfreyberg/svupa"
+    "sveltefire": "^0.4.2"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
+    "astro-cooklang": "^0.0.1",
     "autoprefixer": "^10.4.16",
     "cypress": "^13.13.0",
     "postcss": "^8.4.31",
