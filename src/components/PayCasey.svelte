@@ -8,6 +8,7 @@
       return rate.range == selectedRate;
     }
   });
+  const paymentLinkBase = "https://buy.stripe.com/6oE7uSg2jgyF1Hy8wA";
 </script>
 
 <div class="panel panel-main mt-24">
@@ -56,7 +57,7 @@
   <div class="text-2xl mt-8">Per Single Session</div>
   <div class="mt-4 grid grid-cols-2">
     {#each filteredRates as rate}
-      <a class="button-link m-2 p-2" href="https://caseywatts.com#{rate.singleCode}">
+      <a class="button-link m-2 p-2" href="{paymentLinkBase}?prefilled_promo_code={rate.singleCode}">
         <div class="text-center">
           <div class="text-xl underline">{rate.range} / y</div>
           <div class="m-2"></div>
@@ -72,9 +73,10 @@
     {/each}
   </div>
   <div class="text-2xl mt-4">Per 3-pack (10% discount)</div>
+  <div class="my-4">Note: you must <span class="underline font-bold">update quantity to 3</span> on the 3-pack's checkout page.</div>
   <div class="mt-4 grid grid-cols-2">
     {#each filteredRates as rate}
-      <a class="button-link m-2 p-2" href="https://caseywatts.com#{rate.threePackCode}">
+      <a class="button-link m-2 p-2" href="{paymentLinkBase}?prefilled_promo_code={rate.threePackCode}">
         <div class="text-center">
           <div class="text-xl underline">{rate.range} / y</div>
           <div class="m-2"></div>
