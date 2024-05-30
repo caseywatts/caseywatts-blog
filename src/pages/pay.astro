@@ -1,0 +1,18 @@
+---
+import OuterLayout from "../../src/layouts/OuterLayout.astro"
+import SEOTags from "../components/SEOTags.svelte";
+import PayCasey from "../components/PayCasey.svelte";
+---
+
+<SEOTags 
+	title="Paying Casey"
+	description="How to pay Casey for his services"
+	contentType="website"
+	url={Astro.url.href}
+/>
+
+<OuterLayout>
+	<div class="">
+		<PayCasey client:load />
+	</div>
+</OuterLayout>

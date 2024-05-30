@@ -263,3 +263,62 @@ Person B: "They're the same picture.`,
   //   alt: ``
   // },
 ];
+
+export const RATES = [
+  {
+    range: "0-20k",
+    discount: "85%",
+    perSession: 24,
+    singleCode: "0k20k",
+    threePackCode: "3PACK0K20K",
+  },
+  {
+    range: "20k-40k",
+    discount: "80%",
+    perSession: 32,
+    singleCode: "20k40k",
+    threePackCode: "3PACK20K40K",
+  },
+  {
+    range: "40-60k",
+    discount: "70%",
+    perSession: 48,
+    singleCode: "40k60k",
+    threePackCode: "3PACK40K60K",
+  },
+  {
+    range: "60-80k",
+    discount: "60%",
+    perSession: 64,
+    singleCode: "60k80k",
+    threePackCode: "3PACK60K80K",
+  },
+  {
+    range: "80-100k",
+    discount: "50%",
+    perSession: 80,
+    singleCode: "80k100k",
+    threePackCode: "3PACK80K100K",
+  },
+  {
+    range: "100-130k",
+    discount: "30%",
+    perSession: 112,
+    singleCode: "100k130k",
+    threePackCode: "3PACK100K130K",
+  },
+  {
+    range: "130-160k",
+    discount: "10%",
+    perSession: 144,
+    singleCode: "130k160k",
+    threePackCode: "3PACK1300K160K",
+  },
+  {
+    range: "160k+",
+    discount: "0%",
+    perSession: 160,
+    singleCode: null,
+    threePackCode: "3PACK160K",
+  }
+];
