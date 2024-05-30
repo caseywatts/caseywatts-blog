@@ -273,7 +273,7 @@ export const RATES = [
     threePackCode: "3PACK0K20K",
   },
   {
-    range: "20k-40k",
+    range: "20-40k",
     discount: "80%",
     perSession: 32,
     singleCode: "20k40k",
