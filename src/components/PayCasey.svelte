@@ -55,7 +55,7 @@
     {/each}
   </div>
   <div class="text-2xl mt-8">Per Single Session</div>
-  <div class="mt-4 grid grid-cols-2">
+  <div class="mt-4 grid grid-cols-1 sm:grid-cols-2">
     {#each filteredRates as rate}
       <a class="button-link m-2 p-2" href="{paymentLinkBase}?prefilled_promo_code={rate.singleCode}">
         <div class="text-center">
@@ -74,7 +74,7 @@
   </div>
   <div class="text-2xl mt-4">Per 3-pack (10% discount)</div>
   <div class="my-4">Note: you must <span class="underline font-bold">update quantity to 3</span> on the 3-pack's checkout page.</div>
-  <div class="mt-4 grid grid-cols-2">
+  <div class="mt-4 grid grid-cols-1 sm:grid-cols-2">
     {#each filteredRates as rate}
       <a class="button-link m-2 p-2" href="{paymentLinkBase}?prefilled_promo_code={rate.threePackCode}">
         <div class="text-center">
