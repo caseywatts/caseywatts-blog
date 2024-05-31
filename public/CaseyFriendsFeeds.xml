@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml xmlns:frss="https://freshrss.org/opml" version="2.0">
+  <head>
+    <title>FreshRSS</title>
+    <dateCreated>Fri, 31 May 2024 20:17:56 +0000</dateCreated>
+  </head>
+  <body>
+    <outline text="Casey's Friends">
+      <outline text="Angélique Weger" type="rss" xmlUrl="https://angeliqueweger.com/feed/feed.xml" htmlUrl="https://angeliqueweger.com/"/>
+      <outline text="Anne T. Griffin's Innovation &amp; Disruption Blog" type="rss" xmlUrl="https://annetgriffin.substack.com/feed" htmlUrl="https://annetgriffin.substack.com/"/>
+      <outline text="avdi.codes" type="rss" xmlUrl="https://avdi.codes/feed/" htmlUrl="https://avdi.codes/"/>
+      <outline text="Bill Hunt – Posts" type="rss" xmlUrl="https://billhunt.dev/feed.xml" htmlUrl="https://billhunt.dev/"/>
+      <outline text="Buttondown's blog" type="rss" xmlUrl="https://buttondown.email/rss/blog.xml" htmlUrl="https://buttondown.email/"/>
+      <outline text="Cecilie Vennevik's blog" type="rss" xmlUrl="https://www.cvennevik.no/blog/rss" htmlUrl="https://www.cvennevik.no/blog/"/>
+      <outline text="Chelsea Troy" type="rss" xmlUrl="https://chelseatroy.com/feed/" htmlUrl="https://chelseatroy.com/"/>
+      <outline text="Codosaurus, LLC" type="rss" xmlUrl="https://www.codosaur.us/feed.xml" htmlUrl="https://www.codosaur.us/"/>
+      <outline text="Damien Burke" type="rss" xmlUrl="https://damienburke.com/feed.xml" htmlUrl="http://damienburke.com/"/>
+      <outline text="DaRoost" type="rss" xmlUrl="https://greg.nokes.name/feed.xml" htmlUrl="https://greg.nokes.name/"/>
+      <outline text="David Dashifen Kees" type="rss" xmlUrl="https://dashifen.com/feed/" htmlUrl="https://dashifen.com/"/>
+      <outline text="First Drafts on adrianhoward.com" type="rss" xmlUrl="https://adrianhoward.com/feed.xml" htmlUrl="https://adrianhoward.com/"/>
+      <outline text="Hazel Weakly" type="rss" xmlUrl="https://hazelweakly.me/atom.xml" htmlUrl="https://hazelweakly.me/"/>
+      <outline text="Hi, I'm Casey!" type="rss" xmlUrl="https://www.caseywatts.com/rss.xml" htmlUrl="https://www.caseywatts.com/"/>
+      <outline text="james hunt (.us)" type="rss" xmlUrl="https://jameshunt.us/feeds/main" htmlUrl="https://new.jameshunt.us/"/>
+      <outline text="Jessitron" type="rss" xmlUrl="https://jessitron.com/feed/" htmlUrl="https://jessitron.com/"/>
+      <outline text="Joe's Blog" type="rss" xmlUrl="https://blog.jlleblanc.com/feed" htmlUrl="http://blog.jlleblanc.com/"/>
+      <outline text="Just Melanie from the Internet" type="rss" xmlUrl="https://melsumner.github.io/feed" htmlUrl="https://melsumner.github.io/"/>
+      <outline text="Latest stories" type="rss" xmlUrl="https://www.quartey.com/feed" htmlUrl="https://www.quartey.com/writing"/>
+      <outline text="Matt Gauger" type="rss" xmlUrl="http://blog.mattgauger.com/atom.xml" htmlUrl="https://blog.mattgauger.com/"/>
+      <outline text="naildrivin5.com - David Bryant Copeland's Website" type="rss" xmlUrl="https://naildrivin5.com/atom.xml" htmlUrl="https://naildrivin5.com/"/>
+      <outline text="notkeepingitreal.com" type="rss" xmlUrl="https://notkeepingitreal.com/feed.xml" htmlUrl="https://notkeepingitreal.com/"/>
+      <outline text="NSBlog" type="rss" xmlUrl="https://www.mikeash.com/pyblog/rss.py" htmlUrl="http://www.mikeash.com/pyblog/"/>
+      <outline text="Posts, Essays, and Articles on Candost's Blog" type="rss" xmlUrl="https://candost.blog/posts/rss.xml" htmlUrl="https://candost.blog/posts/"/>
+      <outline text="Posts on Matt Blewitt" type="rss" xmlUrl="https://matt.blwt.io/post/index.xml" htmlUrl="https://matt.blwt.io/post/"/>
+      <outline text="Schneems - Programming Practices, Performance, and Pedantry" type="rss" xmlUrl="https://schneems.com/feed.xml" htmlUrl="https://www.schneems.com/"/>
+      <outline text="SeanKilleen.com" type="rss" xmlUrl="https://seankilleen.com/feed.xml" htmlUrl="https://seankilleen.com/"/>
+      <outline text="Stories by Matt Schellhas on Medium" type="rss" xmlUrl="https://medium.com/@matt-schellhas/feed" htmlUrl="https://medium.com/@matt-schellhas?source=rss-5a4b847349b3------2"/>
+      <outline text="Stories by Robby Russell on Medium" type="rss" xmlUrl="https://medium.com/@robbyrussell/feed" htmlUrl="https://medium.com/@robbyrussell?source=rss-ac1b810bb849------2"/>
+      <outline text="Sympolymathesy, by Chris Krycho" type="rss" xmlUrl="https://v5.chriskrycho.com/feed.xml" htmlUrl="https://v5.chriskrycho.com/"/>
+      <outline text="The Darkest Horse" type="rss" xmlUrl="https://thedarkesthorse.com/feed/" htmlUrl="https://thedarkesthorse.com/"/>
+      <outline text="The Saddest Woman in the World" type="rss" xmlUrl="https://thesaddestwomanintheworld.com/feed/" htmlUrl="https://thesaddestwomanintheworld.com/"/>
+      <outline text="TypeOfNaN" type="rss" xmlUrl="https://typeofnan.dev/rss.xml" htmlUrl="https://typeofnan.dev/"/>
+      <outline text="Why, Dave, Why" type="rss" xmlUrl="https://whydavewhy.com/feed/" htmlUrl="https://whydavewhy.com/"/>
+      <outline text="Xe Iaso's blog" type="rss" xmlUrl="https://xeiaso.net/blog.rss" htmlUrl="https://xeiaso.net/"/>
+      <outline text="Zagaja.com" type="rss" xmlUrl="https://www.zagaja.com/feed.xml" htmlUrl="https://www.zagaja.com/"/>
+    </outline>
+  </body>
+</opml>
