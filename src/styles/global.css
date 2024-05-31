@@ -32,7 +32,7 @@ body {
 }
 
 .filter-button {
-  @apply m-2 cursor-pointer rounded-full bg-blue-200 p-2 shadow-md shadow-violet-400 hover:shadow-violet-400/50;
+  @apply my-2 cursor-pointer rounded-full bg-blue-200 p-2 shadow-md shadow-violet-400 hover:shadow-violet-400/50;
 }
 
 .filter-button.active {

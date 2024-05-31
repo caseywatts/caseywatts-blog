@@ -21,7 +21,7 @@
   <div class="">If you're paying out of pocket yourself, you can pay a discounted rate. My <b>sliding scale</b> means you will get a discount on my rate depending on how much money you make -- e.g. folks who make more money will pay more, and folks who make less money will pay less.</div>
   <div class="text-2xl mb-2 mt-4">Select Your Income Range</div>
   <div class="mb-4">Has your income has been fluctuating lately? You can take an average of the past 3 months.</div>
-  <div>
+  <div class="space-x-2">
     {#each RATES as rate}
       {#if rate.range == selectedRate}
         <div
