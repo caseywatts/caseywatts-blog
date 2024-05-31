@@ -38,7 +38,7 @@ const feed = new Podcast({
   itunesImage: podcastMeta.imageUrl,
 });
 
-export async function get(context) {
+export async function GET(context) {
   const episodes = await getCollection("podcast");
   const sortedEpisodes = episodes.filter((episode) => !episode.data.draft).sort((a, b) => b.data.pubDate - a.data.pubDate);
 
@@ -55,7 +55,5 @@ export async function get(context) {
     });
   });
 
-  return {
-    body: feed.buildXml(),
-  };
+  return new Response(feed.buildXml());
 }
