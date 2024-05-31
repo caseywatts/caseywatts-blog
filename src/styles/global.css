@@ -51,7 +51,7 @@ body {
 
 .panel-main {
   @apply bg-blue-50;
-  @apply p-2 md:p-6;
+  @apply p-4 md:p-6;
   @apply shadow-md shadow-violet-400;
 }
 
