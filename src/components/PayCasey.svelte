@@ -92,3 +92,11 @@
     {/each}
   </div>
 </div>
+<div class="panel panel-main mt-24">
+  <div class="text-2xl">Book Time With Me</div>
+  <div class="mt-2">When you're ready to meet, feel free to grab a time with me:</div>
+  <div class="mt-4 text-xl">
+    <script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
+    <div class="zcal-inline-widget link text-center"><a href="https://zcal.co/heycaseywattsup">📆 Schedule a meeting with Casey</a></div>
+  </div>
+</div>
