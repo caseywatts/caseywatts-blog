@@ -16,7 +16,7 @@
         <div class="text-2xl">{post.data.title}</div>
         <div class="text-sm text-slate-600">{post.data.tagline}</div>
       </div>
-      <div class="text-right italic text-slate-400 text-sm flex items-center justify-center">
+      <div class="text-right italic text-slate-600 text-sm flex items-center justify-center">
         <span>
           <FormattedDate date={post.data.pubDate} />
         </span>

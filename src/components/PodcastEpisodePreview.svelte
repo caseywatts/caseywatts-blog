@@ -16,7 +16,7 @@
         <div class="text-2xl">{episode.data.title}</div>
         <div class="text-sm text-slate-600">{episode.data.description}</div>
       </div>
-      <div class="text-right italic text-slate-400 text-sm flex items-center justify-center">
+      <div class="text-right italic text-slate-600 text-sm flex items-center justify-center">
         <span>
           <FormattedDate date={episode.data.date} />
         </span>
