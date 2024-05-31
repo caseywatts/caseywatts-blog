@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml xmlns:frss="https://freshrss.org/opml" version="2.0">
+  <head>
+    <title>FreshRSS</title>
+    <dateCreated>Fri, 31 May 2024 15:48:27 +0000</dateCreated>
+  </head>
+  <body>
+    <outline text="Baltimore">
+      <outline text="Baltimore Beat" type="rss" xmlUrl="https://baltimorebeat.com/feed/" htmlUrl="https://baltimorebeat.com/" description="Black-led, Black-controlled news"/>
+      <outline text="Baltimore Fishbowl" type="rss" xmlUrl="https://baltimorefishbowl.com/feed/" htmlUrl="https://baltimorefishbowl.com/" description="YOUR WORLD BENEATH THE SURFACE."/>
+      <outline text="Greater Greater Washington" type="rss" xmlUrl="https://ggwash.org/rss" htmlUrl="https://ggwash.org/" description="Main Greater Greater Washington RSS feed."/>
+      <outline text="Homepage - WYPR" type="rss" xmlUrl="https://www.wypr.org/index.rss" htmlUrl="https://www.wypr.org/" description="WYPR is a public radio station serving the Baltimore, Maryland metropolitan area."/>
+    </outline>
+    <outline text="Comics">
+      <outline text="Cat's Cafe" type="rss" xmlUrl="https://tapas.io/rss/series/88854" htmlUrl="https://tapas.io/series/88854" description="Cat's Cafe is a wholesome comic about the daily lives of cute animals! Join Cat, Penguin, and Rabbit as they go about their day and bring a smile to your face. Grab a cup of coffee (or tea!) and enjoy!"/>
+      <outline text="Liz and Mollie" type="rss" xmlUrl="https://lizandmollie.tumblr.com/rss" htmlUrl="https://lizandmollie.tumblr.com/" description="Feelings about work 👀"/>
+      <outline text="Lunarbaboon" type="rss" xmlUrl="http://www.lunarbaboon.com/comics/atom.xml" htmlUrl="http://www.lunarbaboon.com/comics/" description="Comics"/>
+      <outline text="webcomic name" type="rss" xmlUrl="https://webcomicname.com/rss" htmlUrl="https://webcomicname.com/" description="the same joke every time by alex norris"/>
+      <outline text="xkcd.com" type="rss" xmlUrl="https://xkcd.com/atom.xml" htmlUrl="https://xkcd.com/"/>
+    </outline>
+    <outline text="Management / Psychology">
+      <outline text="Ask a Manager" type="rss" xmlUrl="https://www.askamanager.org/feed" htmlUrl="https://www.askamanager.org/"/>
+      <outline text="HBR.org" type="rss" xmlUrl="http://feeds.hbr.org/harvardbusiness/" htmlUrl="http://hbr.org/" description="Practical insights, tools and resources from leading business thought leaders."/>
+      <outline text="Psychology Today: The Latest" type="rss" xmlUrl="https://www.psychologytoday.com/intl/front/feed" htmlUrl="https://www.psychologytoday.com/intl" description="The latest blog posts from Psychology Today"/>
+    </outline>
+    <outline text="News">
+      <outline text="Daily Pnut" type="rss" xmlUrl="https://dailypnut.com/feed/" htmlUrl="https://dailypnut.com/" description="The World in a Nutshell"/>
+      <outline text="NPR Topics: Home Page Top Stories" type="rss" xmlUrl="https://feeds.npr.org/1002/rss.xml" htmlUrl="https://www.npr.org/templates/story/story.php?storyId=1002" description="Top stories in the U.S. and world news, politics, health, science, business, music, arts and culture. Nonprofit journalism with a mission. This is NPR."/>
+    </outline>
+    <outline text="Software Updates">
+      <outline text="FreshRSS releases" type="rss" xmlUrl="https://github.com/FreshRSS/FreshRSS/releases.atom" htmlUrl="https://github.com/FreshRSS/FreshRSS/" description="FreshRSS releases @ GitHub"/>
+    </outline>
+    <outline text="Tech">
+      <outline text="Cecilie Vennevik's blog" type="rss" xmlUrl="https://www.cvennevik.no/blog/rss" htmlUrl="https://www.cvennevik.no/blog/" description="Recent posts on Cecilie Vennevik's blog"/>
+      <outline text="CTO Craft" type="rss" xmlUrl="https://ctocraft.com/feed/" htmlUrl="https://ctocraft.com/" description="Mentoring, events and workshops for CTOs and Technology Leaders"/>
+      <outline text="Lenny's Newsletter" type="rss" xmlUrl="https://www.lennysnewsletter.com/feed" htmlUrl="https://www.lennysnewsletter.com/" description="A weekly advice column about building product, driving growth, and accelerating your career."/>
+      <outline text="Rands in Repose" type="rss" xmlUrl="https://randsinrepose.com/feed/" htmlUrl="https://randsinrepose.com/"/>
+      <outline text="Tech Manager Weekly" type="rss" xmlUrl="https://www.techmanagerweekly.com/rss/" htmlUrl="https://www.techmanagerweekly.com/" description="The most insightful and thought-provoking engineering leadership, culture and technology links to keep you at the top of your game"/>
+    </outline>
+  </body>
+</opml>
