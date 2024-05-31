@@ -3,7 +3,7 @@ import ical from "ical-generator";
 import EVENTS from "../events.json";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "../consts";
 
-export async function get(context) {
+export async function GET(context) {
   const calendar = ical({
     name: "CaseyWatts.com Events",
     url: `${SITE_URL}/calendar.ics`,
@@ -31,7 +31,5 @@ via Casey's Community Calendar`,
     });
   });
 
-  return {
-    body: calendar.toString(),
-  };
+  return new Response(calendar.toString());
 }
