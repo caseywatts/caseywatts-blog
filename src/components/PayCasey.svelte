@@ -80,7 +80,7 @@
         <div class="text-center">
           <div class="text-xl underline">{rate.range} / y</div>
           <div class="m-2"></div>
-          <div class="text-lg"><span class="underline">${(rate.perSession * 3 * 0.9).toFixed(2)}</span> per 25-min session</div>
+          <div class="text-lg"><span class="underline">${(rate.perSession * 3 * 0.9).toFixed(2)}</span> for 3 25-min sessions</div>
           <div class="m-2"></div>
           {#if rate.threePackCode}
             <div class="text-slate-600"><span class="line-through">${(160 * 3 * 0.9).toFixed(2)}</span> {rate.discount} discount + 10% discount</div>
