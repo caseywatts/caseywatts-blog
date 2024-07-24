@@ -10,6 +10,6 @@
 
 <div class="panel panel-main mt-24">
   <div class="text-center mb-4">
-    <FeedsForOpml myFeeds={friendsFeeds} />
+    <FeedsForOpml opmlListOfFeeds={friendsFeeds} />
   </div>
 </div>

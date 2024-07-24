@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { title } from '../components/SEOTags.svelte';
 
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
@@ -39,4 +40,13 @@ const podcast = defineCollection({
 	}),
 });
 
-export const collections = { blog, podcast };
+const feeds = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		emoji: z.string(),
+		url: z.string(),
+	})
+})
+
+export const collections = { blog, podcast, feeds };

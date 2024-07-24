@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import OuterLayout from '../../layouts/OuterLayout.astro';
+import SEOTags from '../../components/SEOTags.svelte';
+import FeedCollections from '../../components/FeedCollections.svelte';
+const allFeeds = (await getCollection('feeds'));
+---
+
+<SEOTags
+	title="RSS Feeds curated by Casey"
+	description="RSS Feeds curated by Casey "
+	contentType="website"
+	url={Astro.url.href}
+/>
+
+<OuterLayout>
+	<FeedCollections allFeeds={allFeeds} client:load />
+</OuterLayout>

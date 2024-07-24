@@ -1,11 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
+import podparse from "podparse";
 import OuterLayout from '../../layouts/OuterLayout.astro';
 import SEOTags from '../../components/SEOTags.svelte';
 import PodcastEpisodesIndex from '../../components/PodcastEpisodesIndex.svelte';
 
-const publishedPodcastEpisodes = (await getCollection('podcast'))
-	.filter((episode) => !episode.data.draft);
+// import GTCEpisodes from "../../GreaterThanCodePodcastRSS.xml?raw";
+// const podcastData = podparse(GTCEpisodes);
+// const publishedPodcastEpisodes = (await getCollection('podcast'))
+	// .filter((episode) => !episode.data.draft);
+import MaintainablePodcast from "../../MaintainablePodcast.xml?raw";
+const podcastData = podparse(MaintainablePodcast);
 ---
 
 <SEOTags
@@ -16,5 +20,5 @@ const publishedPodcastEpisodes = (await getCollection('podcast'))
 />
 
 <OuterLayout>
-	<PodcastEpisodesIndex episodes={publishedPodcastEpisodes} client:load />
+	<PodcastEpisodesIndex podcastData={podcastData} client:load />
 </OuterLayout>

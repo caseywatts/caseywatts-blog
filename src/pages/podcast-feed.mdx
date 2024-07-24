@@ -1,0 +1,12 @@
+---
+title: Podcast Feed Example
+description: "podcast feed example"
+layout: "../layouts/Page.astro"
+---
+
+import podparse from "podparse";
+import podcast3 from "../podcast3.xml?raw";
+import PodcastEpisodeList from "../components/PodcastEpisodeList";
+
+<PodcastEpisodeList podcastData={podcast3}>
+

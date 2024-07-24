@@ -1,9 +1,10 @@
 <script>
   export let episode = {};
-  import FormattedDate from "./FormattedDate.svelte";
+  import FormattedDateB from "./FormattedDateB.svelte";
   import Tag from "./Tag.svelte";
 
-  let url = episode.data.draft ? `/podcast/drafts/${episode.slug}/` : `/podcast/${episode.slug}/`;
+  // let url = episode.data.draft ? `/podcast/drafts/${episode.slug}/` : `/podcast/${episode.slug}/`;
+  let url = `/podcast/${episode.slug}/`;
 </script>
 
 <div class="panel relative group">
@@ -13,17 +14,17 @@
         <span>🎙️</span>
       </div>
       <div class="flex-1 flex flex-col align-middle justify-center items-center md:items-start">
-        <div class="text-2xl">{episode.data.title}</div>
-        <div class="text-sm text-slate-600">{episode.data.description}</div>
+        <div class="text-2xl">{episode.title}</div>
+        <div class="text-sm text-slate-600">{@html episode.description}</div>
       </div>
       <div class="text-right italic text-slate-600 text-sm flex items-center justify-center">
         <span>
-          <FormattedDate date={episode.data.date} />
+          <FormattedDateB date={episode.pubDate} />
         </span>
       </div>
     </div>
   </a>
-  {#if episode.data.tags}
-    <Tag>{episode.data.tags}</Tag>
+  {#if episode.tags}
+    <Tag>{episode.tags}</Tag>
   {/if}
 </div>

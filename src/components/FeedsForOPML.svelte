@@ -1,7 +1,7 @@
 <script>
   import fxparser from "fast-xml-parser";
-  export let myFeeds = "";
-  const feedsXML = new fxparser.XMLParser({ ignoreAttributes: false }).parse(myFeeds);
+  export let opmlListOfFeeds = "";
+  const feedsXML = new fxparser.XMLParser({ ignoreAttributes: false }).parse(opmlListOfFeeds);
   const feedCollectionTitle = feedsXML.opml.body.outline["@_text"];
   const feedsWithDetails = feedsXML.opml.body.outline.outline.map((feed) => {
     return {
