@@ -1,6 +1,8 @@
 name: "Daily Fetch"
 on:
   workflow_dispatch:
+  schedule:
+    - cron:  '12 5 * * *'
 permissions:
   contents: write
 jobs:
