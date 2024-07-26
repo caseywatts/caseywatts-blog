@@ -10,7 +10,8 @@
     "astro": "astro",
     "pullEvents": "node src/lib/grabEventsFromGoogleSheets.js",
     "pullSongs": "node src/lib/grabSongsFromGoogleSheets.js",
-    "test": "astro dev & npx cypress run"
+    "test": "astro dev & npx cypress run",
+    "hello-world": "echo 'hello world, from the script'"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.3.1",
