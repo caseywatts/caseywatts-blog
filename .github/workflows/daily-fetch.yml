@@ -22,6 +22,7 @@ jobs:
         run: |
           npm run pullData
       - name: Commit updated data
+        continue-on-error: true
         run: |
           git config --global user.name 'Casey Botts'
           git config --global user.email 'casey.s.watts+bot@gmail.com'
