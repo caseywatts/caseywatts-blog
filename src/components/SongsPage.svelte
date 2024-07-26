@@ -1,5 +1,5 @@
 <script>
-  import SONGS from "../songs.json";
+  import SONGS from "../data/songs.json";
   import SongsList from "./SongsList.svelte";
 </script>
 

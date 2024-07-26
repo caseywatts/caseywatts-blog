@@ -6,6 +6,6 @@ const googleSheetsURL = "https://docs.google.com/spreadsheets/d/1PFhLtyTR_KGy9-Z
 fetch(googleSheetsURL).then((response) => {
   response.text().then((eventscsv) => {
     const eventsjson = Papa.parse(eventscsv, { header: true });
-    fs.writeFileSync("src/songs.json", JSON.stringify(eventsjson.data));
+    fs.writeFileSync("src/data/songs.json", JSON.stringify(eventsjson.data));
   });
 });
