@@ -6,6 +6,6 @@ const googleSheetsURL = "https://docs.google.com/spreadsheets/d/1vvoOtlCDxfh0XPx
 fetch(googleSheetsURL).then((response) => {
   response.text().then((eventscsv) => {
     const eventsjson = Papa.parse(eventscsv, { header: true });
-    fs.writeFileSync("src/events.json", JSON.stringify(eventsjson.data));
+    fs.writeFileSync("src/data/events.json", JSON.stringify(eventsjson.data));
   });
 });

@@ -1,4 +1,4 @@
-import EVENTS from "../events.json" assert { type: "json" };
+import EVENTS from "../data/events.json" assert { type: "json" };
 import Papa from "papaparse";
 import fs from "fs";
 

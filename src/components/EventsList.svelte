@@ -1,6 +1,6 @@
 <script>
   import { DateTime } from "luxon";
-  import EVENTS from "../events.json";
+  import EVENTS from "../data/events.json";
   import EventCard from "./EventCard.svelte";
   import CalEmbed from "./CalEmbed.svelte";
   const soonestFirst = (a, b) => DateTime.fromISO(a.date).valueOf() - DateTime.fromISO(b.date).valueOf();
