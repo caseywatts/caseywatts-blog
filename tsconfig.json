@@ -2,5 +2,8 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true
+  },
+  "watchOptions": {
+    "excludeDirectories": ["**/node_modules", "dist"]
   }
 }
