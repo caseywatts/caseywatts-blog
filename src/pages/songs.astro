@@ -1,18 +1,18 @@
 ---
-import OuterLayout from "../../src/layouts/OuterLayout.astro"
+import OuterLayout from "../../src/layouts/OuterLayout.astro";
 import SEOTags from "../components/SEOTags.svelte";
 import SongsPage from "../components/SongsPage.svelte";
 ---
 
-<SEOTags 
-	title="Songs"
-	description="Jamming with Casey -- songs, chords, lyrics"
-	contentType="website"
-	url={Astro.url.href}
+<SEOTags
+  title="Songs"
+  description="Jamming with Casey -- songs, chords, lyrics"
+  contentType="website"
+  url={Astro.url.href}
 />
 
 <OuterLayout>
-	<div class="">
-		<SongsPage client:load />
-	</div>
+  <div class="">
+    <SongsPage client:only="svelte" />
+  </div>
 </OuterLayout>
