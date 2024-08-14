@@ -1,6 +1,6 @@
 ---
-import CASEY_FACTS from "@/src/data/facts.json";
-import Page from "@/src/layouts/Page.astro";
+import CASEY_FACTS from "../../data/facts.json";
+import Page from "../../layouts/Page.astro";
 
 export async function getStaticPaths() {
   return CASEY_FACTS.map((fact) => ({
