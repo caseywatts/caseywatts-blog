@@ -8,6 +8,8 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
 
+import path from "path";
+
 // https://astro.build/config
 
 // https://astro.build/config
@@ -29,4 +31,9 @@ export default defineConfig({
     svelte(),
     tailwind(),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "."),
+    },
+  },
 });
