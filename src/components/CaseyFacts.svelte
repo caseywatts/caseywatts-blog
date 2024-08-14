@@ -1,5 +1,5 @@
 <script>
-  import { CASEY_FACTS } from "../consts";
+  import CASEY_FACTS from "../data/facts.json";
 
   Array.prototype.random = function () {
     // I can't believe this isn't built in! lol

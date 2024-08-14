@@ -8,9 +8,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "pullData": "npm run pullEvents & npm run pullSongs",
+    "pullData": "npm run pullEvents & npm run pullSongs && npm run pullFacts",
     "pullEvents": "node src/lib/grabEventsFromGoogleSheets.js",
     "pullSongs": "node src/lib/grabSongsFromGoogleSheets.js",
+    "pullFacts": "node src/lib/grabFactsFromGoogleSheets.js",
     "test": "astro dev & npx cypress run"
   },
   "dependencies": {
