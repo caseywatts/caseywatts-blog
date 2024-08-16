@@ -1,19 +1,10 @@
 <script>
-  import CASEY_FACTS from "../data/facts.json";
+  import CaseyFacts from "../lib/caseyFacts.js";
 
-  Array.prototype.random = function () {
-    // I can't believe this isn't built in! lol
-    return this[Math.floor(Math.random() * this.length)];
-  };
-
-  const randomCaseyFact = function () {
-    return CASEY_FACTS.random();
-  };
-
-  $: currentFact = randomCaseyFact();
+  $: currentFact = CaseyFacts.random();
 
   function newCaseyFact() {
-    currentFact = randomCaseyFact();
+    currentFact = CaseyFacts.random();
   }
 </script>
 
