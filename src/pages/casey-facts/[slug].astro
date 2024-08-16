@@ -1,6 +1,7 @@
 ---
 import CASEY_FACTS from "../../data/facts.json";
 import Page from "../../layouts/Page.astro";
+import NewCaseyFact from "../../components/NewCaseyFact.svelte";
 
 export async function getStaticPaths() {
   return CASEY_FACTS.map((fact) => ({
@@ -13,5 +14,13 @@ const { fact } = Astro.props;
 ---
 
 <Page>
-  {fact.content}
+  <div class="grid-cols-4 space-y-4 md:grid md:space-y-0">
+    <div
+      id="casey-fact"
+      class="col-span-3 flex items-center justify-center bg-violet-200 p-8 text-center align-middle text-lg"
+    >
+      {fact.content}
+    </div>
+    <NewCaseyFact />
+  </div>
 </Page>
