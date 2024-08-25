@@ -3,4 +3,4 @@
 </script>
 
 <!-- {cookware.quantity} -->
-<span class="bg-purple-200 p-1 rounded-sm">{cookware.name}</span>
+<span class="bg-purple-200 py-0.5 px-1 rounded-sm">{cookware.name}</span>
