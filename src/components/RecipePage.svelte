@@ -12,6 +12,10 @@
   });
 </script>
 
+<div class="mb-5 flex align-baseline">
+  <div class="text-sm"><a href="/recipes">⬅️ other recipes</a></div>
+</div>
+
 <div class="leading-7">
   <div class="grid sm:grid-cols-2">
     <div class="mb-4">
