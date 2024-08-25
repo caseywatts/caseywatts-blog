@@ -86,6 +86,8 @@
     </div>
   </div>
   <div class="mt-12 text-center">
-    <button class="link inline-block" on:click={clearLocalStorage}>Clear Checkboxes</button>
+    <div>checkboxes are saved in your browser</div>
+    <button class="link inline-block" on:click={clearLocalStorage}>clear checkboxes</button>
   </div>
+  <div class="mt-12 text-center text-sm">Typeset with <a href="https://cooklang.org/">CookLang</a>, via <a href="https://github.com/kauhat/astro-cooklang-integration/">Astro</a></div>
 </div>
