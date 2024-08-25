@@ -1,7 +1,7 @@
 <script>
   export let recipe = {};
 
-  let url = `${recipe.slug}/`;
+  let url = `/recipes/${recipe.slug}/`;
 </script>
 
 <div class="panel relative group">
