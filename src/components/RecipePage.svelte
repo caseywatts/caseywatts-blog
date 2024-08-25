@@ -13,7 +13,7 @@
 </script>
 
 <div class="leading-7">
-  <div class="grid grid-cols-2">
+  <div class="grid sm:grid-cols-2">
     <div class="mb-4">
       <h1 class="mb-2">{recipe.metadata.name} {recipe.metadata.emoji}</h1>
       {#if recipe.metadata.source}
@@ -43,7 +43,7 @@
     </div>
   </div>
 
-  <div class="grid grid-cols-2">
+  <div class="grid sm:grid-cols-2">
     <div>
       <div>
         <div class="text-2xl">Ingredients</div>
