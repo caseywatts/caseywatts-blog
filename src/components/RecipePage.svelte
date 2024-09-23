@@ -31,6 +31,12 @@
           <a href={recipe.metadata.sourceurl}>Source</a>
         </div>
       {/if}
+
+      {#if recipe.metadata.description}
+        <div class="my-4">
+          <span>{recipe.metadata.description}</span>
+        </div>
+      {/if}
     </div>
     <div class="">
       {#if recipe.metadata.totaltime}
