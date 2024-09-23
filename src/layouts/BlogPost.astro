@@ -12,7 +12,9 @@ import { SEO } from "astro-seo";
 import Webmentions from "../components/Webmentions.svelte";
 import SEOTags from "../components/SEOTags.svelte";
 
-type Props = CollectionEntry<"blog">["data"];
+// type PostData = CollectionEntry<"blog">["data"];
+
+const { post } = Astro.props;
 
 const {
   title,
@@ -23,14 +25,16 @@ const {
   heroImage,
   emoji,
   mastodonURL,
-  tags,
-} = Astro.props;
+  tags
+} = post.data;
+
 const titleWithEmoji = emoji + " " + title;
 const titleWithTagline = titleWithEmoji + " - " + tagline;
 const url = `https://www.caseywatts.com${Astro.url.pathname}`;
 const url2 = `www.caseywatts.com${Astro.url.pathname}`;
 const image =
   `${Astro.url.origin}${heroImage}` || `${Astro.url.origin}${defaultImage}`;
+const editURL = `https://github.com/caseywatts/caseywatts-blog/edit/main/src/content/blog/${post.slug}.mdx`
 ---
 
 <!-- <script is:inline define:vars={{url2}}>
@@ -62,6 +66,7 @@ const image =
       <div
         class="flex-1 text-right align-bottom text-sm italic text-violet-600"
       >
+      <div>
         Published <FormattedDate date={pubDate} />
         {
           updatedDate && (
@@ -70,6 +75,10 @@ const image =
             </div>
           )
         }
+        </div>
+        <div class="underline">
+          <a href={editURL}>suggest an edit</a>
+        </div>
       </div>
     </div>
     <article class="prose mx-auto lg:prose-lg">
