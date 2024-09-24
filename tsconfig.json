@@ -2,10 +2,11 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
   },
   "exclude": [
     "**/node_modules",
     "dist"
-  ]
+  ],
 }

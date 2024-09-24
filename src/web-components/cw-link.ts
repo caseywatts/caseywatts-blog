@@ -2,7 +2,7 @@ import {html, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 
 @customElement('cw-link')
-export class SimpleGreeting extends LitElement {
+export class CWLink extends LitElement {
 
   @property({type: String})
   href = 'https://www.caseywatts.com/';
