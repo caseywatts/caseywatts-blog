@@ -5,10 +5,13 @@
   scrollbar-color: var(--secondary) var(--primary);
 }
 
+html {
+  font: -apple-system-body;
+}
+
 body {
   word-wrap: break-word;
   overflow-wrap: break-word;
-  /* font-family: 'Quicksand', sans-serif; */
 }
 
 .all-small-caps {
