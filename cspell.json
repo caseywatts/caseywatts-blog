@@ -9,6 +9,8 @@
         "FirebaseApp",
         "firestore",
         "fxparser",
+        "Harney",
+        "Rooibos",
         "supabase",
         "sveltefire"
     ],
