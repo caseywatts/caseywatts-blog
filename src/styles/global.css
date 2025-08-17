@@ -124,3 +124,15 @@ pre {
   align-items: center;
   justify-content: center;
 }
+
+aside {
+  @apply border border-blue-300 bg-blue-100 p-1;
+}
+
+aside :first-child {
+  @apply mt-2;
+}
+
+aside :last-child {
+  @apply mb-2;
+}
