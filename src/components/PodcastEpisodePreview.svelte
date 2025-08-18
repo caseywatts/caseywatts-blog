@@ -1,7 +1,7 @@
-<script>
-  export let episode = {};
+<script lang="ts">
   import FormattedDateB from "./FormattedDateB.svelte";
   import Tag from "./Tag.svelte";
+  let { episode = {} } = $props();
 
   // let url = episode.data.draft ? `/podcast/drafts/${episode.slug}/` : `/podcast/${episode.slug}/`;
   let url = `/podcast/${episode.slug}/`;

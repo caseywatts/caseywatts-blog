@@ -1,7 +1,7 @@
-<script>
-  export let post = {};
+<script lang="ts">
   import FormattedDate from "./FormattedDate.svelte";
   import Tag from "./Tag.svelte";
+  let { post = {} } = $props();
 
   let url = post.data.draft ? `/blog/drafts/${post.slug}/` : `/blog/${post.slug}/`;
 </script>

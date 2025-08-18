@@ -1,8 +1,10 @@
 <script lang="ts">
+  import { preventDefault } from 'svelte/legacy';
+
   import { supabase } from "../supabaseClient";
 
-  let loading = false;
-  let email = "";
+  let loading = $state(false);
+  let email = $state("");
 
   const handleLogin = async () => {
     try {
@@ -24,7 +26,7 @@
   <div class="col-6 form-widget" aria-live="polite">
     <h1 class="header">Supabase + Svelte</h1>
     <p class="description">Sign in via magic link with your email below</p>
-    <form class="form-widget" on:submit|preventDefault={handleLogin}>
+    <form class="form-widget" onsubmit={preventDefault(handleLogin)}>
       <div>
         <label for="email">Email</label>
         <input id="email" class="inputField" type="email" placeholder="Your email" bind:value={email} />

@@ -1,7 +1,7 @@
 <script>
   import CaseyFacts from "../lib/caseyFacts.js";
 
-  $: allShuffled = CaseyFacts.allShuffled;
+  let allShuffled = $derived(CaseyFacts.allShuffled);
 </script>
 
 <div class="text-center text-2xl mb-6">Casey Facts</div>

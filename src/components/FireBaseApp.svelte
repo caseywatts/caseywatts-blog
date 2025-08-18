@@ -5,6 +5,11 @@
   import { getAuth } from "firebase/auth";
   import { signInAnonymously } from "firebase/auth";
   import { firestoreObjects } from "../stores.js";
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
@@ -31,5 +36,5 @@
 </script>
 
 <FirebaseApp {auth} {firestore}>
-  <slot />
+  {@render children?.()}
 </FirebaseApp>

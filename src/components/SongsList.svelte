@@ -1,25 +1,25 @@
-<script>
-  export let songs;
+<script lang="ts">
 
   import SongsGroup from "./SongsGroup.svelte";
 
   import PocketBase from 'pocketbase';
+  let { songs } = $props();
   const url = 'https://caseywatts.pockethost.io/'
   const client = new PocketBase(url)
 
-  let favoriteSongFromAPI = [];
+  let favoriteSongFromAPI = $state([]);
   (async function() {
     favoriteSongFromAPI = await client.collection('favorite_songs').getFullList({
         sort: '-created',
     });
   })();
 
-  $: favoriteSongIds = favoriteSongFromAPI.map((song)=> song.songId);
-  $: favoriteSongs = songs.filter((song) => favoriteSongIds.includes(song._id))
+  let favoriteSongIds = $derived(favoriteSongFromAPI.map((song)=> song.songId));
+  let favoriteSongs = $derived(songs.filter((song) => favoriteSongIds.includes(song._id)))
 
-  $: fiveStarSongs = songs.filter((song) => song.Tier == 5);
-  $: fourStarSongs = songs.filter((song) => song.Tier == 4);
-  $: threeStarSongs = songs.filter((song) => song.Tier == 3);
+  let fiveStarSongs = $derived(songs.filter((song) => song.Tier == 5));
+  let fourStarSongs = $derived(songs.filter((song) => song.Tier == 4));
+  let threeStarSongs = $derived(songs.filter((song) => song.Tier == 3));
 </script>
 
 <div class="panel panel-main text-2xl text-center mt-24">

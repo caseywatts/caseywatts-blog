@@ -1,7 +1,7 @@
 <script>
   import CaseyFacts from "../lib/caseyFacts.js";
 
-  $: currentFact = CaseyFacts.random();
+  let currentFact = $derived(CaseyFacts.random());
 
   function newCaseyFact() {
     currentFact = CaseyFacts.random();
@@ -14,6 +14,6 @@
     {currentFact.content}
   </div>
   <div class="text-center col-span-1 flex justify-center items-center align-middle">
-    <button class="button-link block" on:click={newCaseyFact} on:keyup={newCaseyFact}>🔄 new fact</button>
+    <button class="button-link block" onclick={newCaseyFact} onkeyup={newCaseyFact}>🔄 new fact</button>
   </div>
 </div>

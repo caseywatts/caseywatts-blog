@@ -1,6 +1,6 @@
-<script>
-  export let songs;
+<script lang="ts">
   import SongCard from "./SongCard.svelte";
+  let { songs } = $props();
 </script>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">

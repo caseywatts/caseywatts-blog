@@ -1,6 +1,7 @@
 <script>
-  $: bingoTileTerms = ["B", "I", "N", "G", "O", "B", "I", "N", "G", "O", "B", "I", "FREE", "G", "O", "B", "I", "N", "G", "O", "B", "I", "N", "G", "O"];
-  $: title = "Bingo";
+  let bingoTileTerms = $derived(["B", "I", "N", "G", "O", "B", "I", "N", "G", "O", "B", "I", "FREE", "G", "O", "B", "I", "N", "G", "O", "B", "I", "N", "G", "O"]);
+  let title = $state("Bingo");
+  
   import BingoTile from "./BingoTile.svelte";
 
   import { onMount } from "svelte";

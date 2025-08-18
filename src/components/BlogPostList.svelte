@@ -1,12 +1,16 @@
-<script>
+<script lang="ts">
   import BlogPostPreview from "./BlogPostPreview.svelte";
   import { flip } from "svelte/animate";
   import { fly } from "svelte/transition";
-  export let posts = [];
-  export let limit = posts.length;
-  export let categoryFilter = "";
+  interface Props {
+    posts?: any;
+    limit?: any;
+    categoryFilter?: string;
+  }
 
-  $: filteredPosts = posts
+  let { posts = [], limit = posts.length, categoryFilter = "" }: Props = $props();
+
+  let filteredPosts = $derived(posts
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
     .slice(0, limit)
     .filter((post) => {
@@ -15,7 +19,7 @@
       } else {
         return post.data.tags?.includes(categoryFilter);
       }
-    });
+    }));
 </script>
 
 <ul class="block my-10 space-y-10 mb-10">

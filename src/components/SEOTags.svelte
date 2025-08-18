@@ -1,12 +1,24 @@
-<script>
+<script lang="ts">
   import defaultImage from "../assets/headshot-2.jpg";
-  export let title = "";
-  export let author = "Casey Watts!";
-  export let url = "";
-  export let description = "";
-  export let image = defaultImage;
-  export let contentType = "website";
-  export let twitterCreator = "@heycaseywattsup";
+  interface Props {
+    title?: string;
+    author?: string;
+    url?: string;
+    description?: string;
+    image?: any;
+    contentType?: string;
+    twitterCreator?: string;
+  }
+
+  let {
+    title = "",
+    author = "Casey Watts!",
+    url = "",
+    description = "",
+    image = defaultImage,
+    contentType = "website",
+    twitterCreator = "@heycaseywattsup"
+  }: Props = $props();
 </script>
 
 <!-- Regular -->

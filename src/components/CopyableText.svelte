@@ -1,6 +1,11 @@
-<script>
-  export let text = "ha";
-  $: buttonText = "copy text";
+<script lang="ts">
+  interface Props {
+    text?: string;
+  }
+
+  let { text = "ha" }: Props = $props();
+  let buttonText = $state("copy text");
+  
 
   function copyText() {
     navigator.clipboard.writeText(text);
@@ -14,5 +19,5 @@
 
 <pre id="linkedin-content" class="bg-slate-50 p-4">{text}</pre>
 <div class="text-right m-2">
-  <button class="button-link" on:click={copyText}>{buttonText}</button>
+  <button class="button-link" onclick={copyText}>{buttonText}</button>
 </div>

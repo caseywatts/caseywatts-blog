@@ -1,11 +1,10 @@
-<script>
-  export let amount;
-  export let max;
-  $: amountRounded = amount.toFixed(1);
-  $: percentage = ((amount - 1) / (max - 1)) * 100;
-  $: percentageRemainder = 100 - percentage;
-  $: scale = Array.from(Array(max).keys()).map((x) => x + 1);
-  $: showValueInsideAmount = percentage > 20;
+<script lang="ts">
+  let { amount, max } = $props();
+  let amountRounded = $derived(amount.toFixed(1));
+  let percentage = $derived(((amount - 1) / (max - 1)) * 100);
+  let percentageRemainder = $derived(100 - percentage);
+  let scale = $derived(Array.from(Array(max).keys()).map((x) => x + 1));
+  let showValueInsideAmount = $derived(percentage > 20);
 </script>
 
 <div class="py-4">

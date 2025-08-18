@@ -1,5 +1,5 @@
-<script>
-  export let ingredient = {};
+<script lang="ts">
+  let { ingredient = {} } = $props();
 </script>
 
 <span class="bg-blue-200 py-0.5 px-1 rounded-sm">

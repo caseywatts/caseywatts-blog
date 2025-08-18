@@ -1,7 +1,6 @@
-<script>
+<script lang="ts">
   import BlogPostList from "./BlogPostList.svelte";
-  export let posts;
-  let categoryFilter = "";
+  let categoryFilter = $state("");
   function updateCategory(category) {
     return function () {
       if (category) {
@@ -16,6 +15,7 @@
   }
 
   import { onMount } from "svelte";
+  let { posts } = $props();
   onMount(() => {
     const searchParams = new Proxy(new URLSearchParams(window.location.search), {
       get: (searchParams, prop) => searchParams.get(prop),
@@ -41,15 +41,15 @@
   <div class="panel panel-main space-y-4">
     <h2 class="text-center text-2xl">Filter by Category</h2>
     <div>
-      <button class="button-link block whitespace-nowrap w-full" on:click={updateCategory("")}>All</button>
+      <button class="button-link block whitespace-nowrap w-full" onclick={updateCategory("")}>All</button>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-      <button class="button-link whitespace-nowrap" on:click={updateCategory("💻 Programming")}>💻 Programming</button>
-      <button class="button-link whitespace-nowrap" on:click={updateCategory("🧠 Psychology")}>🧠 Psychology</button>
-      <button class="button-link whitespace-nowrap" on:click={updateCategory("👔 Workplace")}>👔 Workplace</button>
-      <button class="button-link whitespace-nowrap" on:click={updateCategory("🌎 Community")}>🌎 Community</button>
-      <button class="button-link whitespace-nowrap" on:click={updateCategory("🙋🏻 Personal")}>🙋🏻 Personal</button>
-      <button class="button-link whitespace-nowrap" on:click={updateCategory("💡 Tips")}>💡 Tips</button>
+      <button class="button-link whitespace-nowrap" onclick={updateCategory("💻 Programming")}>💻 Programming</button>
+      <button class="button-link whitespace-nowrap" onclick={updateCategory("🧠 Psychology")}>🧠 Psychology</button>
+      <button class="button-link whitespace-nowrap" onclick={updateCategory("👔 Workplace")}>👔 Workplace</button>
+      <button class="button-link whitespace-nowrap" onclick={updateCategory("🌎 Community")}>🌎 Community</button>
+      <button class="button-link whitespace-nowrap" onclick={updateCategory("🙋🏻 Personal")}>🙋🏻 Personal</button>
+      <button class="button-link whitespace-nowrap" onclick={updateCategory("💡 Tips")}>💡 Tips</button>
     </div>
   </div>
   <BlogPostList {posts} {categoryFilter} />

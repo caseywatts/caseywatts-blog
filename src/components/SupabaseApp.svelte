@@ -5,7 +5,7 @@
   // import Account from "./Account.svelte";
   import Auth from "./SupabaseAuth.svelte";
 
-  let session: AuthSession;
+  let session: AuthSession = $state();
 
   onMount(() => {
     supabase.auth.getSession().then(({ data }) => {

@@ -1,5 +1,5 @@
-<script>
-  export let cookware = {};
+<script lang="ts">
+  let { cookware = {} } = $props();
 </script>
 
 <!-- {cookware.quantity} -->

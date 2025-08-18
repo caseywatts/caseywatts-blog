@@ -1,13 +1,14 @@
 <script>
   import { RATES } from "../consts.ts";
-  $: selectedRate = null;
-  $: filteredRates = RATES.filter((rate) => {
+  let selectedRate = $state(null);
+  
+  let filteredRates = $derived(RATES.filter((rate) => {
     if (selectedRate == null) {
       return true;
     } else {
       return rate.range == selectedRate;
     }
-  });
+  }));
   const paymentLinkBase = "https://buy.stripe.com/6oE7uSg2jgyF1Hy8wA";
 </script>
 
@@ -25,10 +26,10 @@
     {#each RATES as rate}
       {#if rate.range == selectedRate}
         <div
-          on:click={() => {
+          onclick={() => {
             selectedRate = null;
           }}
-          on:keyup={() => {
+          onkeyup={() => {
             selectedRate = null;
           }}
           tabindex="0"
@@ -39,10 +40,10 @@
         </div>
       {:else}
         <div
-          on:click={() => {
+          onclick={() => {
             selectedRate = rate.range;
           }}
-          on:keyup={() => {
+          onkeyup={() => {
             selectedRate = rate.range;
           }}
           tabindex="0"

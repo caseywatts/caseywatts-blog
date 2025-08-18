@@ -7,5 +7,5 @@
 </script>
 
 <div class="text-right">
-  <span class="button-link" on:click={copyBlockBefore} on:keydown={copyBlockBefore}>copy</span>
+  <span class="button-link" onclick={copyBlockBefore} onkeydown={copyBlockBefore}>copy</span>
 </div>

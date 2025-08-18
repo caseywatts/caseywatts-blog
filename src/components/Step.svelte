@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import Ingredient from "./Ingredient.svelte";
   import Cookware from "./Cookware.svelte";
   import Timer from "./Timer.svelte";
-  export let step = {};
+  let { step = {} } = $props();
 </script>
 
 {#each step as stepFragment}

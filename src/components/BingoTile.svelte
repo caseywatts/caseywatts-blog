@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
-  export let word;
-  export let tileNumber;
   import { localStorageGet, localStorageSet } from "../lib/localStorageBingo.js";
-  let isMarked;
+  let { word, tileNumber } = $props();
+  let isMarked = $state();
 
   function toggleMarked() {
     isMarked = !isMarked;
@@ -18,9 +17,9 @@
   });
 </script>
 
-<div class="bingo-tile flex-center" on:click={toggleMarked} on:keyup={toggleMarked} role="button" tabindex="auto">
+<div class="bingo-tile flex-center" onclick={toggleMarked} onkeyup={toggleMarked} role="button" tabindex="auto">
   <div class="bingo-content">{word}</div>
-  <div class:bingo-marker={isMarked} />
+  <div class:bingo-marker={isMarked}></div>
 </div>
 
 <style lang="postcss">

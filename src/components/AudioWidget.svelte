@@ -1,5 +1,9 @@
-<script>
-  export let audioUrl = "";
+<script lang="ts">
+  interface Props {
+    audioUrl?: string;
+  }
+
+  let { audioUrl = "" }: Props = $props();
 </script>
 
 <audio controls class="w-full my-4" id="hyperplayer">

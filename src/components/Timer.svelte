@@ -1,5 +1,5 @@
-<script>
-  export let timer = {};
+<script lang="ts">
+  let { timer = {} } = $props();
 </script>
 
 <!-- {timer.quantity} -->

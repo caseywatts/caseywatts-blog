@@ -1,7 +1,12 @@
-<script>
-  // import BlogPostList from "./BlogPostList.svelte";
-  export let recipes;
+<script lang="ts">
+  
   import RecipePreview from "./RecipePreview.svelte";
+  interface Props {
+    // import BlogPostList from "./BlogPostList.svelte";
+    recipes: any;
+  }
+
+  let { recipes }: Props = $props();
 </script>
 
 <div class="panel panel-main space-y-6">

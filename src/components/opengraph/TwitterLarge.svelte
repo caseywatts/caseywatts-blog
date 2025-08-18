@@ -1,8 +1,13 @@
-<script>
-  // template from https://opengraphr.com/open-graph-tailwindcss-snippets
-  export let title = "TITLE";
-  export let description = "DESCRIPTION";
-  export let imageSrc = "https://via.placeholder.com/1084x632.png";
+<script lang="ts">
+  
+  interface Props {
+    // template from https://opengraphr.com/open-graph-tailwindcss-snippets
+    title?: string;
+    description?: string;
+    imageSrc?: string;
+  }
+
+  let { title = "TITLE", description = "DESCRIPTION", imageSrc = "https://via.placeholder.com/1084x632.png" }: Props = $props();
 </script>
 
 <div class="block bg-white border border-gray-300 rounded-xl overflow-hidden">

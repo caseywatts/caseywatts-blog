@@ -1,7 +1,7 @@
-<script>
-  export let allFeeds;
+<script lang="ts">
   import FeedsForOpml from "./FeedsForOPML.svelte";
   import friendsFeeds from "../../public/CaseyFriendsFeeds.xml?raw";
+  let { allFeeds } = $props();
 </script>
 
 <div class="panel panel-main mt-24">

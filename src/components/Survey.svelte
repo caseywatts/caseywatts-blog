@@ -1,17 +1,17 @@
-<script>
-  export let scale = {};
+<script lang="ts">
   import ProgressBar from "../components/ProgressBar.svelte";
+  let { scale = {} } = $props();
 
-  let responses = Array(scale.scaleItems.length);
+  let responses = $state(Array(scale.scaleItems.length));
   let max = scale.scaleItems.length * scale.scaleLength;
 
   function reverseScored(number) {
     // ((Number of scale points) + 1) - (Respondent’s answer)
     return scale.scaleLength + 1 - number;
   }
-  $: remainingQuestions = -(responses.filter(String).length - responses.length);
-  $: sum = responses.reduce((a, b) => a + b, 0);
-  $: average = (sum / max) * scale.scaleLength;
+  let remainingQuestions = $derived(-(responses.filter(String).length - responses.length));
+  let sum = $derived(responses.reduce((a, b) => a + b, 0));
+  let average = $derived((sum / max) * scale.scaleLength);
 
   // $: sum, console.log(sum);
   // $: average, console.log(`${sum} / ${max} = ${average}`);
@@ -84,12 +84,12 @@
 
 <form>
   {#each scale.scaleItems as item, itemNumber}
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div class="group p-4 radio-group">
       <div>{item.question}</div>
       <div>
         {#each scale.scaleLabels as label, responseRangeNumber}
-          <label class="inline-block mt-3 sm:mt-5 mx-2 md:mx-3 text-center bg-blue-100 hover:bg-blue-200 p-2 indicator" on:keydown={keyPressed} on:touchend={touchStart}>
+          <label class="inline-block mt-3 sm:mt-5 mx-2 md:mx-3 text-center bg-blue-100 hover:bg-blue-200 p-2 indicator" onkeydown={keyPressed} ontouchend={touchStart}>
             <div class="flex items-center align-middle justify-center gap-2">
               {#if item.reverseScored}
                 <input type="radio" bind:group={responses[itemNumber]} name={`radio-group-${itemNumber}`} value={reverseScored(responseRangeNumber + 1)} data-keyboard-select={responseRangeNumber + 1} />

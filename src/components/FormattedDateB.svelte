@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import { DateTime } from "luxon";
 
-  export let date;
+  let { date } = $props();
   const luxonDate = DateTime.fromISO(date);
 </script>
 

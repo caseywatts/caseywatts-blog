@@ -1,8 +1,12 @@
-<script>
-  export let event;
-  export let inPast = "false";
+<script lang="ts">
   import FormattedDateB from "./FormattedDateB.svelte";
   import Tag from "./Tag.svelte";
+  interface Props {
+    event: any;
+    inPast?: string;
+  }
+
+  let { event, inPast = "false" }: Props = $props();
 </script>
 
 <div class="panel relative group">

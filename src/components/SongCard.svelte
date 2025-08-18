@@ -1,11 +1,11 @@
-<script>
-  export let song;
+<script lang="ts">
   import isAdminQuery from "../lib/is-admin.js";
   let isAdmin = isAdminQuery();
 
   import Tag from "./Tag.svelte";
 
   import PocketBase from 'pocketbase';
+  let { song } = $props();
   const pb = new PocketBase('https://caseywatts.pockethost.io/')
 
   async function favoriteSong() {
@@ -36,8 +36,8 @@
     {/if}
     {#if isAdmin}
       <div class="space-x-3">
-        <button class="button-link" on:click={favoriteSong}>favorite</button>
-        <button class="button-link" on:click={unfavoriteSong}>unfavorite</button>
+        <button class="button-link" onclick={favoriteSong}>favorite</button>
+        <button class="button-link" onclick={unfavoriteSong}>unfavorite</button>
       </div>
     {/if}
   </div>

@@ -1,7 +1,11 @@
-<script>
-  export let url = ""; // UDATE
+<script lang="ts">
+  interface Props {
+    url?: string; // UDATE
+  }
 
-  $: likes = [];
+  let { url = "" }: Props = $props();
+
+  let likes = $derived([]);
   fetch(`https://webmention.io/api/mentions.jf2?target=${url}&wm-property=like-of`)
     .then((response) => {
       return response.json();

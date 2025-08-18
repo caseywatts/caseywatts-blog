@@ -1,5 +1,5 @@
-<script>
-  export let date;
+<script lang="ts">
+  let { date } = $props();
   const dateObject = new Date(date);
 </script>
 

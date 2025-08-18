@@ -10,16 +10,20 @@
 </script>
 
 <div class="bg-purple-100 text-right p-1">
-  <SignedIn let:user let:signOut>
-    {#if user.isAnonymous}
-      logged in anonymously
-    {:else}
-      {user.email}
-    {/if}
-    <button class="p-1 link" on:click={signOut}>Log Out</button>
-  </SignedIn>
-  <SignedOut let:auth>
-    <button class="p-1 link" on:click={() => signInAnonymously(auth)}>Log In (Anonymous)</button>
-    <button class="p-1 link" on:click={() => signInViaGoogle(auth)}>Log In (Google)</button>
-  </SignedOut>
+  <SignedIn  >
+    {#snippet children({ user, signOut })}
+        {#if user.isAnonymous}
+        logged in anonymously
+      {:else}
+        {user.email}
+      {/if}
+      <button class="p-1 link" onclick={signOut}>Log Out</button>
+          {/snippet}
+    </SignedIn>
+  <SignedOut >
+    {#snippet children({ auth })}
+        <button class="p-1 link" onclick={() => signInAnonymously(auth)}>Log In (Anonymous)</button>
+      <button class="p-1 link" onclick={() => signInViaGoogle(auth)}>Log In (Google)</button>
+          {/snippet}
+    </SignedOut>
 </div>

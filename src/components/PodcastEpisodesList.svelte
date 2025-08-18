@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import PodcastEpisodePreview from "./PodcastEpisodePreview.svelte";
   import { flip } from "svelte/animate";
   import { fly } from "svelte/transition";
-  export let episodes = [];
-  // export let limit = episodes.length;
+  let { episodes = [] } = $props();
+  
 
   // $: filteredEpisodes = episodes.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, limit);
   // $: filteredEpisodes = episodes;

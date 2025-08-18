@@ -1,5 +1,5 @@
-<script>
-  export let recipe = {};
+<script lang="ts">
+  let { recipe = {} } = $props();
 
   let url = `/recipes/${recipe.slug}/`;
 </script>
