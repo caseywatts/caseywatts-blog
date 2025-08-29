@@ -1,0 +1,144 @@
+---
+pubDate: "2025-08-29"
+emoji: "🌐"
+title: Browser Support in 2025
+tagline: "What new features can I safely use?"
+description: "Is the 'widely available' badge something I can trust? Should I use BrowsersList to support certain browsers?"
+heroImage: "/assets/images/emoji/globe-with-meridians.png"
+hashtags: ""
+tags: ["💻 Programming"]
+draft: false
+---
+
+Can I safely use the new [CSS container queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries)? How do I decide which browser features my team should or should not use? Do I need to use a polyfill or transpilation step?
+
+There are two main ways people determine this in 2025:
+
+* **Market share.**  
+  * We can calculate what browsers to support based on usage statistics, such as the 2% rule “[We support 98% of browsers by usage in the US](https://browsersl.ist/#q=cover+98%25+in+US%2C+last+2+versions%2C+Firefox+ESR%2C+not+dead)”.  
+* **Period of time.**  
+  * A [widely available](https://web.dev/baseline) browser feature is one that has been available in all major browsers for at least 2.5 years.
+
+I'll share the landscape, the choices I considered making, and the choices I'm suggesting in my (government) context. I'm not suggesting everyone should follow this as a guide — I'm just sharing my evaluation publicly, so it can inform your own team's evaluation.
+
+As I researched this, I was constantly oscillating between the two main approaches. I ended up settling on an approach that uses them both.
+
+## My context
+
+I'm working for the State of Maryland (note: this article does not represent my employer's views), and I've also worked for the US Federal government. So many people depend on government services, and they have varying device age and internet access. It's important that government agencies consider what browsers, browser versions, and browser features we support.
+
+It's a balance. We want to support older browsers, but we ALSO want to be able to leverage newer browser features. Supporting older browsers means that more people can access our services, which is our goal\! But leveraging newer browser features is beneficial too — it means we can enhance the experience for people with newer browsers, and can significantly reduce the maintenance cost.
+
+My stance lately is to use BOTH of the heuristics, depending on the **criticality of the use-case** (defined below).
+
+## Browser features I want to use
+
+What browser features am I thanking about using? Here are a few of my favorites\! These are ordered by their “widely available” date (available in major browsers for \>2.5 years).
+
+* 2015 \- [flexbox](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)  
+* 2017 \- [css custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) (css variables)  
+* 2017 \- [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)  
+* 2017 \- [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)  
+* 2020 \- [custom elements](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) / shadow dom  
+* 2020 \- [webp](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types) (optimized images)  
+* 2022 \- [css cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)  
+* 2022 \- [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) (for no-javascript modals)
+
+## BrowsersList (market share)
+
+To get a sense of market share across browser versions, you could use [browsersli.st](http://browsersli.st). This tool gets data from [statcounter/GlobalStats](https://gs.statcounter.com/) (which is the same data source used by [caniuse.com](http://caniuse.com)). To see the data itself, “export to csv” on any of the graphs on here, like [this browser version over time graph](https://gs.statcounter.com/browser-version-market-share). This heuristic is market-share-based, not time-based.
+
+Here's an example query: “[98% coverage in the US](https://browsersl.ist/#q=cover+98%25+in+US)”  
+(Note: [there is a bug right now with calculation of totals](https://github.com/browserslist/browsersl.ist/issues/540), as of Aug 2025).
+
+Pros for market share
+
+* This framing is pretty close to our actual goal\! The framing is inclusive of a proportion of the population.  
+* Saying “we support 98% of browsers” is easy to talk about as a goal, people understand it as a target.
+
+Cons for market share
+
+* The big risk here is that market share data isn't always reliable, and the numbers can shift a lot over time. For example, in March 2025 Firefox 11 wasn't in the “98% of browsers” query. One month later in April 2025, Firefox 11 was in that 98% again\! Does that mean we should support Firefox 11 now? No… it is NOT very likely that a ton of people in the US started using that ancient browser\! That spike is likely caused by bots, not people.  
+* Market share is also hard for developers to navigate, and therefore harder for teams to reliably support. A developer has to map the 98% heuristic to a (large) set of supported browsers, and then think about which features are supported in which browsers. It's possible, but it takes some work to navigate.  
+* Rounding issues. Statcounter/GlobalStats only rounds to the nearest 0.01%, and browsers that show up around that number might be inflated in usage. There are **many** browsers with very low usage on this trailing-end, and in sum they likely skew the data.
+
+## Baseline “widely available” (time)
+
+A [widely available](https://web.dev/baseline) browser feature is one that has been available in all major browsers for at least 2.5 years. You can see this label “widely available” on MDN  and [caniuse.com](http://caniuse.com). This heuristic is time-based, instead of market-share-based.
+
+Pros for time-based heuristic
+
+* This heuristic is straightforward to calculate. “Widely available” was deliberately chosen to make it easy to calculate. What date was it available in all major browsers? What is 2.5 years after that?  
+* The “widely available” heuristic is easy for developers to use. It is well-documented on MDN and [caniuse.com](http://caniuse.com). There are even [text editor plugins and linters](https://web.dev/blog/eslint-baseline-integration) for this.  
+* It's easy to explain to users, like during support calls or in documentation. I can explain “Please use a browser from the last 2.5 years.” much easier than I can explain “You see, your browser isn't supported because it's not in the top 98% of browsers being used.”
+
+Cons for time-based heuristic
+
+* Unfortunately, this doesn't meet the 98% rule that many government agencies follow. Estimates vary, but according to Statcounter GlobalStats in August 2025, [6%](https://browsersl.ist/#q=%3E+0%25+in+US%2C+not+last+2.5+years%2C+not+dead&region=US) of browsers in the US ([3%](https://browsersl.ist/#q=%3E+0%25+in+US%2C+not+last+2.5+years%2C+not+dead) of browsers globally)  are older than 2.5 years.   
+* Maybe this will be closer to the 98% heuristic soon. The number of older browsers seems to be decreasing over time. Many modern browsers are “evergreen,” meaning they automatically update themselves. On these browsers, users (or IT administrators) no longer need to manually update their browser.
+
+## Criticality & Progressive Enhancement
+
+We could choose two different sets of browsers we support \- a more conservative set of browsers we support for critical use cases, and a less conservative set we target for progressive enhancement use cases.
+
+* **Critical** means it's essential for a user to be able to use, like being able to read content on the page, or submit forms. This is a pretty low bar, but an important distinction\!  
+  * The most critical things have been part of the web forever – text and form fields.  
+  * As a visual mnemonic, imagine a web page without any CSS loaded. Most web pages technically still work without CSS\! The critical path is unblocked, even if the page is ugly without CSS.  
+* **Progressive enhancement** means something will always work in a critical way in supported browsers – but we enhance the user experience when possible.  
+  * As an example, if we used css grid for page layout.  
+    * Usage of the grid feature enhances the visual design of the page, but it isn't critical.  
+    * Grid became widely available in \~2019 – but [some of the 98%-usage browsers in the US still don't support grid](https://browsersl.ist/#q=cover+98%25+in+US%2C+not+%3C0.02%25%2C+not+dead%2C+not+fully+supports+css-grid%0A&region=US), like Chrome 56\.  
+  * Note: Progressive enhancement is often also used as a term for the presence/absence of JavaScript, but that is a separate topic. Here we are talking about progressive enhancement of browser features.
+
+## Example features and their support
+
+### Dialog (allowed with polyfill)
+
+* The `<dialog>` feature can be used to make modals without JavaScript, and has been widely supported in browsers since 2022\.  
+* If you don't have this browser feature, you wouldn't see anything at all \- that's a critical use-case failure.  
+* Many in-use browsers, including [Safari on iOS 10.3—15.3](https://browsersl.ist/#q=cover+98%25+in+US%2C+not+%3C0.02%25%2C+not+dead%2C+not+fully+supports+dialog%0A&region=US) don't support dialog.  
+* We could potentially use a polyfill like [dialog-polyfill](https://github.com/GoogleChrome/dialog-polyfill) to support older iOS browsers, and get to use `<dialog>`  today.
+
+### JavaScript Import (allowed, supported in 98% of browsers)
+
+* The javascript module `import` feature can be used to load in an external javascript file within a javascript script itself (not just via a DOM node). This can be used for things like conditionally loading a polyfill ONLY when a browser needs it.  
+* This feature is [very nearly supported in the 98% of browsers](https://browsersl.ist/#q=cover+98%25+in+US%2C+not+%3C0.02%25%2C+not+dead%2C+not+fully+supports+es6-module-dynamic-import%0A&region=US). If you support iOS on Safari 10.3 or Chrome 56 as a part of your 98% of browsers calculation, then you couldn't use this feature for a critical use case. (I think this is safe to use in 2025\! The usage is so low in this query, I think it's from bots and/or rounding errors.)
+
+### CSS Cascade Layers (allowed, as progressive enhancement)
+
+* CSS Cascade Layers help separate out “layers” of css precedence — like I want my custom CSS to override the component-level CSS from my design system. I want the components to override the baseline styles from my design system. And I want these baseline styles to override the CSS reset.  
+* This is pretty safe overall, but it could potentially cause critical issues. The edge case I'm thinking about is if some text gets blocked in browsers without cascade layers, due to conflicting css. Low risk overall, but something to keep in mind.
+
+### Most CSS is safe
+
+* Most CSS is an “enhancement”. Since we always have text representation of important information, we have a solid fallback for the critical tier if the css doesn't render properly.  
+* CSS *could* be critical if something about our css obscures content, like being absolutely positioned over another element.
+
+## Casey's browser support in August 2025
+
+I came up with my own browser version support list for August 2025, based on analyzing data from a few different sources. I cross-referenced data from [browsersli.st](http://browsersli.st) (GlobalStats) and from some analytics from work, trying to remove outliers like Firefox 11, while still supporting older browsers. My goal is 98%, but the query is much more complex than that to account for so many things.
+
+Here's the two most interesting ones that I would support for my 98% coverage goal:
+
+* Chrome 79 (2019)  
+* Safari on iOS 11 (2017)  
+
+## Your own calculations
+
+If you have access to Google Analytics (or equivalent), you could cross-reference your own traffic, using something like [browserslist-ga-export](https://github.com/browserslist/browserslist-ga-export).
+
+Here's my calculation:
+
+* Using data from before April (before the Firefox 11 spike happened, [see my bug report](https://github.com/browserslist/browsersl.ist/issues/540))  
+* Using the query `cover 96% in US, not < 0.02%, last 2 versions, not firefox <= 11, Firefox ESR, not dead`  
+  * Decreasing our coverage from `98% in US` to `96% in US` to account for the 2% of “other” browsers likely being bots  
+  * Removing very-low-usage browsers, to remove the outliers caused by rounding effects (anything `< 0.02%`)  
+  * Do include `last 2 versions, Firefox ESR, not dead` (from the `defaults` query)  
+  * Removing the outlier Firefox 11  
+* Based on this query, what older browsers would we support for critical use cases? These two in particular stand out:  
+  * Support Chrome 79 (2019)  
+    * this has 0.08% of the US market share lately; not a rounding mistake  
+    * Chrome 79 was released in 2019, and likely IS still being used by actual people.  
+  * Supporting Safari on iOS 11 (2017)  
+    * this has 0.12% of the US market share lately; not a rounding mistake  
+    * Safari on iOS 11 (2017), and likely IS still being used by actual people
