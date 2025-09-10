@@ -33,7 +33,7 @@ My stance lately is to use BOTH of the heuristics, depending on the **criticalit
 
 ## Browser features I want to use
 
-What browser features am I thanking about using? Here are a few of my favorites\! These are ordered by their “widely available” date (available in major browsers for \>2.5 years).
+What browser features am I thanking about using? Here are a few of my favorites\! These are ordered by their "newly available” date (the year it became available in all major browsers).
 
 * 2015 \- [flexbox](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)  
 * 2017 \- [css custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) (css variables)  
@@ -43,6 +43,10 @@ What browser features am I thanking about using? Here are a few of my favorites\
 * 2020 \- [webp](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types) (optimized images)  
 * 2022 \- [css cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)  
 * 2022 \- [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) (for no-javascript modals)
+* 2022 - [css cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+* 2023 - [container queries](https://css-tricks.com/css-container-queries/)
+
+
 
 ## BrowsersList (market share)
 
@@ -104,7 +108,7 @@ We could choose two different sets of browsers we support \- a more conservative
 * The javascript module `import` feature can be used to load in an external javascript file within a javascript script itself (not just via a DOM node). This can be used for things like conditionally loading a polyfill ONLY when a browser needs it.  
 * This feature is [very nearly supported in the 98% of browsers](https://browsersl.ist/#q=cover+98%25+in+US%2C+not+%3C0.02%25%2C+not+dead%2C+not+fully+supports+es6-module-dynamic-import%0A&region=US). If you support iOS on Safari 10.3 or Chrome 56 as a part of your 98% of browsers calculation, then you couldn't use this feature for a critical use case. (I think this is safe to use in 2025\! The usage is so low in this query, I think it's from bots and/or rounding errors.)
 
-### CSS Cascade Layers (allowed, as progressive enhancement)
+### CSS Cascade Layers (allowed, as a progressive enhancement)
 
 * CSS Cascade Layers help separate out “layers” of css precedence — like I want my custom CSS to override the component-level CSS from my design system. I want the components to override the baseline styles from my design system. And I want these baseline styles to override the CSS reset.  
 * This is pretty safe overall, but it could potentially cause critical issues. The edge case I'm thinking about is if some text gets blocked in browsers without cascade layers, due to conflicting css. Low risk overall, but something to keep in mind.
@@ -114,16 +118,19 @@ We could choose two different sets of browsers we support \- a more conservative
 * Most CSS is an “enhancement”. Since we always have text representation of important information, we have a solid fallback for the critical tier if the css doesn't render properly.  
 * CSS *could* be critical if something about our css obscures content, like being absolutely positioned over another element.
 
-## Casey's browser support in August 2025
+## Browser support, August 2025
+
+### Casey's browser support list
 
 I came up with my own browser version support list for August 2025, based on analyzing data from a few different sources. I cross-referenced data from [browsersli.st](http://browsersli.st) (GlobalStats) and from some analytics from work, trying to remove outliers like Firefox 11, while still supporting older browsers. My goal is 98%, but the query is much more complex than that to account for so many things.
 
-Here's the two most interesting ones that I would support for my 98% coverage goal:
+* 2017 - Safari on iOS 11.0
+* 2019 - Chrome 79
+* 2020 - Safari 13.1
+* 2023 - Edge 109
+* 2023 - Firefox 115
 
-* Chrome 79 (2019)  
-* Safari on iOS 11 (2017)  
-
-## Your own calculations
+### Doing your own calculations
 
 If you have access to Google Analytics (or equivalent), you could cross-reference your own traffic, using something like [browserslist-ga-export](https://github.com/browserslist/browserslist-ga-export).
 
@@ -142,3 +149,65 @@ Here's my calculation:
   * Supporting Safari on iOS 11 (2017)  
     * this has 0.12% of the US market share lately; not a rounding mistake  
     * Safari on iOS 11 (2017), and likely IS still being used by actual people
+
+
+# Casey's Browser feature support, August 2025
+
+Here is a list of browser features I've thought through using on my projects, and which category they each fall under. This list of browser features is NOT exhaustive. There are hundreds of features that aren't listed here.
+
+Examples below are from a few sources:
+* Some examples for each category, to make the category clearer  
+* Some browser features that come up in discussions on our team  
+* Some browser features that have some “buzz,” and are being discussed online (blog posts, etc)
+
+
+## Available in all supported browsers (all 98%)
+
+The dates below are the “newly available” date for each feature, which is the date a feature became available in all major browsers.
+
+### ✅ Completely safe: Available for full use, without any concerns.
+
+* 2015 \- [flexbox](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)  
+* 2016 \- [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture) element  
+* 2017 \- [css custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) (css variables)  
+* 2017 \- [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)  
+* 2017 \- [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)  
+* 2020 \- [shadow dom](https://caniuse.com/shadowdomv1) (custom elements)
+
+## Widely available, but not 98% available
+
+### ✅ Generally safe: Available as an enhancement
+
+We can pretty much always use these\! As as our use doesn't block any critical path. For these, we do have to check in on older browsers, to make sure content isn't blocked by conflicting styles. For example, content overlapping other content, or not appearing at all.
+
+* 2022 \- [css cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)  
+  * Cascade layers enable us to separate out our css “layers” of prioritization. For example, we want our custom code to take precedence over other code, followed by component code, followed by any “CSS reset” code.  
+* 2023 \- [Container queries](https://css-tricks.com/css-container-queries/)  
+  * Container queries are a lot like media queries, but instead of being limited to browser window size, we can base it on the parent element's size.
+
+### 🟡 Conditionally safe: Available only with a backup approach (critical case)
+
+If we were to leverage a fallback approach for these features (polyfill, etc), then we could safely use these features, even for critical paths.
+
+* 2020 \- [webp](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types) (optimized images)  
+  * Not fully supported in Safari on iOS 12.5 (2018) or Safari on desktop 15.6 (2022)  
+  * We could support webp as a preferred image format, if we used \<picture\>  
+    * \<picture\> lets us specify a fallback image if webp is not supported  
+    * [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture)  
+* 2022 \- [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) (for no-javascript modals)
+
+## Not Widely Available
+
+In my opinion, it's not worth it to use these features yet, even for progressive enhancement, because they are not available in enough browsers yet.
+
+### 🟡 Conditionally safe: Newly Available
+
+These “Newly Available” browser features are available in the latest version of all major browsers, but they have been available for under 30 months (not “Widely Available”). These are settled enough that it's pretty safe to use as long as we cover IF we have a backup approach, like transpilation or polyfills.
+
+* not widely available yet \- [css nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
+
+### 🚫 Not worthwhile: Limited Availability
+
+These “Limited Availability” browser features are NOT yet available in all major browsers. These are not ready for use yet, even with transpilation (etc) because their APIs might still change significantly.
+
+* limited availability \- [native css mixins](https://nerdy.dev/css-mixins-ready-for-experimentation) (to replace SASS mixins)
