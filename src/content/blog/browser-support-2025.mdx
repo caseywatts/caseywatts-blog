@@ -19,13 +19,15 @@ There are two main ways people determine this in 2025:
 * **Period of time.**  
   * A [widely available](https://web.dev/baseline) browser feature is one that has been available in all major browsers for at least 2.5 years.
 
-I'll share the landscape, the choices I considered making, and the choices I'm suggesting in my (government) context. I'm not suggesting everyone should follow this as a guide — I'm just sharing my evaluation publicly, so it can inform your own team's evaluation.
+I'll share the landscape, the choices I considered making, and the choices I'm considering using in my own contexts (my person projects, my government work). I'm not suggesting everyone should follow this as a guide — I'm just sharing my own evaluation publicly, so it can inform your own evaluation.
 
-As I researched this, I was constantly oscillating between the two main approaches. I ended up settling on an approach that uses them both.
+As I researched this, I was constantly oscillating between the two main approaches. I ended up settling on an approach that uses them both!
 
 ## My context
 
-I'm working for the State of Maryland (note: this article does not represent my employer's views), and I've also worked for the US Federal government. So many people depend on government services, and they have varying device age and internet access. It's important that government agencies consider what browsers, browser versions, and browser features we support.
+I've previously worked for the US Federal government, and I currently work for the State of Maryland (note: this article does not represent my employer's views). So many people depend on government services, and they have varying device age and internet access. It's important that government agencies consider what browsers, browser versions, and browser features we support.
+
+I also personally care about accessibility! I want people to be able to access my work regardless of how they are accessing the site -- whether it's on a bumpy bus with a spotty internet connection, on a huge wide-screen modern computer, or via a screen reader or other assistive technology.
 
 It's a balance. We want to support older browsers, but we ALSO want to be able to leverage newer browser features. Supporting older browsers means that more people can access our services, which is our goal\! But leveraging newer browser features is beneficial too — it means we can enhance the experience for people with newer browsers, and can significantly reduce the maintenance cost.
 
@@ -45,8 +47,6 @@ What browser features am I thanking about using? Here are a few of my favorites\
 * 2022 \- [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) (for no-javascript modals)
 * 2022 - [css cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 * 2023 - [container queries](https://css-tricks.com/css-container-queries/)
-
-
 
 ## BrowsersList (market share)
 
@@ -120,9 +120,9 @@ We could choose two different sets of browsers we support \- a more conservative
 
 ## Browser support, August 2025
 
-### Casey's browser support list
+### Casey's browser version support list
 
-I came up with my own browser version support list for August 2025, based on analyzing data from a few different sources. I cross-referenced data from [browsersli.st](http://browsersli.st) (GlobalStats) and from some analytics from work, trying to remove outliers like Firefox 11, while still supporting older browsers. My goal is 98%, but the query is much more complex than that to account for so many things.
+I came up with my own browser **version** support list for August 2025, based on analyzing data from a few different sources. I cross-referenced data from [browsersli.st](http://browsersli.st) (GlobalStats) and from some analytics from work, trying to remove outliers like Firefox 11, while still supporting older browsers. My goal is 98%, but the query is much more complex than that to account for so many things.
 
 * 2017 - Safari on iOS 11.0
 * 2019 - Chrome 79
@@ -130,13 +130,11 @@ I came up with my own browser version support list for August 2025, based on ana
 * 2023 - Edge 109
 * 2023 - Firefox 115
 
-### Doing your own calculations
-
-If you have access to Google Analytics (or equivalent), you could cross-reference your own traffic, using something like [browserslist-ga-export](https://github.com/browserslist/browserslist-ga-export).
+### My calculations
 
 Here's my calculation:
 
-* Using data from before April (before the Firefox 11 spike happened, [see my bug report](https://github.com/browserslist/browsersl.ist/issues/540))  
+* Using data from before April (before a weird Firefox 11 usage spike, [see my bug report](https://github.com/browserslist/browsersl.ist/issues/540))  
 * Using the query `cover 96% in US, not < 0.02%, last 2 versions, not firefox <= 11, Firefox ESR, not dead`  
   * Decreasing our coverage from `98% in US` to `96% in US` to account for the 2% of “other” browsers likely being bots  
   * Removing very-low-usage browsers, to remove the outliers caused by rounding effects (anything `< 0.02%`)  
@@ -150,10 +148,14 @@ Here's my calculation:
     * this has 0.12% of the US market share lately; not a rounding mistake  
     * Safari on iOS 11 (2017), and likely IS still being used by actual people
 
+### Doing your own calculations
 
-# Casey's Browser feature support, August 2025
+If you have access to Google Analytics (or equivalent), you could cross-reference your own traffic, using something like [browserslist-ga-export](https://github.com/browserslist/browserslist-ga-export). This is likely closer to your actual target audience. For example, if you are working on business-to-business software-as-a-service, maybe you can actually safely assume everyone has up-to-date browsers! Your Google Analytics data (etc) might support that decision.
 
-Here is a list of browser features I've thought through using on my projects, and which category they each fall under. This list of browser features is NOT exhaustive. There are hundreds of features that aren't listed here.
+
+## Casey's Browser feature support, August 2025
+
+Here is a list of browser **features** I've thought through using on my projects, and which category they each fall under. This list of browser features is NOT exhaustive. There are hundreds of features that aren't listed here.
 
 Examples below are from a few sources:
 * Some examples for each category, to make the category clearer  
@@ -161,11 +163,11 @@ Examples below are from a few sources:
 * Some browser features that have some “buzz,” and are being discussed online (blog posts, etc)
 
 
-## Available in all supported browsers (all 98%)
+### Available in all supported browsers (all 98%)
 
 The dates below are the “newly available” date for each feature, which is the date a feature became available in all major browsers.
 
-### ✅ Completely safe: Available for full use, without any concerns.
+#### ✅ Completely safe: Available for full use, without any concerns.
 
 * 2015 \- [flexbox](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox)  
 * 2016 \- [picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture) element  
@@ -174,9 +176,9 @@ The dates below are the “newly available” date for each feature, which is th
 * 2017 \- [grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)  
 * 2020 \- [shadow dom](https://caniuse.com/shadowdomv1) (custom elements)
 
-## Widely available, but not 98% available
+### Widely available, but not 98% available
 
-### ✅ Generally safe: Available as an enhancement
+#### ✅ Generally safe: Available as an enhancement
 
 We can pretty much always use these\! As as our use doesn't block any critical path. For these, we do have to check in on older browsers, to make sure content isn't blocked by conflicting styles. For example, content overlapping other content, or not appearing at all.
 
@@ -185,7 +187,7 @@ We can pretty much always use these\! As as our use doesn't block any critical p
 * 2023 \- [Container queries](https://css-tricks.com/css-container-queries/)  
   * Container queries are a lot like media queries, but instead of being limited to browser window size, we can base it on the parent element's size.
 
-### 🟡 Conditionally safe: Available only with a backup approach (critical case)
+#### 🟡 Conditionally safe: Available only with a backup approach (critical case)
 
 If we were to leverage a fallback approach for these features (polyfill, etc), then we could safely use these features, even for critical paths.
 
@@ -196,18 +198,27 @@ If we were to leverage a fallback approach for these features (polyfill, etc), t
     * [https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture)  
 * 2022 \- [dialog](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog) (for no-javascript modals)
 
-## Not Widely Available
+### Not Widely Available
 
 In my opinion, it's not worth it to use these features yet, even for progressive enhancement, because they are not available in enough browsers yet.
 
-### 🟡 Conditionally safe: Newly Available
+#### 🟡 Conditionally safe: Newly Available
 
 These “Newly Available” browser features are available in the latest version of all major browsers, but they have been available for under 30 months (not “Widely Available”). These are settled enough that it's pretty safe to use as long as we cover IF we have a backup approach, like transpilation or polyfills.
 
 * not widely available yet \- [css nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 
-### 🚫 Not worthwhile: Limited Availability
+#### 🚫 Not worthwhile: Limited Availability
 
 These “Limited Availability” browser features are NOT yet available in all major browsers. These are not ready for use yet, even with transpilation (etc) because their APIs might still change significantly.
 
 * limited availability \- [native css mixins](https://nerdy.dev/css-mixins-ready-for-experimentation) (to replace SASS mixins)
+
+## Summary
+
+A short version of my stance:
+* I want to use modern browser features, but I don't want to prevent anyone from being able to access or interact with my work.
+* I am comfortable using the "widely available" heuristic for most things!
+* But I also evaluate every browser feature in terms of how it would "degrade" in older browsers -- ones that are within a rough "98% of usage" heuristic. 
+
+
