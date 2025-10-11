@@ -107,6 +107,7 @@ export const REDIRECTS = {
   "qlab-feb-2024":
     "https://docs.google.com/document/d/1f8TMJgjT_KjuzuMcE0-WpMHvidoeK68VqWMmyGC2-E8/edit",
   coffeeshops: "https://maps.app.goo.gl/uHzPv8F1TXXnTuaL7",
+  uses: "/equipment"
 };
 export const REDIRECT_FROMS = Object.keys(REDIRECTS);
 
