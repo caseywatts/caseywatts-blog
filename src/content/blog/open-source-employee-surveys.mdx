@@ -1,0 +1,289 @@
+---
+pubDate: "2022-03-02"
+emoji: "👔"
+title: "Open Source Employee Surveys"
+tagline: "You don't have to start from scratch"
+description: "A survey is a great way to get a grasp on how a large organization is performing."
+heroImage: "/assets/images/emoji/necktie.png"
+hashtags: ""
+tags: ["👔 Workplace"]
+draft: false
+---
+
+In this article you’ll get:
+
+1. **background** on surveys
+2. **segmentation** questions to include
+3. a collection of **“open source” survey questions**
+4. a list of **resources** to use when developing surveys
+
+## Survey Background
+
+### What Makes a Good Survey
+
+#### Useful
+
+Have a plan for how the data will be used before collecting it. It can be tempting to include every possible question. You can be more focused with questions like:
+
+- what problems are we trying to address?
+- what are the most important things we want to know?
+- what data would we actually act on?
+
+#### Scope and Frequency
+
+Should we do this for the whole organization, or just one team? These each have their uses! And this is the topic of another blog post, but in short:
+
+- Smaller surveys done for teams can address the teams’ actual issues in their own words (but often can’t be used across teams).
+- Larger surveys done for an entire organization can be used to compare teams, but aren’t necessarily as relevant for team members to use and take action on.
+- Either can be done regularly (annually, quarterly, etc) to see trends over time.
+
+#### Balancing Nuance and Brevity
+
+- Scientific surveys often use many, many questions. Drilling down to the details can help us see what factors are really the most important parts — at the cost of increased survey length.
+    - For example, including “flipped” versions of questions to reduce response bias.
+- For our purposes, we can often get away with higher-level questions to keep the survey shorter.
+
+#### Anonymization/Privacy
+
+If you want honest feedback in a survey, it must be anonymous.
+
+- Do not track who completes the survey.
+- Do not share groups that are too small that they would break anonymity
+    - the statistics here are tricky, but a rule of thumb is a group of 2 people is too small, and a group of 4 can be okay
+- You can collect demographic information, but no more than you’ll actually be able to use.
+
+#### Survey Reliability
+
+Survey design is a whole field! Here are some highlights of common issues to look out for
+
+- [**Survey Reliability**](https://en.wikipedia.org/wiki/Reliability_(statistics)) means we don’t get a lot of noise when someone re-takes it (for example, the week after).
+- Question Clarity: People should understand the questions on the survey easily, or else some questions will be invalid.
+    - We must validate the questions with people before running the survey it
+    - How will we know if one is invalid? One common sign is if we get many comments expressing uncertainty about the question, like “I wasn’t sure if...”.
+- An odd-numbered [Likert scale](https://en.wikipedia.org/wiki/Likert_scale) helps with this, like a 7-point scale (as opposed to an even one like 4 or 6).
+    - The middle value “neutral” is helpful. Often people are truly on the fence, and this lets them can communicate that.
+    - Some people argue that “forcing” them to take one side or the other tells us more — but it does not, it just adds noise to the data, making the survey less “reliable.”
+
+### Survey Jargon
+
+- **QUANTitative data** is anything with numbers. For employee surveys this is often numerical results from the survey.
+- **QUALitative data** is anything without numbers. For employee surveys, these include text in the survey responses (like a text box for a question). These can become quantitative through tagging.
+- The [**Likert scale**](https://en.wikipedia.org/wiki/Likert_scale) is a common psychology tool: a 1-5 or 1-7 scale from “strongly disagree” to “strongly agree” for a given statement.
+- A **baseline** is used to set a point in time so we can compare future results to this point in time. To be able to accurately compare over time, we’ll use the same questions in the future survey to track this. We can run the survey again after a certain intervention, and/or on a schedule.
+- An **intervention** is anything we do to change things. Examples include coaching, training, workshops, policy changes, team structure changes, etc. In this formal use of the word intervention does not mean anything is “wrong” or “bad” — rather we think something may be “improvable” and we are trying some things.
+    - We can colloquially say “**an initiative**” or “trying some changes” instead of intervention — but I end up slipping and using this jargon term a lot so I wanted to share this term.
+
+## Segmentation
+
+We want to know if variables like role, team, tenure, and under-representation affect the measures. These things often do!
+
+### Bin Size for Segments
+
+When coming up with these lists, [bin size](https://en.wikipedia.org/wiki/Data_binning) is an important concern. Bins have to be big enough to be anonymized (the statistics math on this is complicated, but at a very low minimum at least 3 people in a group if 100% of them fill it out). Bins also have to be small enough to be useful.
+
+Here’s how I think about these few common bins.
+
+### Segmentation Questions
+
+#### Under-Representation Segmentation
+
+I really like the [18F 2019 Culture Survey’s minimal approach](https://18f.gsa.gov/2019/10/29/culture-climate-survey/) to self-identification:
+
+1. “I identify as a member of an under-represented demographic in technology.” (Strongly Disagree to Strongly Agree)
+
+I especially like that it’s a scale! Personally, as a queer white man, I feel *somewhat* under-represented, but not nearly as much as other people. I might put myself somewhere in the middle.
+
+This one question will be enough to meaningfully segment between under-represented and not under-represented folks.
+
+If you’re planning specific interventions for race, gender, or other segments, you may need more information on those. However, if you don’t have a specific purpose then collecting that data would be excessive/invasive.
+
+#### Team/Project Segmentation
+
+It helps to frame the survey questions in terms of a **specific** team or project — that improves [survey reliability](https://en.wikipedia.org/wiki/Reliability_(statistics))) a ton.
+
+But people may be on multiple teams! And there are likely differences between someone on 5 teams vs someone on just 1 team.
+
+I often ask both:
+
+1. What is your “main project” — the project you worked the greatest number of hours on over the past 3 months.
+    - drop-down of the full list (one choice)
+    - this choice/definitien is used for questions later like “on my main project...”
+2. For which of these projects did you spend at least 5 hours on over the past 3 months?
+    - checkbox list of the full list (many choices)
+
+#### Role Segmentation
+
+People generally know what role(s) they do, and can self-identify those if you ask.
+
+Before running the survey, ask people how they would describe their role, like “engineer” or “front-end engineer” or “ux researcher” vs “product manager”. This list, coming from the real world, is going to be more powerful than a list from an org chart that lists everyone as an “IT Specialist” (that’s a real-world title from the US government — hah!).
+
+Some people may do multiple roles:
+
+- We may need a “main role” for survey purposes to focus how they answer some questions.
+- We may want to segment “has one role” vs “has many roles,” especially if many people wear many hats at this company.
+
+I often ask both:
+
+1. What is your “main role” — the role you worked the greatest number of hours on over the past 3 months.
+    - drop-down of the full list (one choice)
+2. For which of these roles did you spend at least 10 hours on over the past 3 months?
+    - checkbox list of the full list (many choices)
+
+#### Tenure Segmentation
+
+One other segment I often ask about is “how long have you worked at COMPANY?”. The size of the “[data bins](https://en.wikipedia.org/wiki/Data_binning)” you want may depends on the spread at your company. A startup would be different from a 30-year-old company. Here’s an example:
+
+- less than 6 months
+- 6-12 months
+- 1-2 years
+- 2-5 years
+- 5+ years
+
+## Open Source Survey Questions
+
+Below are my top few favorite sources of “open source” survey questions. These are open source in that you can use these questions on your own surveys; this set of questions is not proprietary. Of course, you should still attribute your sources!
+
+### Attribution
+
+If you use these in a survey, you should cite your sources — that’s the spirit of open source! For an example of how to cite sources, see how [18F did it in their blog post](https://18f.gsa.gov/2019/10/29/culture-climate-survey/).
+
+### Content Questions by Source
+
+#### 2019 18F Culture Survey Questions
+
+[18F Culture Survey Article](https://18f.gsa.gov/2019/10/29/culture-climate-survey/), [18F Culture Survey Questions](https://gist.github.com/alexsoble/305714b7f9bd4bc13af3cc69895b770e)
+
+The 2019 18F culture survey is the one that inspired me to expand on their work! I love how well they documented their decisions, included examples, cited their inspiration/sources.
+
+1. "I feel like I belong on this team."
+2. "On this team, I can voice a contrary opinion without fear of negative consequences."
+3. "On this team, perspectives like mine are included in decision making."
+4. "On this team, administrative or clerical tasks that don’t have a specific owner are fairly divided."
+5. "People on this team accept others who are different."
+6. "It is easy to ask other members of this team for help."
+7. "On this team, messengers are not punished when they deliver news of failures or other bad news."
+8. "On this team, responsibilities are shared."
+9. "On this team, cross-functional collaboration is encouraged and rewarded."
+10. "On this team, failure causes inquiry."
+11. "On this team, new ideas are welcomed."
+12. "On this team, failures are treated primarily as opportunities to improve the system."
+13. "I identify as a member of an under-represented demographic in technology."
+14. "I feel I am growing as an engineer."
+15. "I feel I am treated fairly."
+16. "When I provide feedback to the organization (18F), it is genuinely taken into consideration."
+17. "When I provide feedback to the organization (TTS and above), it is genuinely taken into consideration."
+18. "I am satisfied with my work."
+19. "I am motivated to do my work."
+20. "I am satisfied with the feedback I have received throughout this year."
+21. "Are there any additional thoughts or feedback you would like to share?"
+
+#### CultureAmp’s Employee Engagement Questions
+
+[CultureAmp's Employee Engagement Article](https://www.cultureamp.com/blog/employee-engagement-survey-questions)
+
+I really like CultureAmp’s list because they even include benchmarks, comparing the results to other companies. I also like that they group things under the acronym LEAD. This means we can do a roll-up of the group of these questions to get at a higher level concept!
+
+**Engagement Index**
+
+1. “I am proud to work for [Company]”
+2. “I would recommend [Company] as a great place to work”
+3. “I rarely think about looking for a job at another company”
+4. “I see myself still working at [company] in two years’ time”
+5. “[Company] motivates me to go beyond what I would in a similar role elsewhere”
+
+**Leadership**
+
+1. “The leaders at [company] keep people informed about what is happening”
+2. “My manager is a great role model for employees”
+3. “The leaders at [Company] have communicated a vision that motivates me”
+
+**Enablement**
+
+1. “I have access to the things I need to do my job well”
+2. “I have access to the learning and development I need to do my job well”
+3. “Most of the systems and processes here support us getting our work done effectively”
+
+**Alignment**
+
+1. “I know what I need to do to be successful in my role”
+2. “I receive appropriate recognition when I do good work”
+3. “Day-to-day decisions here demonstrate that quality and improvement are top priorities”
+
+**Development**
+
+1. “My manager (or someone in management) has shown a genuine interest in my career aspirations”
+2. “I believe there are good career opportunities for me at this company”
+3. “This is a great company for me to make a contribution to my development”
+
+**Free-text Questions**
+
+(Note: I write these with a [presupposition](https://en.wikipedia.org/wiki/Presupposition) like “what things are we doing great?” — I find it works better in classes/workshops I do, and I haven’t seen any evidence that suggests surveys would be different.)
+
+1. “Are there some things we are doing great here?”
+2. “Are there some things we are not doing so great here?”
+3. “Is there something else you think we should have asked you in this survey?”
+
+#### Google’s Project Aristotle Questions
+
+[Google’s Project Aristotle](https://rework.withgoogle.com/print/guides/5721312655835136/) is the most data-driven one. It is based on research that asked the question “what makes teams effective?” and the questions that correlated the best rose to the top here — check out [the 2016 NYTimes Article](https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html?smid=pl-share) about it. We don’t have the full survey publicly available, but the top 5 results are public. Notably, the [2021 Accelerate State of DevOps Report](https://cloud.google.com/devops/state-of-devops) also used questions from Google’s fuller survey.
+
+(Note: to use these I would reframe the questions to be statements and use a [Likert scale](https://en.wikipedia.org/wiki/Likert_scale).)
+
+1. **Psychological safety:** Can we take risks on this team without feeling insecure or embarrassed?
+2. **Dependability:** Can we count on each other to do high quality work on time?
+3. **Structure & clarity:** Are goals, roles, and execution plans on our team clear?
+4. **Meaning of work:** Are we working on something that is personally important for each of us?
+5. **Impact of work:** Do we fundamentally believe that the work we’re doing matters?
+
+#### Psychological Safety Research Survey Questions
+
+I first learned about “Psychological Safety” from Google’s Project Aristotle (above). I really wanted to dig in more. If you do too, I suggest [Amy Edmonson’s Book on Psychological Safety](https://fearlessorganization.com/). The survey questions below are from [Amy Edmonson’s 2008 Paper](https://www.jstor.org/stable/pdf/2666999.pdf?refreqid=excelsior%3A4df710a3e0cb5b989bcacfaa2cba91d5), and you might also like to check out [this article explaining how to use this psychological safety scale yourself](https://mcleanonline.medium.com/measuring-psychological-safety-81dd1da91915).
+
+(Note: some of these are reversed — so 7 or 1 could be “good” or “bad” depending on the question. For an employee survey I wouldn’t necessarily use inversions like this.)
+
+1. If I make a mistake in this team, it is held against me.
+2. Members of this team are able to bring up problems and tough issues.
+3. People on this team sometimes reject others for being different.
+4. It is safe to take a risk in this team.
+5. It is difficult to ask other members of this team for help.
+6. No one on this team would deliberately act in a way that undermines my efforts.
+7. Working with members of this team, my unique skills and talents are valued and utilized.
+
+#### PeopleFirst Team Effectiveness Survey Questions
+
+What I like about this list from PeopleFirst is that many of these have a more colloquial/casual tone. Instead of copying these directly, I might modify these to use whatever terms the team actually uses day-to-day. Using the team’s language on a small-team survey can be a great boon to accuracy and reliability (assuming you validate that the terms are well-defined and used consistently).
+
+1. Does every member of your team have the same understanding of the team's purpose?
+2. Is the team united by a common goal?
+3. Does the team's work toward a common goal also, simultaneously, benefit each member of the team?
+4. Do members of your team take time to build connections with each other?
+5. Are all members of your team enabled to contribute their ideas and talents?
+6. Does your team value diverse opinions and perspectives?
+7. Is the team taking time to celebrate the "small wins" along the way?
+8. Do team members hold themselves and each other accountable for delivering what's expected?
+9. Has the team prioritized "doing it well" over "doing it fast"?
+10. Can members of the team count on each other for support and encouragement?
+11. Are members of the team comfortable with being candid as they give each other feedback?
+12. Is the team able to debate ideas and find the best answers together?
+13. Does the team place a high value on learning and growing?
+14. Is the team willing to take chances together?
+15. Do members of the team maintain a positive, can-do attitude?
+16. Does the team take decisive action and keep things moving forward?
+17. Are members of the team setting aside ego and/or positional authority in order to draw on everyone's strengths?
+18. Has the team developed processes for communicating transparently and in a timely manner?
+19. Are roles and responsibilities clearly defined and commonly understood?
+20. Would everyone agree that each member of the team contributes to the desired outcomes in a productive manner?
+
+## Resource List
+
+- Tech Focused Surveys
+    - [Project Aristotle (”The five keys to a successful Google team”)](https://rework.withgoogle.com/blog/five-keys-to-a-successful-google-team/)
+    - [18F’s Culture Survey](https://18f.gsa.gov/2019/10/29/culture-climate-survey/)
+- General Employee Surveys
+    - [Culture Amp’s Employee Engagement Survey Questions](https://www.cultureamp.com/blog/employee-engagement-survey-questions) (with benchmark values!)
+    - [People First Productivity Solutions Workplace Team Effectiveness Questionnaire](https://blog.peoplefirstps.com/connect2win/workplace-team-effectiveness-questionnaire)
+- Psychology Research Surveys
+    - [Psychological Safety Questions](https://mcleanonline.medium.com/measuring-psychological-safety-81dd1da91915)
+- [BICEPS (human needs)](https://www.palomamedina.com/biceps)
+- [The Ethical Researcher’s Checklist by Alba N. Villamil](https://docs.google.com/document/d/1107r9r6d-2-4MwRZX6eiZbMi1LuClOB2sZ88KcQP9ME/edit)
+- [Spotify Health Check Model](https://engineering.atspotify.com/2014/09/squad-health-check-model/)
